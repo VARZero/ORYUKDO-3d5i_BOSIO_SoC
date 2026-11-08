@@ -1,0 +1,51 @@
+{
+  "linux": {
+    "version": "6.12",
+    "source_url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz",
+    "source_sha256": "b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb",
+    "source_patches": []
+  },
+  "opensbi": {
+    "name": "opensbi",
+    "repository": "https://github.com/riscv-software-src/opensbi.git",
+    "tag": "v1.8.1",
+    "commit": "74434f255873d74e56cc50aa762d1caf24c099f8",
+    "role": "unmodified_generic_RV32_fw_jump_source"
+  },
+  "files": {
+    "fw_jump.bin": "0e7c072de5160f8346719a6b458bed12754ac4df88a5d812272721a25fe79eee",
+    "gen3.dts": "0308cd694943edc7f7043d4d56245aae0865039ecbbb3a838fc8c9ad58b93ca0",
+    "Image": "44a62e2fe9ac7515d2b3670bb475b4e3fc4a61483c1e7fa326cfe43e0ea0938a",
+    "linux_userspace_miniconfig": "d3bad75a7e0a05fb889209d15aa49a41472182429dbd527e296709f6705ab06e",
+    "opensbi_defconfig": "ba526ddb84584c6fc1ea1702a83fc2003e2e4ba5afea542d8e475769781a3d42",
+    "licenses/BusyBox-GPL-2.0": "bbfc9843646d483c334664f651c208b9839626891d8f17604db2146962f43548",
+    "licenses/Linux-COPYING": "fb5a425bd3b3cd6071a3a9aff9909a859e7c1158d54d32e07658398cd67eb6a0",
+    "licenses/Linux-GPL-2.0": "f6b78c087c3ebdf0f3c13415070dd480a3f35d8fc76f3d02180a407c1c812f79",
+    "licenses/Linux-syscall-note": "8e378ab93586eb55135d3bc119cce787f7324f48394777d00c34fa3d0be3303f",
+    "licenses/musl-COPYRIGHT": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+    "licenses/OpenSBI-BSD.txt": "82d13fb1bf6bb162629deeea9eb9c117e74548d3b707e478967691fe79a68e21",
+    "shell/build_busybox.sh": "59c002fee522171db6334f6da6e645f3d3a45edb180111a110250d8082c87ff8",
+    "shell/build_linux.sh": "d36a351876465b8e0b7b630fd75560e6d3f3502714b3b89132d99930985e7b62",
+    "shell/config-busybox": "f090ef35da1b56c6a2d7ce23766952be7cf1e5709c459b7cc37faffb9826c5a2",
+    "shell/config-linux": "3f0daacbcf266e7d2d0c9c0102b44a2bf03fb798adbf7d1d4606c0e88926bebf",
+    "shell/ddrcheck.c": "c23cd00f9e6ac1a375fc5916928ede29603af0022b4a6422f6e3b2fd42a1ff4f",
+    "shell/init.c": "86290b40295fb5af91df115a8ac49f041f8d49c0f3f1cff6c670ec01266cb9d9"
+  },
+  "userspace": {
+    "busybox": "1.37.0",
+    "musl": "1.2.5",
+    "abi": "RV32IMA_Zicsr_Zifencei ILP32 static",
+    "shell": "/bin/sh",
+    "tty": "/dev/hvc0"
+  },
+  "memory": {
+    "address": "0x80000000",
+    "bytes": 1073741824,
+    "display_reserved": {
+      "address": "0xbf800000",
+      "bytes": 8388608,
+      "no_map": true
+    }
+  },
+  "provenance": "Unchanged firmware payload and build sources from work/kfb-1g; current gen3.dts reserves the hardware display buffers. Firmware rebuild was not repeated in this board integration."
+}

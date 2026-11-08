@@ -1,0 +1,54 @@
+{
+  "reviewed_at": "2026-11-08T17:25:49.582904+09:00",
+  "physical_implementation": "PASS",
+  "hardware_boot_accepted": true,
+  "full_cold_rtl_shell_accepted": false,
+  "cpu_mhz": 50,
+  "fabric_mhz": 100,
+  "setup_wns_ns": 0.101,
+  "setup_tns_ns": 0,
+  "hold_whs_ns": 0.023,
+  "hold_ths_ns": 0,
+  "routed_nets": 164661,
+  "route_errors": 0,
+  "cdc_warning_critical": 0,
+  "gray_bits": 68,
+  "drc": {
+    "errors": 0,
+    "critical": 0,
+    "warnings": {
+      "BUFC-1": 4,
+      "REQP-1709": 1
+    },
+    "location": "generated MIG IP"
+  },
+  "resources": {
+    "lut": 108798.0,
+    "ff": 72969.0,
+    "bram": 101.5,
+    "dsp": 62.0
+  },
+  "source_hashes_verified": true,
+  "bitstream": "D:\\temp\\gen3bosio\\clocksource_tlb\\board_v1\\route\\ORYUKDO-Gen3-BOSIO-KFB.bit",
+  "bit_sha256": "9e762305efd3c376cce979bb6857f428e02ccfe275388b85d412e39d44f9296b",
+  "critical_path": "IST bank_response_valid_reg[5] to issue_data_reg[266], delay 19.322 ns; user setup uncertainty 0.300 ns retained",
+  "reports": {
+    "implementation_inputs.json": "505f8a2a81c9e70eff61d0415beed8e6edca6deb67bb019cf4b1b68393f75407",
+    "route_status.rpt": "930ad0c5d87764e51cfa3b0b3f09d1bc431b4cbec831e3771f623e9c8ad88da6",
+    "timing_routed.rpt": "824d8f1d3f7dddb81ac9cec7d383400e6a277cfc8c56f5d566dc3b230a5917e4",
+    "timing_cpu_raw.rpt": "97865bd83b507ca2df93b7b3476827d06bd97e3d2336b71ac1be8853f4ab6d91",
+    "timing_clk_pll_i.rpt": "174ebbd69ee4ca39151a030f2ae1939f55ee8867ab84ed24a8466179b74079fc",
+    "utilization.rpt": "c6c703cc82df8ae7ea25bd50467a0ecd7d5ae7931844adef997bb6f0225d46f5",
+    "hierarchy.rpt": "9865d0fe364d40af52e629dce9f951480b0290d9d01b10bda74017f292589710",
+    "drc.rpt": "8041007abdbfdfa1fbbfb61ad4c0675c6d94c53f49f46894b61d350c2fb19040",
+    "cdc.rpt": "8a97fc4dfa3449526c96a4c9a95688feecc263ce49c37e2c9a52417b01e8007a",
+    "gray_paths.tsv": "47c7e4ee6f1b9d263c01405caadb3c970c316d96299567521a21655a9fa088f7",
+    "bus_skew.rpt": "9b422e4eac7a4c9f972c5d1c1cc6a88e7c54c59a9d9c3e5a9060929ae3d057fc",
+    "waivers.rpt": "556f7316e3bdc7691e6bd40e1d97e09331c4578053fb9f880d8c9fd3c9913e42",
+    "clocks.rpt": "4e15c301ff564807a6a383b6be155b42bd01a890a49fd143cf44c18f49c4f1a6",
+    "resolved_constraints.xdc": "9a45331aab9410bd478cdd4d015c4c23411735ab69322e48d3dd16e5ffb02c1d"
+  },
+  "hardware_scope": "JTAG reconfiguration -> SD trace-v2 diagnostic Linux -> BusyBox UART commands and 16 upper DDR pages; no RAM/CPU snapshot injection",
+  "hardware_evidence": "soc/reports/physical_tlb_fix_20261108/trace_review.json",
+  "normal_uninstrumented_sd_hardware_acceptance": false
+}

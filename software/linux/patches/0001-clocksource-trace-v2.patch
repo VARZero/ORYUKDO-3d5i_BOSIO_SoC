@@ -1,0 +1,128 @@
+--- a/kernel/time/clocksource.c
++++ b/kernel/time/clocksource.c
+@@ -1,3 +1,11 @@
++
++#include <asm/sbi.h>
++int oryukdo_trace_active;
++static void oryukdo_mark(const char *s)
++{
++    if (!oryukdo_trace_active) return;
++    while (*s) sbi_console_putchar(*s++);
++}
+ // SPDX-License-Identifier: GPL-2.0+
+ /*
+  * This file contains the functions which manage clocksource drivers.
+@@ -1087,15 +1095,16 @@
+  */
+ static int __init clocksource_done_booting(void)
+ {
+-	mutex_lock(&clocksource_mutex);
++	oryukdo_trace_active = 1; oryukdo_mark("[C0]\n");
++	mutex_lock(&clocksource_mutex); oryukdo_mark("[C1]\n");
+ 	curr_clocksource = clocksource_default_clock();
+ 	finished_booting = 1;
+ 	/*
+ 	 * Run the watchdog first to eliminate unstable clock sources
+ 	 */
+ 	__clocksource_watchdog_kthread();
+-	clocksource_select();
+-	mutex_unlock(&clocksource_mutex);
++	oryukdo_mark("[C2]\n"); clocksource_select(); oryukdo_mark("[C3]\n");
++	mutex_unlock(&clocksource_mutex); oryukdo_mark("[C4]\n"); oryukdo_trace_active = 0;
+ 	return 0;
+ }
+ fs_initcall(clocksource_done_booting);
+--- a/kernel/time/tick-common.c
++++ b/kernel/time/tick-common.c
+@@ -1,3 +1,11 @@
++
++#include <asm/sbi.h>
++extern int oryukdo_trace_active;
++static void oryukdo_mark(const char *s)
++{
++    if (!oryukdo_trace_active) return;
++    while (*s) sbi_console_putchar(*s++);
++}
+ // SPDX-License-Identifier: GPL-2.0
+ /*
+  * This file contains the base functions to manage periodic tick
+@@ -109,6 +117,8 @@
+ {
+ 	int cpu = smp_processor_id();
+ 	ktime_t next = dev->next_event;
++	unsigned int oryukdo_catchup = 0;
++	oryukdo_mark("[T0]\n");
+ 
+ 	tick_periodic(cpu);
+ 
+@@ -129,8 +139,8 @@
+ 		 */
+ 		next = ktime_add_ns(next, TICK_NSEC);
+ 
+-		if (!clockevents_program_event(dev, next, false))
+-			return;
++		if (!clockevents_program_event(dev, next, false)) { oryukdo_mark("[T1]\n"); return; }
++		if (!(oryukdo_catchup++ & 15)) oryukdo_mark("[TL]\n");
+ 		/*
+ 		 * Have to be careful here. If we're in oneshot mode,
+ 		 * before we call tick_periodic() in a loop, we need
+--- a/kernel/time/timekeeping.c
++++ b/kernel/time/timekeeping.c
+@@ -1,3 +1,11 @@
++
++#include <asm/sbi.h>
++extern int oryukdo_trace_active;
++static void oryukdo_mark(const char *s)
++{
++    if (!oryukdo_trace_active) return;
++    while (*s) sbi_console_putchar(*s++);
++}
+ // SPDX-License-Identifier: GPL-2.0
+ /*
+  *  Kernel timekeeping code and accessor functions. Based on code from
+@@ -1581,7 +1589,7 @@
+ 	unsigned long flags;
+ 	bool change = false;
+ 
+-	new = (struct clocksource *) data;
++	oryukdo_mark("[X0]\n"); new = (struct clocksource *) data;
+ 
+ 	/*
+ 	 * If the cs is in module, get a module reference. Succeeds
+@@ -1595,18 +1603,18 @@
+ 	}
+ 
+ 	raw_spin_lock_irqsave(&timekeeper_lock, flags);
+-	write_seqcount_begin(&tk_core.seq);
+-
+-	timekeeping_forward_now(tk);
++	write_seqcount_begin(&tk_core.seq); oryukdo_mark("[X1]\n");
++
++	timekeeping_forward_now(tk); oryukdo_mark("[X2]\n");
+ 
+ 	if (change) {
+ 		old = tk->tkr_mono.clock;
+-		tk_setup_internals(tk, new);
+-	}
+-
+-	timekeeping_update(tk, TK_CLEAR_NTP | TK_MIRROR | TK_CLOCK_WAS_SET);
+-
+-	write_seqcount_end(&tk_core.seq);
++		tk_setup_internals(tk, new); oryukdo_mark("[X3]\n");
++	}
++
++	timekeeping_update(tk, TK_CLEAR_NTP | TK_MIRROR | TK_CLOCK_WAS_SET); oryukdo_mark("[X4]\n");
++
++	write_seqcount_end(&tk_core.seq); oryukdo_mark("[X5]\n");
+ 	raw_spin_unlock_irqrestore(&timekeeper_lock, flags);
+ 
+ 	if (old) {
+@@ -1632,7 +1640,7 @@
+ 
+ 	if (tk->tkr_mono.clock == clock)
+ 		return 0;
+-	stop_machine(change_clocksource, clock, NULL);
++	oryukdo_mark("[N0]\n"); stop_machine(change_clocksource, clock, NULL); oryukdo_mark("[N1]\n");
+ 	tick_clock_notify();
+ 	return tk->tkr_mono.clock == clock ? 0 : -1;
+ }

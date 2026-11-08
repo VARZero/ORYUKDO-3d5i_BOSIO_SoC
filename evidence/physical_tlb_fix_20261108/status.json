@@ -1,0 +1,65 @@
+{
+  "started": "2026-11-08T17:29:52.244432+09:00",
+  "bit_sha256": "9e762305efd3c376cce979bb6857f428e02ccfe275388b85d412e39d44f9296b",
+  "port": "COM4",
+  "baud": 115200,
+  "status": "PASS_PHYSICAL_UART_SHELL_AND_GUEST_MEMORY",
+  "commands": [
+    {
+      "command": "echo $((19+23))",
+      "result": "PASS"
+    },
+    {
+      "command": "uname -r",
+      "result": "PASS"
+    },
+    {
+      "command": "grep MemTotal /proc/meminfo",
+      "result": "PASS"
+    },
+    {
+      "command": "ddrcheck",
+      "result": "PASS"
+    }
+  ],
+  "diagnostic_bootargs_seen": true,
+  "expected_sd_sha256": "1ea331456cb3b9e69caf80159dfa17f3b71a5e2b16f47e520c48a257669ba255",
+  "last_rx": "2026-11-08T17:33:07.965255+09:00",
+  "uart_bytes": 22071,
+  "elapsed_seconds": 195.7,
+  "markers": {
+    "T1": 147,
+    "T0": 140,
+    "TL": 109,
+    "C0": 1,
+    "C1": 1,
+    "C2": 1,
+    "N0": 1,
+    "X0": 1,
+    "X1": 1,
+    "X2": 1,
+    "X3": 1,
+    "X4": 1,
+    "X5": 1
+  },
+  "last_marker": {
+    "marker": "T1",
+    "time": "2026-11-08T17:32:01.877006+09:00"
+  },
+  "program_exit_code": 0,
+  "program_completed": true,
+  "last_initcall": {
+    "address": "0xc016428c",
+    "name": "of_platform_sync_state_init",
+    "returned": true,
+    "observed": "2026-11-08T17:32:45.239372+09:00",
+    "result": 0,
+    "returned_at": "2026-11-08T17:32:45.313449+09:00"
+  },
+  "shell_observed_seconds": 177.08319470001152,
+  "memtotal_kib": 1024148,
+  "upper_memory_range": [
+    "0xbee00000",
+    "0xbef08ffc"
+  ]
+}

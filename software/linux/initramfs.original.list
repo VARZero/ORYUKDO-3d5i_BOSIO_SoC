@@ -1,0 +1,39 @@
+dir /bin 0755 0 0
+dir /dev 0755 0 0
+dir /proc 0555 0 0
+dir /sys 0555 0 0
+dir /tmp 01777 0 0
+nod /dev/console 0600 0 0 c 5 1
+file /init /var/tmp/kfb-linux-1g/init 0755 0 0
+file /bin/busybox /var/tmp/kfb-linux-1g/busybox 0755 0 0
+file /bin/ddrcheck /var/tmp/kfb-linux-1g/ddrcheck 0755 0 0
+slink /bin/ash busybox 0777 0 0
+slink /bin/sh busybox 0777 0 0
+slink /bin/cat busybox 0777 0 0
+slink /bin/ls busybox 0777 0 0
+slink /bin/echo busybox 0777 0 0
+slink /bin/pwd busybox 0777 0 0
+slink /bin/uname busybox 0777 0 0
+slink /bin/free busybox 0777 0 0
+slink /bin/head busybox 0777 0 0
+slink /bin/grep busybox 0777 0 0
+slink /bin/mount busybox 0777 0 0
+slink /bin/mkdir busybox 0777 0 0
+slink /bin/sleep busybox 0777 0 0
+slink /bin/ps busybox 0777 0 0
+slink /bin/env busybox 0777 0 0
+slink /bin/true busybox 0777 0 0
+slink /bin/false busybox 0777 0 0
+slink /bin/test busybox 0777 0 0
+slink /bin/printf busybox 0777 0 0
+slink /bin/dmesg busybox 0777 0 0
+slink /bin/tty busybox 0777 0 0
+slink /bin/stty busybox 0777 0 0
+slink /bin/setsid busybox 0777 0 0
+slink /bin/sync busybox 0777 0 0
+slink /bin/date busybox 0777 0 0
+slink /bin/wc busybox 0777 0 0
+slink /bin/cp busybox 0777 0 0
+slink /bin/mv busybox 0777 0 0
+slink /bin/rm busybox 0777 0 0
+slink /bin/touch busybox 0777 0 0

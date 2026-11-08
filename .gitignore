@@ -1,0 +1,11 @@
+/artifacts/
+/build/
+/soc/reports/
+/soc/board/logs/
+__pycache__/
+*.pyc
+.Xil/
+*.jou
+*.wdb
+*.vcd
+*.fst

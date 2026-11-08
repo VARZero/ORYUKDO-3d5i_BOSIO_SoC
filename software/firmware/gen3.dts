@@ -1,0 +1,65 @@
+/dts-v1/;
+// 50 MHz timebase and UART input clock.
+// Board clocks, pins, DDR controller and peripherals are separate integration.
+/ {
+    #address-cells = <1>;
+    #size-cells = <1>;
+    compatible = "oryukdo,gen3";
+    model = "ORYUKDO Gen3 3D5I";
+    chosen {
+        stdout-path = "/soc/serial@10000000:115200n8";
+        bootargs = "earlycon=sbi console=hvc0 loglevel=7 nokaslr lpj=1000000 rdinit=/init initcall_debug ignore_loglevel keep_bootcon printk.time=1";
+    };
+    memory@80000000 { device_type = "memory"; reg = <0x80000000 0x40000000>; };
+    reserved-memory {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        ranges;
+        // OpenSBI additionally inserts its own no-map firmware reservation.
+        bosio_frames: framebuffer@bf800000 {
+            reg = <0xbf800000 0x00800000>;
+            no-map;
+        };
+    };
+    cpus {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        timebase-frequency = <50000000>;
+        cpu@0 {
+            device_type = "cpu";
+            compatible = "riscv";
+            reg = <0>;
+            status = "okay";
+            riscv,isa = "rv32ima_zicsr_zifencei_svade";
+            riscv,isa-base = "rv32i";
+            riscv,isa-extensions = "i", "m", "a", "zicsr", "zifencei", "svade";
+            mmu-type = "riscv,sv32";
+            cpu_intc: interrupt-controller {
+                #interrupt-cells = <1>;
+                #address-cells = <0>;
+                interrupt-controller;
+                compatible = "riscv,cpu-intc";
+            };
+        };
+    };
+    soc {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        compatible = "simple-bus";
+        ranges;
+        serial@10000000 {
+            compatible = "ns16550";
+            reg = <0x10000000 8>;
+            clock-frequency = <50000000>;
+            current-speed = <115200>;
+            reg-shift = <0>;
+            reg-io-width = <1>;
+            // Polling only; no external UART interrupt controller yet.
+        };
+        timer@200bff8 {
+            compatible = "riscv,aclint-mtimer";
+            reg = <0x0200bff8 8>, <0x02004000 8>;
+            interrupts-extended = <&cpu_intc 7>;
+        };
+    };
+};

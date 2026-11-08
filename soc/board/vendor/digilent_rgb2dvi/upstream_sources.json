@@ -1,0 +1,61 @@
+{
+  "commit": "0362ce72d39eebc400fdabacff706ee7fa8ad564",
+  "files": [
+    {
+      "file": "src/ClockGen.vhd",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/ClockGen.vhd",
+      "sha256": "911088c9f4cf5897443a13bdbeaef4a0b3cf8157745582d68b556482e642765b"
+    },
+    {
+      "file": "src/DVI_Constants.vhd",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/DVI_Constants.vhd",
+      "sha256": "d8dbbbc3c8696d4527ee0d3c4757f1a40d0acebc845899483bc61c2bb8270cde"
+    },
+    {
+      "file": "src/OutputSERDES.vhd",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/OutputSERDES.vhd",
+      "sha256": "6205d58405919d4f899a525256e2cafa725408f6644642755cd0de63e69b286e"
+    },
+    {
+      "file": "src/SyncAsync.vhd",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/SyncAsync.vhd",
+      "sha256": "5561ac8099ed13f3114e97387aab5f7f30ad28a8be2fc540004cbee3f19eb3a7"
+    },
+    {
+      "file": "src/SyncAsyncReset.vhd",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/SyncAsyncReset.vhd",
+      "sha256": "3ce7ade3267959da59b4d448cc6641018e4f0ac3de9f8f998d0b9ff84a3794bc"
+    },
+    {
+      "file": "src/TMDS_Encoder.vhd",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/TMDS_Encoder.vhd",
+      "sha256": "b047a257c1172412d1b354a98e3cc77d013d0f3c1af6ff646233abf8b669c196"
+    },
+    {
+      "file": "src/rgb2dvi.vhd",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/rgb2dvi.vhd",
+      "sha256": "e3f24df794677dcef79628051686677eff6ca86612285635b79c0c6fe1dc49bf"
+    },
+    {
+      "file": "src/rgb2dvi.xdc",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/rgb2dvi.xdc",
+      "sha256": "51b9ac7f1229a2250cddb1d490e45e536dd836eb5c42851f67359c7a5aef6130"
+    },
+    {
+      "file": "src/rgb2dvi_clocks.xdc",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/rgb2dvi_clocks.xdc",
+      "sha256": "d11f05f62ffa0fce205fc2c2fe95033972da802fdfc7cd3572cef32014fdba57"
+    },
+    {
+      "file": "src/rgb2dvi_ooc.xdc",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/src/rgb2dvi_ooc.xdc",
+      "sha256": "77f9820235b2c3ce1e99d369db4932a76705633eeb5f950908855183931dc1a2"
+    },
+    {
+      "file": "component.xml",
+      "url": "https://raw.githubusercontent.com/Digilent/vivado-library/0362ce72d39eebc400fdabacff706ee7fa8ad564/ip/rgb2dvi/component.xml",
+      "sha256": "da4b8a84e98fd5839f1917f8c5805531cfe2dbb5b7555d54617cf574ce63d59a"
+    }
+  ],
+  "policy": "Byte-identical official Digilent distribution; integration changes belong in external wrappers."
+}

@@ -1,0 +1,1 @@
+PASS lint: no errors, latches, multiple drivers or combinational loops

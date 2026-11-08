@@ -1,0 +1,95 @@
+# clocksource 정지 수정 및 실보드 검증 — 2026-11-08
+
+PZ-A7200T-KFB 실보드에서 **동일한 trace-v2 SD를 유지하고 비트스트림만 교체**해
+문제 구간의 복구와 BusyBox UART 쉘을 확인했다. 최종 명령 검사는 17:33 KST에 통과했다.
+
+## 원인과 수정
+
+기존 비트스트림은 `clocksource_done_booting()`의 mutex 획득과 시계 설정을 완료했다.
+`change_clocksource`의 sequence counter 종료 표시 X5까지 출력됐지만, 인터럽트 복원
+이후 N1로 진행하지 못했다. 대신 주기 타이머 T0/TL/T1이 반복됐다. 느린 Sv32 변환과
+메모리 접근으로 타이머 처리에 실행 시간이 소모되어 초기화 코드가 재개되지 않는
+현상이다. 별도 RTL의 지연 30 조건에서는 한 타이머 처리 내부의 catch-up 반복도 재현됐다.
+실보드의 반복 재진입과 모델의 단일 처리 내부 반복은 구분한다.
+
+CPU 명령·데이터 변환부에 각각 8엔트리 TLB를 추가했다. SATP, VPN, 권한, 접근 종류,
+SUM/MXR을 태그로 확인하고, SFENCE.VMA 및 SATP 처리 시 무효화한다. 진행 중인
+페이지 테이블 응답은 받은 뒤 루트부터 다시 시작해 오래된 PTE의 재삽입을 막는다.
+클럭, Linux HZ, MIG 및 HDMI IP는 바꾸지 않았다.
+
+수정 후 같은 실보드에서 N1/C3/C4와 initcall `returned 0`이 확인됐다.
+진단 출력 중 타이머가 끼어들어 `[N1[T0]... ]` 형태가 될 수 있다.
+원본 UART를 보존하고 정확한 타이머 표시만 분리하여 전경 표시를 복원했다.
+업로드 전 UART 출력도 원본에 남아 있으므로 새 OpenSBI 배너 이후만 비교했다.
+진단 표시는 실행 시간에 영향을 주므로 성능 측정 근거로 사용하지 않는다.
+
+## 검증 결과
+
+| 항목 | 결과 |
+|---|---|
+| 기존 RTL, DDR 지연 30, clocksource 진입 스냅샷 | 2,000만 사이클 내 반환 실패 |
+| TLB RTL, 같은 조건 | 1,936,470 사이클에 반환 |
+| TLB RTL, DDR 지연 60 | 5,501,256 사이클에 반환 |
+| TLB 권한·문맥·무효화·진행 중 응답·superpage·주소 범위 | PASS, 128회 remap 포함 |
+| 기존 BOSIO 통합, 2개 장면 × 3개 seed | 6 PASS |
+| 실보드 clocksource 초기화 | PASS, 정상 반환 |
+| 실보드 SD → Linux → BusyBox | PASS, JTAG 재구성 후 SD 적재 |
+| `echo $((19+23))` | `42` |
+| `uname -r` | `6.12.0-oryukdo-kfb` |
+| `grep MemTotal /proc/meminfo` | `1024148 kB` |
+| `ddrcheck` | `DDR_HIGH_OK pages=16 first_pa=0xbee00000 last_pa=0xbef08ffc` |
+
+RAM 전체를 전수 검사한 결과는 아니다. Linux는 1GiB 메모리 맵에서 펌웨어·커널·
+프레임버퍼 등의 예약 영역을 제외한 가용 메모리를 보고했다. 상위 실제 주소의
+16페이지 읽기·쓰기를 검사했다. HDMI 영상의 시각적 출력은 이번 시험에 포함하지 않았다.
+
+호스트 측 시험 시작부터 첫 쉘까지 약 177초, 명령 검사 완료까지 약 196초였다.
+여기에는 Vivado 실행 및 JTAG 프로그램 시간이 포함되며, 순수 전원 인가 부팅 시간과
+구분해야 한다.
+
+## 배선 후 결과
+
+| 항목 | 결과 |
+|---|---:|
+| CPU / fabric | 50 / 100 MHz |
+| Setup WNS / TNS | +0.101 / 0 ns |
+| Hold WHS / THS | +0.023 / 0 ns |
+| LUT / FF | 108,798 / 72,969 |
+| BRAM / DSP | 101.5 / 62 |
+| 배선 완료 | 164,661 / 164,661 nets |
+| 배선 오류 | 0 |
+| CDC Warning / Critical | 0 / 0 |
+| DRC Error / Critical | 0 / 0 |
+| 남은 DRC Warning | MIG BUFC-1 ×4, REQP-1709 ×1 |
+
+최장 CPU 경로는 IST의 `bank_response_valid_reg[5]`에서 `issue_data_reg[266]`까지이며,
+데이터 경로 지연 19.322ns이다. 추가 setup uncertainty 0.300ns를 유지했다.
+소스/입력 해시, 68개 Gray pointer 경로, bus skew 및 vendor 원본 무결성을 확인했다.
+합성 전체 로그의 Vivado 12-3645는 파일을 하나씩 불러오는 도구 실행 성능 안내이며,
+회로 DRC/CDC와 별도로 기록한다.
+
+## 산출물과 사용
+
+- 비트스트림: [ORYUKDO-KFB-TLB8-20261108.bit](soc/board/candidates/clocksource_tlb_v1/ORYUKDO-KFB-TLB8-20261108.bit)
+- 검증한 진단 SD: [ORYUKDO-KFB-clocksource-trace-v2.img](soc/board/candidates/clocksource_tlb_v1/ORYUKDO-KFB-clocksource-trace-v2.img)
+- 해시: [manifest.json](soc/board/candidates/clocksource_tlb_v1/manifest.json)
+- 실보드 판정: [trace_review.json](soc/reports/physical_tlb_fix_20261108/trace_review.json)
+- 원본 UART: [uart.bin](soc/reports/physical_tlb_fix_20261108/uart.bin)
+- 새 부팅 이후 UART: [boot_uart.txt](soc/reports/physical_tlb_fix_20261108/boot_uart.txt)
+- 배선 판정: [physical_acceptance.json](soc/reports/board_tlb_v1/physical_acceptance.json)
+- RTL 변경 및 재현: [검증 설명](soc/board/clocksource_debug/README.md)
+
+현재 보드에는 위 TLB 비트스트림이 JTAG로 올라가 있다. 플래시는 기록하지 않았다.
+전원을 끄면 FPGA에 다시 올려야 한다. UART는 COM4, 115200, 8N1, 흐름 제어 없음이다.
+직접 입력용 `ORYUKDO Linux Shell - COM4 115200` 창을 열어 새 프롬프트를 확인했다.
+이 창이 COM4를 사용하므로 다른 시리얼 프로그램과 동시에 열지 않는다. Ctrl+]로 종료한다.
+
+## 아직 완료하지 않은 검증
+
+- 수정본의 SD부터 시작하는 전체 RTL 콜드 부팅은 계속 실행 중이다.
+- DDR 지연 30의 스냅샷 후속 시험은 2억 사이클 한도에서 쉘 전 초기화 중 종료됐다.
+  clocksource 이후 타이머 394회 복귀를 확인했지만 쉘 PASS로 세지 않는다.
+- 진단 표시를 넣지 않은 원래 SD는 수정 비트스트림에서 실보드 재시험하지 않았다.
+- 위 실보드 PASS는 trace-v2 진단 커널에 대한 결과이며 전체 미완료 검증을 대체하지 않는다.
+
+기존 장시간 RTL 실행과 기존 원본은 변경하거나 재시작하지 않았다. 원격 Git 작업은 하지 않았다.

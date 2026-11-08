@@ -1,0 +1,8 @@
+{
+  "created": "2026-11-08T17:35:59.309864+09:00",
+  "scope": "Hardware-tested TLB fix with trace-v2 diagnostic SD; full cold RTL run pending",
+  "files": {
+    "ORYUKDO-KFB-clocksource-trace-v2.img": "1ea331456cb3b9e69caf80159dfa17f3b71a5e2b16f47e520c48a257669ba255",
+    "ORYUKDO-KFB-TLB8-20261108.bit": "9e762305efd3c376cce979bb6857f428e02ccfe275388b85d412e39d44f9296b"
+  }
+}

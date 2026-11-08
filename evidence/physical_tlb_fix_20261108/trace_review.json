@@ -1,0 +1,52 @@
+{
+  "reviewed_at": "2026-11-08T17:33:17.433021+09:00",
+  "bit_sha256": "9e762305efd3c376cce979bb6857f428e02ccfe275388b85d412e39d44f9296b",
+  "scope": "Physical board with trace-v2 diagnostic kernel; UART before last OpenSBI banner excluded",
+  "raw_uart_sha256": "90be154d72cedc1d6d17c8efac7c8b604763c5fbad3628a862826b0cbb44115a",
+  "trace_v2_entry_observed": true,
+  "markers": {
+    "T0": 49,
+    "T1": 49,
+    "TL": 2,
+    "C0": 1,
+    "C1": 1,
+    "C2": 1,
+    "N0": 1,
+    "X0": 1,
+    "X1": 1,
+    "X2": 1,
+    "X3": 1,
+    "X4": 1,
+    "X5": 1,
+    "N1": 1,
+    "C3": 1,
+    "C4": 1
+  },
+  "clocksource_return_observed": true,
+  "shell_prompt_observed": true,
+  "shell_and_guest_memory_acceptance": true,
+  "command_results": [
+    {
+      "command": "echo $((19+23))",
+      "result": "PASS"
+    },
+    {
+      "command": "uname -r",
+      "result": "PASS"
+    },
+    {
+      "command": "grep MemTotal /proc/meminfo",
+      "result": "PASS"
+    },
+    {
+      "command": "ddrcheck",
+      "result": "PASS"
+    }
+  ],
+  "memtotal_kib": 1024148,
+  "upper_memory_range": [
+    "0xbee00000",
+    "0xbef08ffc"
+  ],
+  "instrumentation_limit": "Raw SBI markers add execution time; use for control-flow localization, not uninstrumented timing."
+}

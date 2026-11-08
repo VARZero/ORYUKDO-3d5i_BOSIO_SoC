@@ -1,0 +1,24 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov  8 17:17:52 2026
+| Host         : VieupE-Desk running 64-bit major release  (build 9200)
+| Command      : report_waivers -file D:/temp/gen3bosio/clocksource_tlb/board_v1/route/waivers.rpt
+| Design       : gen3_kfb_bosio
+| Device       : 7a200tfbg484-2
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------
+
+Waiver Report
+
+
+-----------------
+Table Of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS (DRC: no waivers)
+3. REPORT DETAILS (METHODOLOGY: no waivers)
+4. REPORT DETAILS (CDC: no waivers)
+
+
+No waivers found.

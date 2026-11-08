@@ -1,0 +1,1358 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov  8 17:17:35 2026
+| Host         : VieupE-Desk running 64-bit major release  (build 9200)
+| Command      : report_timing -from [get_clocks clk_pll_i] -to [get_clocks clk_pll_i] -max_paths 10 -file D:/temp/gen3bosio/clocksource_tlb/board_v1/route/timing_clk_pll_i.rpt
+| Design       : gen3_kfb_bosio
+| Device       : 7a200t-fbg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.173ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[32]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.465ns  (logic 3.575ns (37.772%)  route 5.890ns (62.228%))
+  Logic Levels:           14  (CARRY4=10 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.847ns = ( 15.847 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    15.442 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.442    system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1_n_3
+    Routing       SLICE_X50Y137                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/CI
+    Routing       SLICE_X50Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    15.540 r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.540    system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1_n_3
+    Routing       SLICE_X50Y138                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[32]_i_1/CI
+    Routing       SLICE_X50Y138        CARRY4 (Prop_carry4_CI_O[0])
+                                                                    0.181    15.721 r  system/bosio/output0/u_sensor_pose/diff_y_reg[32]_i_1/O[0]
+                                       net (fo=1, routed)           0.000    15.721    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[32]
+    Routing       SLICE_X50Y138        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[32]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.299    15.847    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y138        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[32]/C
+                                       clock pessimism              0.348    16.194    
+                                       clock uncertainty           -0.360    15.834    
+                  SLICE_X50Y138        FDRE (Setup_fdre_C_D)        0.059    15.893    system/bosio/output0/u_display_transform/diff_y_reg[32]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.893    
+                                       arrival time                         -15.721    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.173    
+
+Slack (MET) :             0.187ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.451ns  (logic 3.561ns (37.680%)  route 5.890ns (62.320%))
+  Logic Levels:           13  (CARRY4=9 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.847ns = ( 15.847 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    15.442 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.442    system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1_n_3
+    Routing       SLICE_X50Y137                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/CI
+    Routing       SLICE_X50Y137        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    15.707 r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/O[1]
+                                       net (fo=1, routed)           0.000    15.707    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[29]
+    Routing       SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[29]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.299    15.847    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[29]/C
+                                       clock pessimism              0.348    16.194    
+                                       clock uncertainty           -0.360    15.834    
+                  SLICE_X50Y137        FDRE (Setup_fdre_C_D)        0.059    15.893    system/bosio/output0/u_display_transform/diff_y_reg[29]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.893    
+                                       arrival time                         -15.707    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.187    
+
+Slack (MET) :             0.192ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.446ns  (logic 3.556ns (37.647%)  route 5.890ns (62.353%))
+  Logic Levels:           13  (CARRY4=9 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.847ns = ( 15.847 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    15.442 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.442    system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1_n_3
+    Routing       SLICE_X50Y137                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/CI
+    Routing       SLICE_X50Y137        CARRY4 (Prop_carry4_CI_O[3])
+                                                                    0.260    15.702 r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/O[3]
+                                       net (fo=1, routed)           0.000    15.702    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[31]
+    Routing       SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[31]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.299    15.847    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[31]/C
+                                       clock pessimism              0.348    16.194    
+                                       clock uncertainty           -0.360    15.834    
+                  SLICE_X50Y137        FDRE (Setup_fdre_C_D)        0.059    15.893    system/bosio/output0/u_display_transform/diff_y_reg[31]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.893    
+                                       arrival time                         -15.702    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.192    
+
+Slack (MET) :             0.252ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.386ns  (logic 3.496ns (37.248%)  route 5.890ns (62.752%))
+  Logic Levels:           13  (CARRY4=9 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.847ns = ( 15.847 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    15.442 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.442    system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1_n_3
+    Routing       SLICE_X50Y137                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/CI
+    Routing       SLICE_X50Y137        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    15.642 r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/O[2]
+                                       net (fo=1, routed)           0.000    15.642    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[30]
+    Routing       SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[30]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.299    15.847    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[30]/C
+                                       clock pessimism              0.348    16.194    
+                                       clock uncertainty           -0.360    15.834    
+                  SLICE_X50Y137        FDRE (Setup_fdre_C_D)        0.059    15.893    system/bosio/output0/u_display_transform/diff_y_reg[30]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.893    
+                                       arrival time                         -15.642    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.252    
+
+Slack (MET) :             0.271ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.367ns  (logic 3.477ns (37.121%)  route 5.890ns (62.879%))
+  Logic Levels:           13  (CARRY4=9 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.847ns = ( 15.847 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    15.442 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.442    system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1_n_3
+    Routing       SLICE_X50Y137                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/CI
+    Routing       SLICE_X50Y137        CARRY4 (Prop_carry4_CI_O[0])
+                                                                    0.181    15.623 r  system/bosio/output0/u_sensor_pose/diff_y_reg[31]_i_1/O[0]
+                                       net (fo=1, routed)           0.000    15.623    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[28]
+    Routing       SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[28]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.299    15.847    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y137        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[28]/C
+                                       clock pessimism              0.348    16.194    
+                                       clock uncertainty           -0.360    15.834    
+                  SLICE_X50Y137        FDRE (Setup_fdre_C_D)        0.059    15.893    system/bosio/output0/u_display_transform/diff_y_reg[28]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.893    
+                                       arrival time                         -15.623    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.271    
+
+Slack (MET) :             0.284ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.353ns  (logic 3.463ns (37.027%)  route 5.890ns (62.973%))
+  Logic Levels:           12  (CARRY4=8 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.846ns = ( 15.846 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    15.609 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/O[1]
+                                       net (fo=1, routed)           0.000    15.609    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[25]
+    Routing       SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[25]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.298    15.846    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[25]/C
+                                       clock pessimism              0.348    16.193    
+                                       clock uncertainty           -0.360    15.833    
+                  SLICE_X50Y136        FDRE (Setup_fdre_C_D)        0.059    15.892    system/bosio/output0/u_display_transform/diff_y_reg[25]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.892    
+                                       arrival time                         -15.609    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.284    
+
+Slack (MET) :             0.289ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[27]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.348ns  (logic 3.458ns (36.993%)  route 5.890ns (63.007%))
+  Logic Levels:           12  (CARRY4=8 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.846ns = ( 15.846 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_O[3])
+                                                                    0.260    15.604 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/O[3]
+                                       net (fo=1, routed)           0.000    15.604    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[27]
+    Routing       SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[27]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.298    15.846    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[27]/C
+                                       clock pessimism              0.348    16.193    
+                                       clock uncertainty           -0.360    15.833    
+                  SLICE_X50Y136        FDRE (Setup_fdre_C_D)        0.059    15.892    system/bosio/output0/u_display_transform/diff_y_reg[27]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.892    
+                                       arrival time                         -15.604    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.289    
+
+Slack (MET) :             0.330ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_x_reg[32]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.303ns  (logic 3.596ns (38.655%)  route 5.707ns (61.345%))
+  Logic Levels:           14  (CARRY4=10 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.065ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.843ns = ( 15.843 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.512    12.877    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X52Y126                                                     f  system/bosio/output0/u_display_transform/dx0[10]_i_2/I3
+    Placement     SLICE_X52Y126        LUT6 (Prop_lut6_I3_O)        0.253    13.130 r  system/bosio/output0/u_display_transform/dx0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.130    system/bosio/output0/u_display_transform/dx0[12]_i_6_n_3
+    Placement     SLICE_X52Y126                                                     r  system/bosio/output0/u_display_transform/dx0_reg[12]_i_2/S[1]
+    Routing       SLICE_X52Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.444    13.574 r  system/bosio/output0/u_display_transform/dx0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.574    system/bosio/output0/u_display_transform/dx0_reg[12]_i_2_n_3
+    Routing       SLICE_X52Y127                                                     r  system/bosio/output0/u_display_transform/dx0_reg[16]_i_2/CI
+    Routing       SLICE_X52Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.100    13.674 r  system/bosio/output0/u_display_transform/dx0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.674    system/bosio/output0/u_display_transform/dx0_reg[16]_i_2_n_3
+    Routing       SLICE_X52Y128                                                     r  system/bosio/output0/u_display_transform/dx0_reg[20]_i_2/CI
+    Routing       SLICE_X52Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.100    13.774 r  system/bosio/output0/u_display_transform/dx0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.774    system/bosio/output0/u_display_transform/dx0_reg[20]_i_2_n_3
+    Routing       SLICE_X52Y129                                                     r  system/bosio/output0/u_display_transform/dx0_reg[24]_i_2/CI
+    Routing       SLICE_X52Y129        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.100    13.874 r  system/bosio/output0/u_display_transform/dx0_reg[24]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.874    system/bosio/output0/u_display_transform/dx0_reg[24]_i_2_n_3
+    Routing       SLICE_X52Y130                                                     r  system/bosio/output0/u_display_transform/dx0_reg[28]_i_2/CI
+    Routing       SLICE_X52Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.100    13.974 r  system/bosio/output0/u_display_transform/dx0_reg[28]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.974    system/bosio/output0/u_display_transform/dx0_reg[28]_i_2_n_3
+    Routing       SLICE_X52Y131                                                     r  system/bosio/output0/u_display_transform/dx0_reg[31]_i_2/CI
+    Placement     SLICE_X52Y131        CARRY4 (Prop_carry4_CI_O[0])
+                                                                    0.178    14.152 r  system/bosio/output0/u_display_transform/dx0_reg[31]_i_2/O[0]
+                                       net (fo=2, routed)           0.531    14.683    system/bosio/output0/u_display_transform/dx0_reg[31]_i_2_n_10
+    Placement     SLICE_X53Y131                                                     r  system/bosio/output0/u_display_transform/diff_x[31]_i_5/I0
+    Routing       SLICE_X53Y131        LUT4 (Prop_lut4_I0_O)        0.238    14.921 r  system/bosio/output0/u_display_transform/diff_x[31]_i_5/O
+                                       net (fo=1, routed)           0.000    14.921    system/bosio/output0/u_display_transform/diff_x[31]_i_5_n_3
+    Routing       SLICE_X53Y131                                                     r  system/bosio/output0/u_display_transform/diff_x_reg[31]_i_1/S[1]
+    Routing       SLICE_X53Y131        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    15.378 r  system/bosio/output0/u_display_transform/diff_x_reg[31]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.378    system/bosio/output0/u_display_transform/diff_x_reg[31]_i_1_n_3
+    Routing       SLICE_X53Y132                                                     r  system/bosio/output0/u_display_transform/diff_x_reg[32]_i_1/CI
+    Routing       SLICE_X53Y132        CARRY4 (Prop_carry4_CI_O[0])
+                                                                    0.181    15.559 r  system/bosio/output0/u_display_transform/diff_x_reg[32]_i_1/O[0]
+                                       net (fo=1, routed)           0.000    15.559    system/bosio/output0/u_display_transform/diff_x0[32]
+    Routing       SLICE_X53Y132        FDRE                                         r  system/bosio/output0/u_display_transform/diff_x_reg[32]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.295    15.843    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X53Y132        FDRE                                         r  system/bosio/output0/u_display_transform/diff_x_reg[32]/C
+                                       clock pessimism              0.348    16.190    
+                                       clock uncertainty           -0.360    15.830    
+                  SLICE_X53Y132        FDRE (Setup_fdre_C_D)        0.059    15.889    system/bosio/output0/u_display_transform/diff_x_reg[32]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.889    
+                                       arrival time                         -15.559    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.330    
+
+Slack (MET) :             0.349ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.288ns  (logic 3.398ns (36.586%)  route 5.890ns (63.414%))
+  Logic Levels:           12  (CARRY4=8 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.846ns = ( 15.846 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    15.544 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/O[2]
+                                       net (fo=1, routed)           0.000    15.544    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[26]
+    Routing       SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[26]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.298    15.846    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[26]/C
+                                       clock pessimism              0.348    16.193    
+                                       clock uncertainty           -0.360    15.833    
+                  SLICE_X50Y136        FDRE (Setup_fdre_C_D)        0.059    15.892    system/bosio/output0/u_display_transform/diff_y_reg[26]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.892    
+                                       arrival time                         -15.544    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.349    
+
+Slack (MET) :             0.368ns  (required time - arrival time)
+  Source:                 system/bosio/output0/sensor_mode_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            system/bosio/output0/u_display_transform/diff_y_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_pll_i
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_pll_i rise@10.000ns - clk_pll_i rise@0.000ns)
+  Data Path Delay:        9.269ns  (logic 3.379ns (36.456%)  route 5.890ns (63.544%))
+  Logic Levels:           12  (CARRY4=8 LUT1=1 LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.846ns = ( 15.846 - 10.000 ) 
+    Source Clock Delay      (SCD):    6.256ns
+    Clock Pessimism Removal (CPR):    0.348ns
+  Clock Uncertainty:      0.360ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.098ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.300ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock clk_pll_i rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.360     6.256    system/bosio/output0/ui_clk
+                  SLICE_X79Y169        FDRE                                         r  system/bosio/output0/sensor_mode_reg/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X79Y169        FDRE (Prop_fdre_C_Q)         0.379     6.635 r  system/bosio/output0/sensor_mode_reg/Q
+                                       net (fo=56, routed)          3.006     9.641    system/bosio/output0/u_sensor_pose/valid_reg[0]
+    Placement     SLICE_X104Y125                                                    r  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/I1
+    Routing       SLICE_X104Y125       LUT3 (Prop_lut3_I1_O)        0.126     9.767 f  system/bosio/output0/u_sensor_pose/raw_dx[5]_i_1/O
+                                       net (fo=7, routed)           1.658    11.424    system/bosio/output0/u_sensor_pose/selected_cfg_data[5]
+    Routing       SLICE_X55Y123                                                     f  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/I0
+    Routing       SLICE_X55Y123        LUT1 (Prop_lut1_I0_O)        0.283    11.707 r  system/bosio/output0/u_sensor_pose/dy0[7]_i_11/O
+                                       net (fo=1, routed)           0.000    11.707    system/bosio/output0/u_sensor_pose/dy0[7]_i_11_n_3
+    Routing       SLICE_X55Y123                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/S[1]
+    Routing       SLICE_X55Y123        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    12.164 r  system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4/CO[3]
+                                       net (fo=1, routed)           0.000    12.164    system/bosio/output0/u_sensor_pose/dy0_reg[7]_i_4_n_3
+    Routing       SLICE_X55Y124                                                     r  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/CI
+    Placement     SLICE_X55Y124        CARRY4 (Prop_carry4_CI_O[2])
+                                                                    0.200    12.364 f  system/bosio/output0/u_sensor_pose/dy0_reg[11]_i_4/O[2]
+                                       net (fo=2, routed)           0.518    12.882    system/bosio/output0/u_display_transform/turn_dx00_in[10]
+    Placement     SLICE_X51Y126                                                     f  system/bosio/output0/u_display_transform/dy0[10]_i_2/I1
+    Placement     SLICE_X51Y126        LUT6 (Prop_lut6_I1_O)        0.253    13.135 r  system/bosio/output0/u_display_transform/dy0[10]_i_2/O
+                                       net (fo=3, routed)           0.000    13.135    system/bosio/output0/u_display_transform/dy0[12]_i_6_n_3
+    Placement     SLICE_X51Y126                                                     r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/S[1]
+    Routing       SLICE_X51Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                                    0.457    13.592 r  system/bosio/output0/u_display_transform/dy0_reg[12]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.592    system/bosio/output0/u_display_transform/dy0_reg[12]_i_2_n_3
+    Routing       SLICE_X51Y127                                                     r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CI
+    Routing       SLICE_X51Y127        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.690 r  system/bosio/output0/u_display_transform/dy0_reg[16]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.690    system/bosio/output0/u_display_transform/dy0_reg[16]_i_2_n_3
+    Routing       SLICE_X51Y128                                                     r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CI
+    Routing       SLICE_X51Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                                    0.098    13.788 r  system/bosio/output0/u_display_transform/dy0_reg[20]_i_2/CO[3]
+                                       net (fo=1, routed)           0.000    13.788    system/bosio/output0/u_display_transform/dy0_reg[20]_i_2_n_3
+    Routing       SLICE_X51Y129                                                     r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/CI
+    Placement     SLICE_X51Y129        CARRY4 (Prop_carry4_CI_O[1])
+                                                                    0.265    14.053 r  system/bosio/output0/u_display_transform/dy0_reg[24]_i_2/O[1]
+                                       net (fo=2, routed)           0.709    14.762    system/bosio/output0/u_display_transform/turn_dy0[22]
+    Placement     SLICE_X50Y135                                                     r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/I0
+    Routing       SLICE_X50Y135        LUT4 (Prop_lut4_I0_O)        0.250    15.012 r  system/bosio/output0/u_display_transform/diff_y[23]_i_3/O
+                                       net (fo=1, routed)           0.000    15.012    system/bosio/output0/u_sensor_pose/diff_y_reg[23][2]
+    Routing       SLICE_X50Y135                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/S[2]
+    Routing       SLICE_X50Y135        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                                    0.332    15.344 r  system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1/CO[3]
+                                       net (fo=1, routed)           0.000    15.344    system/bosio/output0/u_sensor_pose/diff_y_reg[23]_i_1_n_3
+    Routing       SLICE_X50Y136                                                     r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/CI
+    Routing       SLICE_X50Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                                    0.181    15.525 r  system/bosio/output0/u_sensor_pose/diff_y_reg[27]_i_1/O[0]
+                                       net (fo=1, routed)           0.000    15.525    system/bosio/output0/u_display_transform/diff_y_reg[32]_0[24]
+    Routing       SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[24]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock clk_pll_i rise edge)
+                                                                   10.000    10.000 r  
+                  R4                                                0.000    10.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    10.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    10.804 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    12.503    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    12.581 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    13.998    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    14.071 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    15.100    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    15.169 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    15.946    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    13.019 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    14.471    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    14.548 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=50445, routed)       1.298    15.846    system/bosio/output0/u_display_transform/ui_clk
+                  SLICE_X50Y136        FDRE                                         r  system/bosio/output0/u_display_transform/diff_y_reg[24]/C
+                                       clock pessimism              0.348    16.193    
+                                       clock uncertainty           -0.360    15.833    
+                  SLICE_X50Y136        FDRE (Setup_fdre_C_D)        0.059    15.892    system/bosio/output0/u_display_transform/diff_y_reg[24]
+  ---------------------------------------------------------------------------------
+                                       required time                         15.892    
+                                       arrival time                         -15.525    
+  ---------------------------------------------------------------------------------
+                                       slack                                  0.368    
+
+
+
+

@@ -1,0 +1,24 @@
+{
+  "upstream_url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz",
+  "upstream_sha256": "b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb",
+  "regular_files_compared": 86618,
+  "changes": [
+    {
+      "path": "kernel/time/clocksource.c",
+      "base_sha256": "300b4440a391ec768705810cff2d64577b80a63209416cc417059a9965ab56c5",
+      "sha256": "33dcc8f270d0bc67299efa02772fe79f76e515e5ad5ee953b7caac1c71134204"
+    },
+    {
+      "path": "kernel/time/tick-common.c",
+      "base_sha256": "737e640d30a9f788879db330ac5c6b291230c3d4b0ae5cf10c708773dc0ad29e",
+      "sha256": "abd01e2fc931a1ffa42b505acd5e485c565dae7f2e44e5743e1162b53ebd03ba"
+    },
+    {
+      "path": "kernel/time/timekeeping.c",
+      "base_sha256": "2c9e225c2d348a22329048b186d3cff0b23060bc6c4dcdf26763ae6d3b7519b6",
+      "sha256": "2b5244aab21938ca48171764ba49237f0c8dc47825fae6796fe109a9a45b35ac"
+    }
+  ],
+  "extra_files": [],
+  "image_sha256": "56787fc5fbc97313b70b445db82a1147424439dbef6d48087185b508415450c0"
+}

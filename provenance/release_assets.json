@@ -1,0 +1,18 @@
+{
+  "linux-6.12-oryukdo-trace-v2.tar.gz": {
+    "sha256": "106b4d84cc38646402f91914c61124d46a76471e3b97e18425a1c3f30e8128ff",
+    "bytes": 314903862
+  },
+  "linux-6.12.tar.xz": {
+    "sha256": "b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb",
+    "bytes": 147906904
+  },
+  "ORYUKDO-KFB-clocksource-trace-v2.img": {
+    "sha256": "1ea331456cb3b9e69caf80159dfa17f3b71a5e2b16f47e520c48a257669ba255",
+    "bytes": 3880960
+  },
+  "ORYUKDO-KFB-TLB8-20261108.bit": {
+    "sha256": "9e762305efd3c376cce979bb6857f428e02ccfe275388b85d412e39d44f9296b",
+    "bytes": 6314029
+  }
+}
