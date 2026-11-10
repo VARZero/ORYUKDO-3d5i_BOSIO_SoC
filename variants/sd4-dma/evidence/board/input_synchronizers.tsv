@@ -1,0 +1,7 @@
+uart_rx	system/soc/uart/rx_meta_reg
+gp_uart_rx	system/uart1/uart/rx_meta_reg
+gp_spi_miso	system/spi1/miso_meta_reg
+gp_i2c_scl	system/i2c1/scl_meta_reg
+gp_i2c_sda	system/i2c1/sda_meta_reg
+sensor_scl	sensor_clock_input/syncstages_ff_reg[0]
+sensor_sda	sensor_data_input/syncstages_ff_reg[0]

@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Nov 10 09:42:22 2026
+| Host         : VieupE-Desk running 64-bit major release  (build 9200)
+| Command      : report_timing -from [get_clocks serial_raw] -to [get_clocks serial_raw] -max_paths 10 -file D:/temp/gen3bosio/sd4-dma/board_v6_incremental/route/timing_serial_raw.rpt
+| Design       : gen3_kfb_bosio
+| Device       : 7a200t-fbg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+No timing paths found.
+
+

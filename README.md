@@ -1,5 +1,36 @@
 # ORYUKDO-3d5i_BOSIO_SoC
 
+## 최신 추가: SD 4비트·DMA·ext4 (2026-11-10)
+
+[SD4·DMA 구성](variants/sd4-dma/README.md)에 native 4비트 SD, CPU 제어 DMA, PLIC 외부 인터럽트,
+Linux MMC/DMAengine 드라이버와 영구 ext4 `/data`를 추가했다. BusyBox와 BoAYO native-v2는 보존했다.
+소스·테스트·원본 검증 로그·Vivado 리포트는 `variants/sd4-dma/`에 함께 있다.
+
+**새 구성은 시뮬레이션과 전체 보드 합성·배선을 통과했으며, 실보드 SD 파일시스템 검증은 아직 하지 않았다.**
+기존 검증본과 혼동하지 않도록 루트의 2026-11-08 소스와 증거를 보존했다. 두 구성의 소스를 섞지 않는다.
+
+| 항목 | SD4·DMA 전체 보드 배선 결과 |
+|---|---:|
+| CPU / fabric / SD 최대 | 50 / 100 / 25 MHz |
+| LUT / FF / BRAM / DSP | 114,075 / 74,189 / 101.5 / 62 |
+| Setup WNS / Hold WHS | +0.034 ns / +0.027 ns |
+| TNS / THS | 0 / 0 |
+| CDC Warning·Critical | 0 |
+| DRC | Error·Critical 0, 기존 MIG Warning 5건 |
+
+[새 사전 릴리스: 비트스트림·SD 이미지·Linux 전체 소스](https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/tag/sd4-dma-20261110-candidate)
+에서 파일을 받는다. 새 비트스트림과 새 SD 이미지는 한 쌍으로 사용해야 한다.
+
+- [추가 기능과 검증 범위](variants/sd4-dma/README.md)
+- [상세 구조·수정 내역·타이밍 분석](variants/sd4-dma/README_STORAGE_KO.md)
+- [실보드 확인 절차](variants/sd4-dma/BOARD_STORAGE_CHECK_KO.md)
+- [결과·소스·산출물 해시](variants/sd4-dma/provenance/board_manifest.json)
+
+게시본 무결성 확인: `python scripts/verify_sd4_publication.py`.
+대용량 이미지는 Git 이력에 넣지 않고 사전 릴리스 첨부파일로 관리한다.
+
+## 기존 실보드 부팅 검증본 (2026-11-08, 루트 디렉터리)
+
 PZ-A7200T-KFB에서 Linux 6.12와 BusyBox UART 쉘의 부팅을 확인한 ORYUKDO Gen3 + BOSIO SoC 소스이다. 기준은 **2026-11-08 실보드에서 검증한 TLB8 비트스트림과 trace-v2 진단 SD**의 조합이다.
 
 비트스트림, SD 이미지, 전체 Linux 소스 압축본은 [실보드 검증본 Release](https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/tag/board-20261108-tlb8-trace-v2)에서 받는다. 첨부한 `SOC-SHA256SUMS.txt`로 다운로드한 파일의 해시를 확인할 수 있다.

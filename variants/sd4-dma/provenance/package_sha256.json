@@ -1,0 +1,8 @@
+{
+  "fw_jump.bin": "0e7c072de5160f8346719a6b458bed12754ac4df88a5d812272721a25fe79eee",
+  "gen3.dtb": "25c3bbe42f29edbf9df46ffd799384fa3341b2a191b98e2761fe9930849a349b",
+  "linux-6.12-sd4-dma-source.tar.gz": "62a15cf984f1f9100cfa2a7f986f2954195d7334c8eb29a0c5e2553f4a9288d3",
+  "ORYUKDO-KFB-SD4-DMA-v1.bit": "fe1ce8e52f30f1b9bd7bad944a0bf6f981eef9bba01438c0d26b40da6126fdf0",
+  "ORYUKDO-KFB-SD4-DMA-v1.img": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+  "ORYUKDO-SD4-DMA-rtl-software-tests.tar.gz": "d170cd78fa486b3c4e49c0da7f48894d340cb2f68c004e1a332e1d1702172508"
+}

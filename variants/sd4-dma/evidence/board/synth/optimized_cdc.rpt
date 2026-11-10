@@ -1,0 +1,111 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Nov 10 07:45:57 2026
+| Host         : VieupE-Desk running 64-bit major release  (build 9200)
+| Command      : report_cdc -details -no_waiver -file D:/temp/gen3bosio/sd4-dma/board_v6/synth/optimized_cdc.rpt
+| Design       : gen3_kfb_bosio
+| Device       : 7a200t-fbg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+-----------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID     Severity  Count  Description
+-----  --------  -----  -------------------------------------------------------
+CDC-3  Info         19  1-bit synchronized with ASYNC_REG property
+CDC-9  Info         18  Asynchronous reset synchronized with ASYNC_REG property
+
+Source Clock: clk_pll_i
+Destination Clock: board200
+CDC Type: Safely Timed
+
+Row  ID     Severity  Description                                 Depth  Exception                Source (From)                                                            Destination (To)
+---  -----  --------  ------------------------------------------  -----  -----------------------  -----------------------------------------------------------------------  -----------------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  Max Delay Datapath Only  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep/C  ddr/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.rst_r1_reg/D
+
+Source Clock: input port clock
+Destination Clock: board200
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  -------------  -------------------------------------------------------------------
+  1  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property     15  False Path  rst_n          ddr/u_mig_7series_0_mig/u_iodelay_ctrl/rst_ref_sync_r_reg[0][0]/PRE
+
+Source Clock: cpu_raw
+Destination Clock: clk_pll_i
+CDC Type: Safely Timed
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)                                                                                                            Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -----------------------------------------------------------------------------------------------------------------------  --------------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  system/cpu_crossing/ar/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/C  system/cpu_crossing/ar/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst/syncstages_ff_reg[0]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  system/cpu_crossing/aw/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/C  system/cpu_crossing/aw/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst/syncstages_ff_reg[0]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  False Path  system/cpu_crossing/b/ack_reg/C                                                                                          system/cpu_crossing/b/ack_meta_reg/D
+  4  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  system/cpu_crossing/r/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg/C   system/cpu_crossing/r/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst/syncstages_ff_reg[0]/D
+  5  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  system/cpu_crossing/w/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/C   system/cpu_crossing/w/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst/syncstages_ff_reg[0]/D
+  6  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  False Path  system/lock_source_reg/C                                                                                                 system/lock_meta_reg/D
+  7  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  system/snoop_cdc/consumed_reg/C                                                                                          system/snoop_cdc/completion_path.completion_sync/syncstages_ff_reg[0]/D
+  8  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  system/snoop_cdc/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg/C        system/snoop_cdc/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst/syncstages_ff_reg[0]/D
+
+Source Clock: input port clock
+Destination Clock: clk_pll_i
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  -------------  -----------------------------------------------------------------------
+  1  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property     12  False Path  rst_n          ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r_reg[0]/PRE
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   3  False Path  sensor_scl     sensor_clock_input/syncstages_ff_reg[0]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   3  False Path  sensor_sda     sensor_data_input/syncstages_ff_reg[0]/D
+  4  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/ar/dest_reset/arststages_ff_reg[0]/CLR
+  5  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/aw/dest_reset/arststages_ff_reg[0]/CLR
+  6  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/r/source_reset/arststages_ff_reg[0]/CLR
+  7  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/w/dest_reset/arststages_ff_reg[0]/CLR
+  8  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      2  False Path  rst_n          system/fr/sync_reg[0]/CLR
+  9  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/snoop_cdc/source_reset/arststages_ff_reg[0]/CLR
+ 10  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      5  False Path  rst_n          ui_release/arststages_ff_reg[0]/CLR
+
+Source Clock: mem_refclk
+Destination Clock: clk_pll_i
+CDC Type: User Ignored
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)                                                                                                                                                                                            Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/MEMREFCLK  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/dqsfind_calib_left.u_ddr_phy_dqs_found_cal_hr/pi_dqs_found_lanes_r1_reg[0]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/MEMREFCLK  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/dqsfind_calib_left.u_ddr_phy_dqs_found_cal_hr/pi_dqs_found_lanes_r1_reg[1]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/MEMREFCLK  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/dqsfind_calib_left.u_ddr_phy_dqs_found_cal_hr/pi_dqs_found_lanes_r1_reg[2]/D
+  4  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in/MEMREFCLK  ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/dqsfind_calib_left.u_ddr_phy_dqs_found_cal_hr/pi_dqs_found_lanes_r1_reg[3]/D
+
+Source Clock: pixel_raw
+Destination Clock: clk_pll_i
+CDC Type: Safely Timed
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)                                                                                                       Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  ------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  display/frame_toggle_reg/C                                                                                          display/frame_crossing/syncstages_ff_reg[0]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  display/scan_fifo/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg/C  display/scan_fifo/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst/syncstages_ff_reg[0]/D
+
+Source Clock: input port clock
+Destination Clock: cpu_raw
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  -------------  ------------------------------------------------------------
+  1  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/ar/source_reset/arststages_ff_reg[0]/CLR
+  2  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/aw/source_reset/arststages_ff_reg[0]/CLR
+  3  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/r/dest_reset/arststages_ff_reg[0]/CLR
+  4  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/cpu_crossing/w/source_reset/arststages_ff_reg[0]/CLR
+  5  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/snoop_cdc/dest_reset/arststages_ff_reg[0]/CLR
+  6  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  rst_n          system/soc/cpu/scheduler/pin_release_reg[0]/CLR
+  7  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      2  False Path  rst_n          system/soc/pin_release_reg[0]/CLR
+
+Source Clock: clk_pll_i
+Destination Clock: pixel_raw
+CDC Type: Safely Timed
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)                                                                                                       Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  ------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  display/fifo_reset_n_reg/C                                                                                          display/scan_fifo/dest_reset/arststages_ff_reg[0]/CLR
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   3  False Path  display/scan_fifo/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/C  display/scan_fifo/transport/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst/syncstages_ff_reg[0]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property                   3  False Path  display/front_valid_reg/C                                                                                           display/valid_crossing/syncstages_ff_reg[0]/D
+  4  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      4  False Path  run_ui_reg/C                                                                                                        pixel_release/arststages_ff_reg[0]/CLR
+

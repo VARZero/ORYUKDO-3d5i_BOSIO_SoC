@@ -1,0 +1,57 @@
+%Warning-DECLFILENAME: soc/bosio/gen3_axil_regs.sv:35:8: Filename 'gen3_axil_regs' does not match MODULE name: 'gen3_axi_uart'
+   35 | module gen3_axi_uart(
+      |        ^~~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.020
+                       ... Use "/* verilator lint_off DECLFILENAME */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: soc/bosio/or_storage_dma.sv:47:26: Operator SUB expects 8 bits on the LHS, but LHS's VARREF 'count' generates 5 bits.
+                                                       : ... note: In instance 'or_sd_storage.dma'
+   47 |    memory.ar.len=8'(count-1'b1);memory.aw.len=8'(count-1'b1);
+      |                          ^
+%Warning-WIDTHEXPAND: soc/bosio/or_storage_dma.sv:47:55: Operator SUB expects 8 bits on the LHS, but LHS's VARREF 'count' generates 5 bits.
+                                                       : ... note: In instance 'or_sd_storage.dma'
+   47 |    memory.ar.len=8'(count-1'b1);memory.aw.len=8'(count-1'b1);
+      |                                                       ^
+%Warning-UNUSEDSIGNAL: soc/bosio/or_sd_storage.sv:27:31: Bits of signal are not used: 'address'[31:8]
+                                                       : ... note: In instance 'or_sd_storage'
+   27 |  wire valid,store;wire [31:0] address,write_data;wire [3:0] mask;
+      |                               ^~~~~~~
+%Warning-UNUSEDSIGNAL: soc/bosio/or_sd_storage.sv:29:7: Signal is not used: 'phy_busy'
+                                                      : ... note: In instance 'or_sd_storage'
+   29 |  wire phy_busy,phy_done;wire [2:0] phy_error;wire [127:0] phy_response;
+      |       ^~~~~~~~
+%Warning-UNUSEDSIGNAL: soc/bosio/or_storage_dma.sv:22:31: Bits of signal are not used: 'address'[31:8]
+                                                        : ... note: In instance 'or_sd_storage.dma'
+   22 |  wire valid,store;wire [31:0] address,write_data;wire [3:0] mask;
+      |                               ^~~~~~~
+%Warning-UNUSEDSIGNAL: soc/bosio/or_sd_native.sv:25:16: Bits of signal are not used: 'rsp_shift'[135]
+                                                      : ... note: In instance 'or_sd_storage.phy'
+   25 |  logic [135:0] rsp_shift;
+      |                ^~~~~~~~~
+%Warning-UNUSEDSIGNAL: soc/bosio/or_sd_native.sv:28:14: Bits of signal are not used: 'byte_shift'[7]
+                                                      : ... note: In instance 'or_sd_storage.phy'
+   28 |  logic [7:0] byte_shift;
+      |              ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: soc/bosio/or_sd_native.sv:35:14: Bits of signal are not used: 'token'[4]
+                                                      : ... note: In instance 'or_sd_storage.phy'
+   35 |  logic [4:0] token;
+      |              ^~~~~
+%Warning-UNUSEDPARAM: soc/bosio/or_bo_axi_pkg.sv:38:35: Parameter is not used: 'SLVERR'
+                                                      : ... note: In instance 'or_sd_storage.phy'
+   38 |     localparam logic [1:0] OKAY=0,SLVERR=2,DECERR=3;
+      |                                   ^~~~~~
+%Warning-UNUSEDPARAM: soc/bosio/or_bo_axi_pkg.sv:38:44: Parameter is not used: 'DECERR'
+                                                      : ... note: In instance 'or_sd_storage.phy'
+   38 |     localparam logic [1:0] OKAY=0,SLVERR=2,DECERR=3;
+      |                                            ^~~~~~
+%Warning-UNUSEDSIGNAL: soc/bosio/or_bo_axi_pkg.sv:57:50: Bits of signal are not used: 'a'[98,18:0]
+                                                       : ... note: In instance 'or_sd_storage.phy'
+   57 |     function automatic bit legal(input ax_addr_t a,input bit cpu);
+      |                                                  ^
+%Warning-UNUSEDSIGNAL: soc/bosio/or_bo_axi_pkg.sv:58:22: Bits of signal are not used: 'last_offset'[11:0]
+                                                       : ... note: In instance 'or_sd_storage.phy'
+   58 |         logic [12:0] last_offset;
+      |                      ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: soc/bosio/gen3_axil_regs.sv:5:35: Bits of signal are not used: 'req'[10:5]
+                                                       : ... note: In instance 'or_sd_storage.dma.regs'
+    5 |     input or_bo_axi_pkg::al_req_t req,output or_bo_axi_pkg::al_rsp_t rsp,
+      |                                   ^~~

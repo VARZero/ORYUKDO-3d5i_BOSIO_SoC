@@ -1,0 +1,66 @@
+[0] %Warning: xpm_cdc.sv:257: TOP.tb_gen3_bosio.dut.snoop_cdc.completion_path.completion_sync.sim_check.sim_xil_check: Vivado Simulator does not currently support the SystemVerilog Assertion syntax used within XPM_CDC.  
+Messages related to potential misuse will not be reported.
+G
+PROGRESS cycles=199999 retired=1347 pc=8000043c done=00000000 fabric=3 owner=0
+// Interrupt Monitor : interrupt for ap_done detected @ "2262665000"
+// Interrupt Monitor : interrupt for ap_done detected @ "2266235000"
+GEN3 BOSIO SOC PROGRESS cycles=399999 retired=2890 pc=800007c0 done=00000000 fabric=0 owner=0
+OK
+PASS GEN3_BOSIO cycles=418889 retired=3105 reads='{'h270b, 'h24, 'h12, 'h1190}  writes='{'h13b, 'h200, 'h100, 'h0}  snoops=768 lock_cycles=381 pixels=146983 output_read_beats=4496
+- soc/tests/tb_gen3_bosio.sv:147: Verilog $finish
+[0] %Warning: xpm_cdc.sv:257: TOP.tb_gen3_bosio.dut.snoop_cdc.completion_path.completion_sync.sim_check.sim_xil_check: Vivado Simulator does not currently support the SystemVerilog Assertion syntax used within XPM_CDC.  
+Messages related to potential misuse will not be reported.
+G
+PROGRESS cycles=199999 retired=1359 pc=8000043c done=00000000 fabric=0 owner=0
+// Interrupt Monitor : interrupt for ap_done detected @ "2246645000"
+// Interrupt Monitor : interrupt for ap_done detected @ "2250205000"
+GEN3 BOSIO SOC PROGRESS cycles=399999 retired=2918 pc=800007c0 done=00000000 fabric=0 owner=0
+OK
+PASS GEN3_BOSIO cycles=418907 retired=3140 reads='{'h276e, 'h24, 'h12, 'h1190}  writes='{'h13b, 'h200, 'h100, 'h0}  snoops=768 lock_cycles=383 pixels=149015 output_read_beats=4496
+- soc/tests/tb_gen3_bosio.sv:147: Verilog $finish
+[0] %Warning: xpm_cdc.sv:257: TOP.tb_gen3_bosio.dut.snoop_cdc.completion_path.completion_sync.sim_check.sim_xil_check: Vivado Simulator does not currently support the SystemVerilog Assertion syntax used within XPM_CDC.  
+Messages related to potential misuse will not be reported.
+G
+PROGRESS cycles=199999 retired=1340 pc=80000440 done=00000000 fabric=3 owner=0
+// Interrupt Monitor : interrupt for ap_done detected @ "2268815000"
+// Interrupt Monitor : interrupt for ap_done detected @ "2272385000"
+GEN3 BOSIO SOC PROGRESS cycles=399999 retired=2879 pc=800007c0 done=00000000 fabric=0 owner=0
+OK
+PASS GEN3_BOSIO cycles=420641 retired=3114 reads='{'h2723, 'h24, 'h12, 'h1190}  writes='{'h13b, 'h200, 'h100, 'h0}  snoops=768 lock_cycles=391 pixels=147648 output_read_beats=4496
+- soc/tests/tb_gen3_bosio.sv:147: Verilog $finish
+[0] %Warning: xpm_cdc.sv:257: TOP.tb_gen3_bosio.dut.snoop_cdc.completion_path.completion_sync.sim_check.sim_xil_check: Vivado Simulator does not currently support the SystemVerilog Assertion syntax used within XPM_CDC.  
+Messages related to potential misuse will not be reported.
+G
+PROGRESS cycles=199999 retired=2199 pc=8000044c done=00000000 fabric=0 owner=0
+PROGRESS cycles=399999 retired=4857 pc=80000448 done=00000000 fabric=1 owner=0
+PROGRESS cycles=599999 retired=7332 pc=80000498 done=00000000 fabric=0 owner=0
+// Interrupt Monitor : interrupt for ap_done detected @ "6537065000"
+// Interrupt Monitor : interrupt for ap_done detected @ "6540635000"
+GEN3 BOSIO SPROGRESS cycles=799999 retired=8875 pc=80000820 done=00000000 fabric=0 owner=0
+OC OK
+PASS GEN3_BOSIO cycles=847375 retired=9332 reads='{'h60c8, 'h24, 'h12, 'h1190}  writes='{'h23b, 'h200, 'h100, 'h0}  snoops=768 lock_cycles=381 pixels=148319 output_read_beats=4496
+- soc/tests/tb_gen3_bosio.sv:147: Verilog $finish
+[0] %Warning: xpm_cdc.sv:257: TOP.tb_gen3_bosio.dut.snoop_cdc.completion_path.completion_sync.sim_check.sim_xil_check: Vivado Simulator does not currently support the SystemVerilog Assertion syntax used within XPM_CDC.  
+Messages related to potential misuse will not be reported.
+G
+PROGRESS cycles=199999 retired=2229 pc=80000444 done=00000000 fabric=0 owner=0
+PROGRESS cycles=399999 retired=4931 pc=80000448 done=00000000 fabric=3 owner=0
+PROGRESS cycles=599999 retired=7403 pc=80000490 done=00000000 fabric=0 owner=0
+// Interrupt Monitor : interrupt for ap_done detected @ "6453545000"
+// Interrupt Monitor : interrupt for ap_done detected @ "6457105000"
+GEN3 BOSIO SOPROGRESS cycles=799999 retired=8975 pc=80000820 done=00000000 fabric=0 owner=0
+C OK
+PASS GEN3_BOSIO cycles=839363 retired=9373 reads='{'h6137, 'h24, 'h12, 'h1190}  writes='{'h23b, 'h200, 'h100, 'h0}  snoops=768 lock_cycles=372 pixels=149202 output_read_beats=4496
+- soc/tests/tb_gen3_bosio.sv:147: Verilog $finish
+[0] %Warning: xpm_cdc.sv:257: TOP.tb_gen3_bosio.dut.snoop_cdc.completion_path.completion_sync.sim_check.sim_xil_check: Vivado Simulator does not currently support the SystemVerilog Assertion syntax used within XPM_CDC.  
+Messages related to potential misuse will not be reported.
+G
+PROGRESS cycles=199999 retired=2184 pc=80000448 done=00000000 fabric=0 owner=0
+PROGRESS cycles=399999 retired=4814 pc=8000043c done=00000000 fabric=0 owner=0
+PROGRESS cycles=599999 retired=7285 pc=8000049c done=00000000 fabric=0 owner=0
+// Interrupt Monitor : interrupt for ap_done detected @ "6588685000"
+// Interrupt Monitor : interrupt for ap_done detected @ "6592255000"
+GEN3 BOSIO SPROGRESS cycles=799999 retired=8843 pc=80000824 done=00000000 fabric=3 owner=0
+OC OK
+PASS GEN3_BOSIO cycles=851401 retired=9342 reads='{'h60e3, 'h24, 'h12, 'h1190}  writes='{'h23b, 'h200, 'h100, 'h0}  snoops=768 lock_cycles=382 pixels=146560 output_read_beats=4496
+- soc/tests/tb_gen3_bosio.sv:147: Verilog $finish

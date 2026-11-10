@@ -1,0 +1,1259 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Nov 10 09:42:22 2026
+| Host         : VieupE-Desk running 64-bit major release  (build 9200)
+| Command      : report_timing -from [get_clocks pixel_raw] -to [get_clocks pixel_raw] -max_paths 10 -file D:/temp/gen3bosio/sd4-dma/board_v6_incremental/route/timing_pixel_raw.rpt
+| Design       : gen3_kfb_bosio
+| Device       : 7a200t-fbg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.192ns  (required time - arrival time)
+  Source:                 display/py_reg[6]/C
+                            (rising edge-triggered cell FDSE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        11.065ns  (logic 1.671ns (15.102%)  route 9.394ns (84.898%))
+  Logic Levels:           9  (LUT2=2 LUT3=2 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.091ns = ( 19.559 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.487ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.591     6.487    display/pixel_clk
+                  SLICE_X130Y209       FDSE                                         r  display/py_reg[6]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X130Y209       FDSE (Prop_fdse_C_Q)         0.379     6.866 f  display/py_reg[6]/Q
+                                       net (fo=2, routed)           0.481     7.347    display/py_reg_n_3_[6]
+    Placement     SLICE_X130Y208                                                    f  display/transmitter_i_89/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.126     7.473 r  display/transmitter_i_89/O
+                                       net (fo=3, routed)           0.362     7.835    display/transmitter_i_89_n_3
+    Placement     SLICE_X130Y208                                                    r  display/transmitter_i_87/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.267     8.102 f  display/transmitter_i_87/O
+                                       net (fo=2, routed)           0.491     8.593    display/transmitter_i_87_n_3
+    Placement     SLICE_X130Y207                                                    f  display/transmitter_i_78/I3
+    Placement     SLICE_X130Y207       LUT6 (Prop_lut6_I3_O)        0.105     8.698 r  display/transmitter_i_78/O
+                                       net (fo=2, routed)           0.345     9.044    display/de
+    Placement     SLICE_X132Y206                                                    r  display/transmitter_i_86/I0
+    Placement     SLICE_X132Y206       LUT3 (Prop_lut3_I0_O)        0.106     9.150 r  display/transmitter_i_86/O
+                                       net (fo=2, routed)           0.329     9.479    display/scan_fifo/ever_underflow_reg_0
+    Placement     SLICE_X133Y206                                                    r  display/scan_fifo/transmitter_i_31/I5
+    Placement     SLICE_X133Y206       LUT6 (Prop_lut6_I5_O)        0.268     9.747 f  display/scan_fifo/transmitter_i_31/O
+                                       net (fo=30, routed)          1.182    10.929    hdmi_output/pDataOut_1_reg[0]_0
+    Moved         SLICE_X142Y217                                                    f  hdmi_output/transmitter_i_24/I3
+    Moved         SLICE_X142Y217       LUT4 (Prop_lut4_I3_O)        0.105    11.034 r  hdmi_output/transmitter_i_24/O
+                                       net (fo=3, routed)           5.501    16.535    hdmi_output/transmitter/DataEncoders[1].DataEncoder/vid_pData[1]
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/I0
+    Placement     SLICE_X8Y243         LUT3 (Prop_lut3_I0_O)        0.105    16.640 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.141    16.781    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2_n_3
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3/I3
+    Placement     SLICE_X8Y243         LUT6 (Prop_lut6_I3_O)        0.105    16.886 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3/O
+                                       net (fo=3, routed)           0.560    17.446    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3_n_3
+    Placement     SLICE_X9Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[2]_i_1/I1
+    Routing       SLICE_X9Y243         LUT6 (Prop_lut6_I1_O)        0.105    17.551 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[2]_i_1/O
+                                       net (fo=1, routed)           0.000    17.551    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[2]_i_1_n_3
+    Routing       SLICE_X9Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[2]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.543    19.559    hdmi_output/transmitter/DataEncoders[1].DataEncoder/PixelClk
+                  SLICE_X9Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[2]/C
+                                       clock pessimism              0.363    19.922    
+                                       clock uncertainty           -0.210    19.712    
+                  SLICE_X9Y243         FDRE (Setup_fdre_C_D)        0.032    19.744    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[2]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.744    
+                                       arrival time                         -17.551    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.192    
+
+Slack (MET) :             2.194ns  (required time - arrival time)
+  Source:                 display/py_reg[6]/C
+                            (rising edge-triggered cell FDSE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        11.061ns  (logic 1.671ns (15.108%)  route 9.390ns (84.892%))
+  Logic Levels:           9  (LUT2=2 LUT3=2 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.091ns = ( 19.559 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.487ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.591     6.487    display/pixel_clk
+                  SLICE_X130Y209       FDSE                                         r  display/py_reg[6]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X130Y209       FDSE (Prop_fdse_C_Q)         0.379     6.866 f  display/py_reg[6]/Q
+                                       net (fo=2, routed)           0.481     7.347    display/py_reg_n_3_[6]
+    Placement     SLICE_X130Y208                                                    f  display/transmitter_i_89/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.126     7.473 r  display/transmitter_i_89/O
+                                       net (fo=3, routed)           0.362     7.835    display/transmitter_i_89_n_3
+    Placement     SLICE_X130Y208                                                    r  display/transmitter_i_87/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.267     8.102 f  display/transmitter_i_87/O
+                                       net (fo=2, routed)           0.491     8.593    display/transmitter_i_87_n_3
+    Placement     SLICE_X130Y207                                                    f  display/transmitter_i_78/I3
+    Placement     SLICE_X130Y207       LUT6 (Prop_lut6_I3_O)        0.105     8.698 r  display/transmitter_i_78/O
+                                       net (fo=2, routed)           0.345     9.044    display/de
+    Placement     SLICE_X132Y206                                                    r  display/transmitter_i_86/I0
+    Placement     SLICE_X132Y206       LUT3 (Prop_lut3_I0_O)        0.106     9.150 r  display/transmitter_i_86/O
+                                       net (fo=2, routed)           0.329     9.479    display/scan_fifo/ever_underflow_reg_0
+    Placement     SLICE_X133Y206                                                    r  display/scan_fifo/transmitter_i_31/I5
+    Placement     SLICE_X133Y206       LUT6 (Prop_lut6_I5_O)        0.268     9.747 f  display/scan_fifo/transmitter_i_31/O
+                                       net (fo=30, routed)          1.182    10.929    hdmi_output/pDataOut_1_reg[0]_0
+    Moved         SLICE_X142Y217                                                    f  hdmi_output/transmitter_i_24/I3
+    Moved         SLICE_X142Y217       LUT4 (Prop_lut4_I3_O)        0.105    11.034 r  hdmi_output/transmitter_i_24/O
+                                       net (fo=3, routed)           5.501    16.535    hdmi_output/transmitter/DataEncoders[1].DataEncoder/vid_pData[1]
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/I0
+    Placement     SLICE_X8Y243         LUT3 (Prop_lut3_I0_O)        0.105    16.640 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.141    16.781    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2_n_3
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3/I3
+    Placement     SLICE_X8Y243         LUT6 (Prop_lut6_I3_O)        0.105    16.886 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3/O
+                                       net (fo=3, routed)           0.556    17.442    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3_n_3
+    Placement     SLICE_X9Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[1]_i_1/I0
+    Routing       SLICE_X9Y243         LUT6 (Prop_lut6_I0_O)        0.105    17.547 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[1]_i_1/O
+                                       net (fo=1, routed)           0.000    17.547    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[1]_i_1_n_3
+    Routing       SLICE_X9Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[1]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.543    19.559    hdmi_output/transmitter/DataEncoders[1].DataEncoder/PixelClk
+                  SLICE_X9Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[1]/C
+                                       clock pessimism              0.363    19.922    
+                                       clock uncertainty           -0.210    19.712    
+                  SLICE_X9Y243         FDRE (Setup_fdre_C_D)        0.030    19.742    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[1]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.742    
+                                       arrival time                         -17.547    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.194    
+
+Slack (MET) :             2.202ns  (required time - arrival time)
+  Source:                 display/py_reg[6]/C
+                            (rising edge-triggered cell FDSE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        11.055ns  (logic 1.671ns (15.115%)  route 9.384ns (84.885%))
+  Logic Levels:           9  (LUT2=2 LUT3=2 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.091ns = ( 19.559 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.487ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.591     6.487    display/pixel_clk
+                  SLICE_X130Y209       FDSE                                         r  display/py_reg[6]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X130Y209       FDSE (Prop_fdse_C_Q)         0.379     6.866 f  display/py_reg[6]/Q
+                                       net (fo=2, routed)           0.481     7.347    display/py_reg_n_3_[6]
+    Placement     SLICE_X130Y208                                                    f  display/transmitter_i_89/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.126     7.473 r  display/transmitter_i_89/O
+                                       net (fo=3, routed)           0.362     7.835    display/transmitter_i_89_n_3
+    Placement     SLICE_X130Y208                                                    r  display/transmitter_i_87/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.267     8.102 f  display/transmitter_i_87/O
+                                       net (fo=2, routed)           0.491     8.593    display/transmitter_i_87_n_3
+    Placement     SLICE_X130Y207                                                    f  display/transmitter_i_78/I3
+    Placement     SLICE_X130Y207       LUT6 (Prop_lut6_I3_O)        0.105     8.698 r  display/transmitter_i_78/O
+                                       net (fo=2, routed)           0.345     9.044    display/de
+    Placement     SLICE_X132Y206                                                    r  display/transmitter_i_86/I0
+    Placement     SLICE_X132Y206       LUT3 (Prop_lut3_I0_O)        0.106     9.150 r  display/transmitter_i_86/O
+                                       net (fo=2, routed)           0.329     9.479    display/scan_fifo/ever_underflow_reg_0
+    Placement     SLICE_X133Y206                                                    r  display/scan_fifo/transmitter_i_31/I5
+    Placement     SLICE_X133Y206       LUT6 (Prop_lut6_I5_O)        0.268     9.747 f  display/scan_fifo/transmitter_i_31/O
+                                       net (fo=30, routed)          1.182    10.929    hdmi_output/pDataOut_1_reg[0]_0
+    Moved         SLICE_X142Y217                                                    f  hdmi_output/transmitter_i_24/I3
+    Moved         SLICE_X142Y217       LUT4 (Prop_lut4_I3_O)        0.105    11.034 r  hdmi_output/transmitter_i_24/O
+                                       net (fo=3, routed)           5.501    16.535    hdmi_output/transmitter/DataEncoders[1].DataEncoder/vid_pData[1]
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/I0
+    Placement     SLICE_X8Y243         LUT3 (Prop_lut3_I0_O)        0.105    16.640 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.141    16.781    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2_n_3
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3/I3
+    Placement     SLICE_X8Y243         LUT6 (Prop_lut6_I3_O)        0.105    16.886 f  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3/O
+                                       net (fo=3, routed)           0.551    17.437    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_3_n_3
+    Placement     SLICE_X9Y243                                                      f  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_1/I1
+    Routing       SLICE_X9Y243         LUT6 (Prop_lut6_I1_O)        0.105    17.542 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_1/O
+                                       net (fo=1, routed)           0.000    17.542    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[3]_i_1_n_3
+    Routing       SLICE_X9Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[3]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.543    19.559    hdmi_output/transmitter/DataEncoders[1].DataEncoder/PixelClk
+                  SLICE_X9Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[3]/C
+                                       clock pessimism              0.363    19.922    
+                                       clock uncertainty           -0.210    19.712    
+                  SLICE_X9Y243         FDRE (Setup_fdre_C_D)        0.032    19.744    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[3]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.744    
+                                       arrival time                         -17.542    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.202    
+
+Slack (MET) :             2.659ns  (required time - arrival time)
+  Source:                 display/py_reg[6]/C
+                            (rising edge-triggered cell FDSE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        10.638ns  (logic 1.566ns (14.721%)  route 9.072ns (85.279%))
+  Logic Levels:           8  (LUT2=2 LUT3=2 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.091ns = ( 19.559 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.487ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.591     6.487    display/pixel_clk
+                  SLICE_X130Y209       FDSE                                         r  display/py_reg[6]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X130Y209       FDSE (Prop_fdse_C_Q)         0.379     6.866 f  display/py_reg[6]/Q
+                                       net (fo=2, routed)           0.481     7.347    display/py_reg_n_3_[6]
+    Placement     SLICE_X130Y208                                                    f  display/transmitter_i_89/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.126     7.473 r  display/transmitter_i_89/O
+                                       net (fo=3, routed)           0.362     7.835    display/transmitter_i_89_n_3
+    Placement     SLICE_X130Y208                                                    r  display/transmitter_i_87/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.267     8.102 f  display/transmitter_i_87/O
+                                       net (fo=2, routed)           0.491     8.593    display/transmitter_i_87_n_3
+    Placement     SLICE_X130Y207                                                    f  display/transmitter_i_78/I3
+    Placement     SLICE_X130Y207       LUT6 (Prop_lut6_I3_O)        0.105     8.698 r  display/transmitter_i_78/O
+                                       net (fo=2, routed)           0.345     9.044    display/de
+    Placement     SLICE_X132Y206                                                    r  display/transmitter_i_86/I0
+    Placement     SLICE_X132Y206       LUT3 (Prop_lut3_I0_O)        0.106     9.150 r  display/transmitter_i_86/O
+                                       net (fo=2, routed)           0.329     9.479    display/scan_fifo/ever_underflow_reg_0
+    Placement     SLICE_X133Y206                                                    r  display/scan_fifo/transmitter_i_31/I5
+    Placement     SLICE_X133Y206       LUT6 (Prop_lut6_I5_O)        0.268     9.747 f  display/scan_fifo/transmitter_i_31/O
+                                       net (fo=30, routed)          1.182    10.929    hdmi_output/pDataOut_1_reg[0]_0
+    Moved         SLICE_X142Y217                                                    f  hdmi_output/transmitter_i_24/I3
+    Moved         SLICE_X142Y217       LUT4 (Prop_lut4_I3_O)        0.105    11.034 r  hdmi_output/transmitter_i_24/O
+                                       net (fo=3, routed)           5.501    16.535    hdmi_output/transmitter/DataEncoders[1].DataEncoder/vid_pData[1]
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/I0
+    Placement     SLICE_X8Y243         LUT3 (Prop_lut3_I0_O)        0.105    16.640 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.380    17.020    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_2_n_3
+    Placement     SLICE_X8Y243                                                      r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_1/I0
+    Routing       SLICE_X8Y243         LUT6 (Prop_lut6_I0_O)        0.105    17.125 r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_1/O
+                                       net (fo=1, routed)           0.000    17.125    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1[0]_i_1_n_3
+    Routing       SLICE_X8Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[0]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.543    19.559    hdmi_output/transmitter/DataEncoders[1].DataEncoder/PixelClk
+                  SLICE_X8Y243         FDRE                                         r  hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[0]/C
+                                       clock pessimism              0.363    19.922    
+                                       clock uncertainty           -0.210    19.712    
+                  SLICE_X8Y243         FDRE (Setup_fdre_C_D)        0.072    19.784    hdmi_output/transmitter/DataEncoders[1].DataEncoder/n1d_1_reg[0]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.784    
+                                       arrival time                         -17.125    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.659    
+
+Slack (MET) :             2.675ns  (required time - arrival time)
+  Source:                 display/py_reg[6]/C
+                            (rising edge-triggered cell FDSE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        10.622ns  (logic 1.852ns (17.435%)  route 8.770ns (82.565%))
+  Logic Levels:           9  (LUT2=2 LUT3=2 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.037ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.087ns = ( 19.555 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.487ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.591     6.487    display/pixel_clk
+                  SLICE_X130Y209       FDSE                                         r  display/py_reg[6]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X130Y209       FDSE (Prop_fdse_C_Q)         0.379     6.866 f  display/py_reg[6]/Q
+                                       net (fo=2, routed)           0.481     7.347    display/py_reg_n_3_[6]
+    Placement     SLICE_X130Y208                                                    f  display/transmitter_i_89/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.126     7.473 r  display/transmitter_i_89/O
+                                       net (fo=3, routed)           0.362     7.835    display/transmitter_i_89_n_3
+    Placement     SLICE_X130Y208                                                    r  display/transmitter_i_87/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.267     8.102 f  display/transmitter_i_87/O
+                                       net (fo=2, routed)           0.491     8.593    display/transmitter_i_87_n_3
+    Placement     SLICE_X130Y207                                                    f  display/transmitter_i_78/I3
+    Placement     SLICE_X130Y207       LUT6 (Prop_lut6_I3_O)        0.105     8.698 r  display/transmitter_i_78/O
+                                       net (fo=2, routed)           0.345     9.044    display/de
+    Placement     SLICE_X132Y206                                                    r  display/transmitter_i_86/I0
+    Placement     SLICE_X132Y206       LUT3 (Prop_lut3_I0_O)        0.106     9.150 r  display/transmitter_i_86/O
+                                       net (fo=2, routed)           0.329     9.479    display/scan_fifo/ever_underflow_reg_0
+    Placement     SLICE_X133Y206                                                    r  display/scan_fifo/transmitter_i_31/I5
+    Placement     SLICE_X133Y206       LUT6 (Prop_lut6_I5_O)        0.268     9.747 f  display/scan_fifo/transmitter_i_31/O
+                                       net (fo=30, routed)          0.688    10.435    hdmi_output/pDataOut_1_reg[0]_0
+    Moved         SLICE_X138Y201                                                    f  hdmi_output/transmitter_i_8/I3
+    Moved         SLICE_X138Y201       LUT4 (Prop_lut4_I3_O)        0.105    10.540 r  hdmi_output/transmitter_i_8/O
+                                       net (fo=3, routed)           5.256    15.796    hdmi_output/transmitter/DataEncoders[2].DataEncoder/vid_pData[1]
+    Moved         SLICE_X11Y234                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2/I0
+    Moved         SLICE_X11Y234        LUT3 (Prop_lut3_I0_O)        0.124    15.920 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.297    16.217    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2_n_3
+    Placement     SLICE_X10Y234                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3/I3
+    Placement     SLICE_X10Y234        LUT6 (Prop_lut6_I3_O)        0.267    16.484 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3/O
+                                       net (fo=3, routed)           0.520    17.004    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3_n_3
+    Placement     SLICE_X10Y234                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[1]_i_1/I0
+    Routing       SLICE_X10Y234        LUT6 (Prop_lut6_I0_O)        0.105    17.109 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[1]_i_1/O
+                                       net (fo=1, routed)           0.000    17.109    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[1]_i_1_n_3
+    Routing       SLICE_X10Y234        FDRE                                         r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[1]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.539    19.555    hdmi_output/transmitter/DataEncoders[2].DataEncoder/PixelClk
+                  SLICE_X10Y234        FDRE                                         r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[1]/C
+                                       clock pessimism              0.363    19.918    
+                                       clock uncertainty           -0.210    19.708    
+                  SLICE_X10Y234        FDRE (Setup_fdre_C_D)        0.076    19.784    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[1]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.784    
+                                       arrival time                         -17.109    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.675    
+
+Slack (MET) :             2.759ns  (required time - arrival time)
+  Source:                 display/py_reg[6]/C
+                            (rising edge-triggered cell FDSE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        10.493ns  (logic 1.852ns (17.649%)  route 8.641ns (82.351%))
+  Logic Levels:           9  (LUT2=2 LUT3=2 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.088ns = ( 19.556 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.487ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.591     6.487    display/pixel_clk
+                  SLICE_X130Y209       FDSE                                         r  display/py_reg[6]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X130Y209       FDSE (Prop_fdse_C_Q)         0.379     6.866 f  display/py_reg[6]/Q
+                                       net (fo=2, routed)           0.481     7.347    display/py_reg_n_3_[6]
+    Placement     SLICE_X130Y208                                                    f  display/transmitter_i_89/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.126     7.473 r  display/transmitter_i_89/O
+                                       net (fo=3, routed)           0.362     7.835    display/transmitter_i_89_n_3
+    Placement     SLICE_X130Y208                                                    r  display/transmitter_i_87/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.267     8.102 f  display/transmitter_i_87/O
+                                       net (fo=2, routed)           0.491     8.593    display/transmitter_i_87_n_3
+    Placement     SLICE_X130Y207                                                    f  display/transmitter_i_78/I3
+    Placement     SLICE_X130Y207       LUT6 (Prop_lut6_I3_O)        0.105     8.698 r  display/transmitter_i_78/O
+                                       net (fo=2, routed)           0.345     9.044    display/de
+    Placement     SLICE_X132Y206                                                    r  display/transmitter_i_86/I0
+    Placement     SLICE_X132Y206       LUT3 (Prop_lut3_I0_O)        0.106     9.150 r  display/transmitter_i_86/O
+                                       net (fo=2, routed)           0.329     9.479    display/scan_fifo/ever_underflow_reg_0
+    Placement     SLICE_X133Y206                                                    r  display/scan_fifo/transmitter_i_31/I5
+    Placement     SLICE_X133Y206       LUT6 (Prop_lut6_I5_O)        0.268     9.747 f  display/scan_fifo/transmitter_i_31/O
+                                       net (fo=30, routed)          0.688    10.435    hdmi_output/pDataOut_1_reg[0]_0
+    Moved         SLICE_X138Y201                                                    f  hdmi_output/transmitter_i_8/I3
+    Moved         SLICE_X138Y201       LUT4 (Prop_lut4_I3_O)        0.105    10.540 r  hdmi_output/transmitter_i_8/O
+                                       net (fo=3, routed)           5.256    15.796    hdmi_output/transmitter/DataEncoders[2].DataEncoder/vid_pData[1]
+    Moved         SLICE_X11Y234                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2/I0
+    Moved         SLICE_X11Y234        LUT3 (Prop_lut3_I0_O)        0.124    15.920 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.297    16.217    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2_n_3
+    Placement     SLICE_X10Y234                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3/I3
+    Placement     SLICE_X10Y234        LUT6 (Prop_lut6_I3_O)        0.267    16.484 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3/O
+                                       net (fo=3, routed)           0.391    16.875    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3_n_3
+    Placement     SLICE_X11Y235                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[2]_i_1/I1
+    Routing       SLICE_X11Y235        LUT6 (Prop_lut6_I1_O)        0.105    16.980 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[2]_i_1/O
+                                       net (fo=1, routed)           0.000    16.980    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[2]_i_1_n_3
+    Routing       SLICE_X11Y235        FDRE                                         r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[2]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.540    19.556    hdmi_output/transmitter/DataEncoders[2].DataEncoder/PixelClk
+                  SLICE_X11Y235        FDRE                                         r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[2]/C
+                                       clock pessimism              0.363    19.919    
+                                       clock uncertainty           -0.210    19.709    
+                  SLICE_X11Y235        FDRE (Setup_fdre_C_D)        0.030    19.739    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[2]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.739    
+                                       arrival time                         -16.980    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.759    
+
+Slack (MET) :             2.780ns  (required time - arrival time)
+  Source:                 display/scan_fifo/read_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        10.378ns  (logic 1.185ns (11.419%)  route 9.193ns (88.581%))
+  Logic Levels:           6  (LUT3=2 LUT4=1 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.130ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.998ns = ( 19.466 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.491ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.595     6.491    display/scan_fifo/pixel_clk
+                  SLICE_X137Y205       FDRE                                         r  display/scan_fifo/read_index_reg[0]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X137Y205       FDRE (Prop_fdre_C_Q)         0.379     6.870 r  display/scan_fifo/read_index_reg[0]/Q
+                                       net (fo=220, routed)         1.467     8.336    scan_fifo/output_words_reg_0_3_96_101/ADDRB0
+    Routing       SLICE_X140Y199                                                    r  scan_fifo/output_words_reg_0_3_96_101/RAMB_D1/RADR0
+    Routing       SLICE_X140Y199       RAMD32 (Prop_ramd32_RADR0_O)
+                                                                    0.105     8.441 r  scan_fifo/output_words_reg_0_3_96_101/RAMB_D1/O
+                                       net (fo=1, routed)           0.937     9.378    hdmi_output/fifo_data[75]
+    Routing       SLICE_X141Y200                                                    r  hdmi_output/transmitter_i_54/I0
+    Routing       SLICE_X141Y200       LUT6 (Prop_lut6_I0_O)        0.105     9.483 r  hdmi_output/transmitter_i_54/O
+                                       net (fo=1, routed)           1.496    10.979    hdmi_output/transmitter_i_54_n_3
+    Routing       SLICE_X138Y216                                                    r  hdmi_output/transmitter_i_14/I0
+    Placement     SLICE_X138Y216       LUT4 (Prop_lut4_I0_O)        0.105    11.084 r  hdmi_output/transmitter_i_14/O
+                                       net (fo=3, routed)           4.388    15.472    hdmi_output/transmitter/DataEncoders[0].DataEncoder/vid_pData[3]
+    Moved         SLICE_X51Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2/I1
+    Moved         SLICE_X51Y238        LUT3 (Prop_lut3_I1_O)        0.119    15.591 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.373    15.965    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2_n_3
+    Moved         SLICE_X51Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_2/I0
+    Moved         SLICE_X51Y238        LUT3 (Prop_lut3_I0_O)        0.267    16.232 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_2/O
+                                       net (fo=3, routed)           0.532    16.763    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_2_n_3
+    Placement     SLICE_X50Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[1]_i_1/I5
+    Routing       SLICE_X50Y238        LUT6 (Prop_lut6_I5_O)        0.105    16.868 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[1]_i_1/O
+                                       net (fo=1, routed)           0.000    16.868    hdmi_output/transmitter/DataEncoders[0].DataEncoder/sum_bits[1]
+    Routing       SLICE_X50Y238        FDRE                                         r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[1]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.450    19.466    hdmi_output/transmitter/DataEncoders[0].DataEncoder/PixelClk
+                  SLICE_X50Y238        FDRE                                         r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[1]/C
+                                       clock pessimism              0.363    19.829    
+                                       clock uncertainty           -0.210    19.619    
+                  SLICE_X50Y238        FDRE (Setup_fdre_C_D)        0.030    19.649    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[1]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.649    
+                                       arrival time                         -16.868    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.780    
+
+Slack (MET) :             2.895ns  (required time - arrival time)
+  Source:                 display/scan_fifo/read_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        10.265ns  (logic 1.185ns (11.544%)  route 9.080ns (88.456%))
+  Logic Levels:           6  (LUT3=2 LUT4=1 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.130ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.998ns = ( 19.466 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.491ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.595     6.491    display/scan_fifo/pixel_clk
+                  SLICE_X137Y205       FDRE                                         r  display/scan_fifo/read_index_reg[0]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X137Y205       FDRE (Prop_fdre_C_Q)         0.379     6.870 r  display/scan_fifo/read_index_reg[0]/Q
+                                       net (fo=220, routed)         1.467     8.336    scan_fifo/output_words_reg_0_3_96_101/ADDRB0
+    Routing       SLICE_X140Y199                                                    r  scan_fifo/output_words_reg_0_3_96_101/RAMB_D1/RADR0
+    Routing       SLICE_X140Y199       RAMD32 (Prop_ramd32_RADR0_O)
+                                                                    0.105     8.441 r  scan_fifo/output_words_reg_0_3_96_101/RAMB_D1/O
+                                       net (fo=1, routed)           0.937     9.378    hdmi_output/fifo_data[75]
+    Routing       SLICE_X141Y200                                                    r  hdmi_output/transmitter_i_54/I0
+    Routing       SLICE_X141Y200       LUT6 (Prop_lut6_I0_O)        0.105     9.483 r  hdmi_output/transmitter_i_54/O
+                                       net (fo=1, routed)           1.496    10.979    hdmi_output/transmitter_i_54_n_3
+    Routing       SLICE_X138Y216                                                    r  hdmi_output/transmitter_i_14/I0
+    Placement     SLICE_X138Y216       LUT4 (Prop_lut4_I0_O)        0.105    11.084 r  hdmi_output/transmitter_i_14/O
+                                       net (fo=3, routed)           4.388    15.472    hdmi_output/transmitter/DataEncoders[0].DataEncoder/vid_pData[3]
+    Moved         SLICE_X51Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2/I1
+    Moved         SLICE_X51Y238        LUT3 (Prop_lut3_I1_O)        0.119    15.591 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.373    15.965    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2_n_3
+    Moved         SLICE_X51Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_2/I0
+    Moved         SLICE_X51Y238        LUT3 (Prop_lut3_I0_O)        0.267    16.232 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_2/O
+                                       net (fo=3, routed)           0.419    16.651    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_2_n_3
+    Placement     SLICE_X50Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_1/I0
+    Routing       SLICE_X50Y238        LUT6 (Prop_lut6_I0_O)        0.105    16.756 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_1/O
+                                       net (fo=1, routed)           0.000    16.756    hdmi_output/transmitter/DataEncoders[0].DataEncoder/sum_bits[3]
+    Routing       SLICE_X50Y238        FDRE                                         r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[3]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.450    19.466    hdmi_output/transmitter/DataEncoders[0].DataEncoder/PixelClk
+                  SLICE_X50Y238        FDRE                                         r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[3]/C
+                                       clock pessimism              0.363    19.829    
+                                       clock uncertainty           -0.210    19.619    
+                  SLICE_X50Y238        FDRE (Setup_fdre_C_D)        0.032    19.651    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[3]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.651    
+                                       arrival time                         -16.756    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.895    
+
+Slack (MET) :             2.908ns  (required time - arrival time)
+  Source:                 display/py_reg[6]/C
+                            (rising edge-triggered cell FDSE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        10.387ns  (logic 1.852ns (17.829%)  route 8.535ns (82.171%))
+  Logic Levels:           9  (LUT2=2 LUT3=2 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.037ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.087ns = ( 19.555 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.487ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.591     6.487    display/pixel_clk
+                  SLICE_X130Y209       FDSE                                         r  display/py_reg[6]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Placement     SLICE_X130Y209       FDSE (Prop_fdse_C_Q)         0.379     6.866 f  display/py_reg[6]/Q
+                                       net (fo=2, routed)           0.481     7.347    display/py_reg_n_3_[6]
+    Placement     SLICE_X130Y208                                                    f  display/transmitter_i_89/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.126     7.473 r  display/transmitter_i_89/O
+                                       net (fo=3, routed)           0.362     7.835    display/transmitter_i_89_n_3
+    Placement     SLICE_X130Y208                                                    r  display/transmitter_i_87/I1
+    Placement     SLICE_X130Y208       LUT2 (Prop_lut2_I1_O)        0.267     8.102 f  display/transmitter_i_87/O
+                                       net (fo=2, routed)           0.491     8.593    display/transmitter_i_87_n_3
+    Placement     SLICE_X130Y207                                                    f  display/transmitter_i_78/I3
+    Placement     SLICE_X130Y207       LUT6 (Prop_lut6_I3_O)        0.105     8.698 r  display/transmitter_i_78/O
+                                       net (fo=2, routed)           0.345     9.044    display/de
+    Placement     SLICE_X132Y206                                                    r  display/transmitter_i_86/I0
+    Placement     SLICE_X132Y206       LUT3 (Prop_lut3_I0_O)        0.106     9.150 r  display/transmitter_i_86/O
+                                       net (fo=2, routed)           0.329     9.479    display/scan_fifo/ever_underflow_reg_0
+    Placement     SLICE_X133Y206                                                    r  display/scan_fifo/transmitter_i_31/I5
+    Placement     SLICE_X133Y206       LUT6 (Prop_lut6_I5_O)        0.268     9.747 f  display/scan_fifo/transmitter_i_31/O
+                                       net (fo=30, routed)          0.688    10.435    hdmi_output/pDataOut_1_reg[0]_0
+    Moved         SLICE_X138Y201                                                    f  hdmi_output/transmitter_i_8/I3
+    Moved         SLICE_X138Y201       LUT4 (Prop_lut4_I3_O)        0.105    10.540 r  hdmi_output/transmitter_i_8/O
+                                       net (fo=3, routed)           5.256    15.796    hdmi_output/transmitter/DataEncoders[2].DataEncoder/vid_pData[1]
+    Moved         SLICE_X11Y234                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2/I0
+    Moved         SLICE_X11Y234        LUT3 (Prop_lut3_I0_O)        0.124    15.920 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.297    16.217    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[0]_i_2_n_3
+    Placement     SLICE_X10Y234                                                     r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3/I3
+    Placement     SLICE_X10Y234        LUT6 (Prop_lut6_I3_O)        0.267    16.484 f  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3/O
+                                       net (fo=3, routed)           0.285    16.769    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_3_n_3
+    Placement     SLICE_X10Y234                                                     f  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_1/I1
+    Routing       SLICE_X10Y234        LUT6 (Prop_lut6_I1_O)        0.105    16.874 r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_1/O
+                                       net (fo=1, routed)           0.000    16.874    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1[3]_i_1_n_3
+    Routing       SLICE_X10Y234        FDRE                                         r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[3]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.539    19.555    hdmi_output/transmitter/DataEncoders[2].DataEncoder/PixelClk
+                  SLICE_X10Y234        FDRE                                         r  hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[3]/C
+                                       clock pessimism              0.363    19.918    
+                                       clock uncertainty           -0.210    19.708    
+                  SLICE_X10Y234        FDRE (Setup_fdre_C_D)        0.074    19.782    hdmi_output/transmitter/DataEncoders[2].DataEncoder/n1d_1_reg[3]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.782    
+                                       arrival time                         -16.874    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.908    
+
+Slack (MET) :             2.964ns  (required time - arrival time)
+  Source:                 display/scan_fifo/read_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Destination:            hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_raw  {rise@0.000ns fall@6.734ns period=13.468ns})
+  Path Group:             pixel_raw
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            13.468ns  (pixel_raw rise@13.468ns - pixel_raw rise@0.000ns)
+  Data Path Delay:        10.196ns  (logic 1.185ns (11.623%)  route 9.011ns (88.377%))
+  Logic Levels:           6  (LUT3=1 LUT4=1 LUT6=3 RAMD32=1)
+  Clock Path Skew:        -0.130ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.998ns = ( 19.466 - 13.468 ) 
+    Source Clock Delay      (SCD):    6.491ns
+    Clock Pessimism Removal (CPR):    0.363ns
+  Clock Uncertainty:      0.210ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.414ns
+    Phase Error              (PE):    0.000ns
+
+    Pin Reuse     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  ---------------------------------------------------------------------------------    -------------------
+                                       (clock pixel_raw rise edge)
+                                                                    0.000     0.000 r  
+                  R4                                                0.000     0.000 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000     0.000    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.842     0.842 r  sysbuf/O
+                                       net (fo=1, routed)           1.792     2.634    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.082     2.716 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.519     4.234    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.077     4.311 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.165     5.476    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.106     5.582 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.813     6.395    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -3.104     3.291 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.524     4.815    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.896 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.804     6.700    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -4.175     2.525 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.290     4.815    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.896 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.595     6.491    display/scan_fifo/pixel_clk
+                  SLICE_X137Y205       FDRE                                         r  display/scan_fifo/read_index_reg[0]/C
+  ---------------------------------------------------------------------------------    -------------------
+    Routing       SLICE_X137Y205       FDRE (Prop_fdre_C_Q)         0.379     6.870 r  display/scan_fifo/read_index_reg[0]/Q
+                                       net (fo=220, routed)         1.467     8.336    scan_fifo/output_words_reg_0_3_96_101/ADDRB0
+    Routing       SLICE_X140Y199                                                    r  scan_fifo/output_words_reg_0_3_96_101/RAMB_D1/RADR0
+    Routing       SLICE_X140Y199       RAMD32 (Prop_ramd32_RADR0_O)
+                                                                    0.105     8.441 r  scan_fifo/output_words_reg_0_3_96_101/RAMB_D1/O
+                                       net (fo=1, routed)           0.937     9.378    hdmi_output/fifo_data[75]
+    Routing       SLICE_X141Y200                                                    r  hdmi_output/transmitter_i_54/I0
+    Routing       SLICE_X141Y200       LUT6 (Prop_lut6_I0_O)        0.105     9.483 r  hdmi_output/transmitter_i_54/O
+                                       net (fo=1, routed)           1.496    10.979    hdmi_output/transmitter_i_54_n_3
+    Routing       SLICE_X138Y216                                                    r  hdmi_output/transmitter_i_14/I0
+    Placement     SLICE_X138Y216       LUT4 (Prop_lut4_I0_O)        0.105    11.084 r  hdmi_output/transmitter_i_14/O
+                                       net (fo=3, routed)           4.388    15.472    hdmi_output/transmitter/DataEncoders[0].DataEncoder/vid_pData[3]
+    Moved         SLICE_X51Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2/I1
+    Moved         SLICE_X51Y238        LUT3 (Prop_lut3_I1_O)        0.119    15.591 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2/O
+                                       net (fo=3, routed)           0.369    15.961    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[0]_i_2_n_3
+    Moved         SLICE_X51Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_3/I3
+    Moved         SLICE_X51Y238        LUT6 (Prop_lut6_I3_O)        0.267    16.228 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_3/O
+                                       net (fo=3, routed)           0.354    16.581    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[3]_i_3_n_3
+    Placement     SLICE_X50Y238                                                     r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[2]_i_1/I1
+    Routing       SLICE_X50Y238        LUT6 (Prop_lut6_I1_O)        0.105    16.686 r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1[2]_i_1/O
+                                       net (fo=1, routed)           0.000    16.686    hdmi_output/transmitter/DataEncoders[0].DataEncoder/sum_bits[2]
+    Routing       SLICE_X50Y238        FDRE                                         r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[2]/D
+  ---------------------------------------------------------------------------------    -------------------
+
+                                       (clock pixel_raw rise edge)
+                                                                   13.468    13.468 r  
+                  R4                                                0.000    13.468 r  sys_clk_p (IN)
+                                       net (fo=0)                   0.000    13.468    sys_clk_p
+                  R4                                                                r  sysbuf/I
+                  R4                   IBUFDS (Prop_ibufds_I_O)     0.804    14.272 r  sysbuf/O
+                                       net (fo=1, routed)           1.699    15.971    sysclk
+                  BUFGCTRL_X0Y2                                                     r  sysclk_BUFG_inst/I
+                  BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.078    16.049 r  sysclk_BUFG_inst/O
+                                       net (fo=63, routed)          1.417    17.466    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i_0
+                  PLLE2_ADV_X1Y2                                                    r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+                  PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                                    0.073    17.539 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                                       net (fo=1, routed)           1.029    18.568    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out
+                  BUFHCE_X1Y24                                                      r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/I
+                  BUFHCE_X1Y24         BUFH (Prop_bufh_I_O)         0.069    18.637 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                                       net (fo=1, routed)           0.777    19.414    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3
+                  MMCME2_ADV_X1Y2                                                   r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+                  MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                                   -2.927    16.487 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT
+                                       net (fo=1, routed)           1.452    17.939    ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/clk_pll_i
+                  BUFGCTRL_X0Y0                                                     r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/I
+                  BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    18.016 r  ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                                       net (fo=51794, routed)       1.687    19.703    ui_clk
+                  MMCME2_ADV_X1Y0                                                   r  video_mmcm/CLKIN1
+                  MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                                   -3.944    15.759 r  video_mmcm/CLKOUT0
+                                       net (fo=1, routed)           2.180    17.939    pixel_raw
+                  BUFGCTRL_X0Y1                                                     r  pixel_buffer/I
+                  BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    18.016 r  pixel_buffer/O
+                                       net (fo=583, routed)         1.450    19.466    hdmi_output/transmitter/DataEncoders[0].DataEncoder/PixelClk
+                  SLICE_X50Y238        FDRE                                         r  hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[2]/C
+                                       clock pessimism              0.363    19.829    
+                                       clock uncertainty           -0.210    19.619    
+                  SLICE_X50Y238        FDRE (Setup_fdre_C_D)        0.032    19.651    hdmi_output/transmitter/DataEncoders[0].DataEncoder/n1d_1_reg[2]
+  ---------------------------------------------------------------------------------
+                                       required time                         19.651    
+                                       arrival time                         -16.686    
+  ---------------------------------------------------------------------------------
+                                       slack                                  2.964    
+
+
+
+

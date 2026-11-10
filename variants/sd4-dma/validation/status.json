@@ -1,0 +1,217 @@
+{
+  "updated_utc": "2026-11-10T00:43:39.455404+00:00",
+  "release": "CANDIDATE_NOT_HARDWARE_VALIDATED",
+  "board_accessed": false,
+  "original_worktree": "work/bosio-linux-sw preserved",
+  "image": "D:\\temp\\gen3bosio\\sd4-dma\\candidate\\ORYUKDO-KFB-SD4-DMA-v1.img",
+  "image_sha256": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+  "checks": {
+    "native_test.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "f47589fd45bd964f8f3d2f312553a589fc5e38faa319b5a9dd8a3776b4261755"
+    },
+    "native_delayed_input_test.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "7cbd84b8a7d1448ea3d219089f7ec28243c7f7d18a9696d2e6359eeae476ffb9"
+    },
+    "storage_test.log": {
+      "pass_marker": true,
+      "pass_count": 2,
+      "expected_count": 2,
+      "sha256": "093c3a9d112a53b274795f1bb76b848198e705b1b37b2cb87daf42aaad0a51dc"
+    },
+    "soc_lint_summary.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "4f6d3da6ceefe7a6e43c8478a85c3ee798768502cc55cacb13848cd680dce3cf"
+    },
+    "cpu_bosio_regression.log": {
+      "pass_marker": true,
+      "pass_count": 6,
+      "expected_count": 6,
+      "sha256": "f6842cbe0d6e26b94ae6c9b95a0394941ce7dd5f1c5cd35003529ec32179b34e"
+    },
+    "dma_seed1.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "8210cb2d3b3e2c87b6308cd1588ca47904de567cba574cdc33da129d72510410"
+    },
+    "dma_seed7.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "67e3584ace0dbb61e84d8e1cfecc275a6ed30b86bd5575c97a985e268316961e"
+    },
+    "dma_seed23.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "373f67ede863248630c29ff467af9ce823aab99dcb3c4d7ce90916c98ae144fa"
+    },
+    "plic_seed1.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "8650c2c7509c1c5eae1067d085e04f4d59316d08c53ec11081d197a3856f2b9f"
+    },
+    "plic_seed7.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "8650c2c7509c1c5eae1067d085e04f4d59316d08c53ec11081d197a3856f2b9f"
+    },
+    "plic_seed23.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "8650c2c7509c1c5eae1067d085e04f4d59316d08c53ec11081d197a3856f2b9f"
+    },
+    "irq_seed1.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "22870cdb5689353ec1ccff043c272fd3d47e360150938410b163ebebb8ca1440"
+    },
+    "irq_seed7.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "22870cdb5689353ec1ccff043c272fd3d47e360150938410b163ebebb8ca1440"
+    },
+    "irq_seed23.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "22870cdb5689353ec1ccff043c272fd3d47e360150938410b163ebebb8ca1440"
+    },
+    "cpu_storage_seed1.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "0eef0fa14f6ab140bd1f07c7e2fb8472bc1ebd21831c783683570cc8a52472d7"
+    },
+    "cpu_storage_seed7.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "0eef0fa14f6ab140bd1f07c7e2fb8472bc1ebd21831c783683570cc8a52472d7"
+    },
+    "cpu_storage_seed23.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "b41273d051c473bc78be0dcfe414cd31d1b5dd6c83977b738379b4cd2f3893e0"
+    },
+    "cpu_storage_native_seed1.log": {
+      "pass_marker": true,
+      "pass_count": 2,
+      "expected_count": 2,
+      "sha256": "c6de1339f0ff04a39bf96286890fe1fdfef36f83549d7ffd27417ce09d3f94f1"
+    },
+    "cpu_storage_native_seed7.log": {
+      "pass_marker": true,
+      "pass_count": 2,
+      "expected_count": 2,
+      "sha256": "78d1bfa04a5a9900af20ddb94c6cc92df1a7c953e397ddf91db28b3605e60262"
+    },
+    "cpu_storage_native_seed23.log": {
+      "pass_marker": true,
+      "pass_count": 2,
+      "expected_count": 2,
+      "sha256": "32ea06525e18a217dfec3cca15dd69106c0ff698f5fc975b3ba59c53d546c3b8"
+    },
+    "cpu_bosio_native_regression.log": {
+      "pass_marker": true,
+      "pass_count": 6,
+      "expected_count": 6,
+      "sha256": "9a5b4b32ab9484e8c0d3c66a93ab252935420f52d9f9af6600a9f61684f23322"
+    },
+    "boot_reject_header.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "8cb710c19a715c938fe594f5854654420e94d17d757bf601ab538d0a4c5c9bef"
+    },
+    "boot_reject_oversize.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "0a96f13ed30d2b826e5558a45095cea7f1f68cfa3d0ec25d809cef1036344f01"
+    },
+    "boot_reject_payload-crc.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "71aec10e89a714fde579db8971683a2c8c52c4622083a3fbd2537e17480f78f9"
+    },
+    "boot_reject_card-crc.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "97ae23600f36565a0f181b8256de1893d2fb810d1db568494264c95f4fc26abb"
+    },
+    "boot_reject_ddr.log": {
+      "pass_marker": true,
+      "pass_count": 1,
+      "expected_count": 1,
+      "sha256": "58da742c2ab992a36033409caef1f215c2c507dfe67f6b2fde38be2312b42896"
+    }
+  },
+  "actual_image_loader": {
+    "result": "PASS_NATIVE_SD_LOADER_MODEL",
+    "image_sha256": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+    "raw_boot_sha256": "823d16971078e303e8cfd372d168bacc4599b54c5d8c616d39f1e5acb5ed702c",
+    "hardware": false,
+    "rtl": true,
+    "cpu_executes_linux": false,
+    "ddr_backend": "mock; loader RAM clear parameter reduced to 4096 bytes",
+    "native_sd_model": "pin-level behavioral SDHC model",
+    "rtl_sha256": {
+      "soc/board/sd_boot.sv": "c2d65cb9dc1efb9504618d08fd12d92ac25801adec64103d6cdded4317ae7526",
+      "soc/bosio/or_sd_native.sv": "5a7e016c16146f32bac5d083055564c2ed58f51c8f7d5d32c52ab903de54470e",
+      "soc/bosio/or_sd_storage.sv": "ad329cf9ebb4c965733cbc49038037b44461197a90d619b3871ee8b7e164f65a",
+      "soc/bosio/or_storage_dma.sv": "3fdbc1db6532c303f8d1c6634a87fd3c4dbd6ced78ad8afa909eed073653113b"
+    },
+    "current_rtl_matches": true
+  },
+  "qemu": {
+    "result": "PASS_QEMU_ONLY",
+    "image": "/var/tmp/oryukdo-sd4-linux/image/ORYUKDO-KFB-SD4-DMA-v1.img",
+    "image_sha256": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+    "hardware": false,
+    "rtl": false,
+    "mock_backend": true,
+    "checks": [
+      "BusyBox repair shell; native SD hardware absent",
+      "cat /etc/oryukdo-image",
+      "test ! -L /usr/bin/python && test ! -e /usr/bin/python3 && test ! -d /usr/lib/python3.12",
+      "echo $((19+23))",
+      "ddrcheck",
+      "test -x /bin/storage-check && test -d /data"
+    ]
+  },
+  "full_board": {
+    "directory": "D:\\temp\\gen3bosio\\sd4-dma\\board_v6_incremental",
+    "source_match": true,
+    "synth_pass_marker": true,
+    "route_pass_marker": true,
+    "error_in_runner": false,
+    "bitstream_exists": true
+  },
+  "pending_hardware": [
+    "native MMC enumeration",
+    "ext4 mount/write/reboot persistence",
+    "actual card/PCB timing and bandwidth",
+    "DMAengine software execution on FPGA"
+  ],
+  "not_proven": [
+    "full RTL CPU boots this Linux image to shell",
+    "BoAYO accelerated by DMA"
+  ]
+}

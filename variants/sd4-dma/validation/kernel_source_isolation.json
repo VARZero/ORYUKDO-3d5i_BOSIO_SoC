@@ -1,0 +1,1 @@
+{"status":"isolated", "materialized_external_links":85352, "original_hooks_restored":["drivers/mmc/host/Makefile","drivers/mmc/host/Kconfig","drivers/dma/Makefile","drivers/dma/Kconfig"], "note":"Copied baseline used external symlinks. Four appended hooks were preserved locally and removed exactly from original targets; independent source files now used."}

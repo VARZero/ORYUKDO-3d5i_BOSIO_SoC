@@ -1,0 +1,2 @@
+PASS PLIC M/S contexts, priorities, level re-pending, claim/complete, response stalls
+- soc/tests/tb_storage_plic.sv:36: Verilog $finish

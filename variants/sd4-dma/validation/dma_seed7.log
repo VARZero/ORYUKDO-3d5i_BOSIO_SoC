@@ -1,0 +1,2 @@
+PASS DMA copy/fill, 4KiB split, 5-master contention, atomic lock, snoops, SD directions, queue, errors, 256 randomized descriptors cycles=107183
+- soc/tests/tb_storage_dma.sv:93: Verilog $finish

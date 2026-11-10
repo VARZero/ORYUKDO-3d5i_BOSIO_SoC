@@ -1,0 +1,103 @@
+/dts-v1/;
+// 50 MHz timebase and UART input clock.
+// Board clocks, pins, DDR controller and peripherals are separate integration.
+/ {
+    #address-cells = <1>;
+    #size-cells = <1>;
+    compatible = "oryukdo,gen3";
+    model = "ORYUKDO Gen3 3D5I";
+    chosen {
+        stdout-path = "/soc/serial@10000000:115200n8";
+        bootargs = "earlycon=sbi console=hvc0 loglevel=7 nokaslr lpj=1000000 rdinit=/init initcall_debug ignore_loglevel keep_bootcon printk.time=1";
+    };
+    memory@80000000 { device_type = "memory"; reg = <0x80000000 0x40000000>; };
+    reserved-memory {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        ranges;
+        bosio_dma: dma-pool@bd000000 {
+            compatible = "shared-dma-pool";
+            reg = <0xbd000000 0x01000000>;
+            no-map;
+        };
+        // OpenSBI additionally inserts its own no-map firmware reservation.
+        bosio_frames: framebuffer@bf800000 {
+            reg = <0xbf800000 0x00800000>;
+            no-map;
+        };
+    };
+    cpus {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        timebase-frequency = <50000000>;
+        cpu@0 {
+            device_type = "cpu";
+            compatible = "riscv";
+            reg = <0>;
+            status = "okay";
+            riscv,isa = "rv32ima_zicsr_zifencei_svade";
+            riscv,isa-base = "rv32i";
+            riscv,isa-extensions = "i", "m", "a", "zicsr", "zifencei", "svade";
+            mmu-type = "riscv,sv32";
+            cpu_intc: interrupt-controller {
+                #interrupt-cells = <1>;
+                #address-cells = <0>;
+                interrupt-controller;
+                compatible = "riscv,cpu-intc";
+            };
+        };
+    };
+    soc {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        compatible = "simple-bus";
+        ranges;
+        plic: interrupt-controller@c000000 {
+            compatible = "riscv,plic0";
+            reg = <0x0c000000 0x00400000>;
+            #address-cells = <0>;
+            #interrupt-cells = <1>;
+            interrupt-controller;
+            riscv,ndev = <2>;
+            interrupts-extended = <&cpu_intc 11>, <&cpu_intc 9>;
+        };
+        mmc@10008000 {
+            compatible = "oryukdo,sd4-v1";
+            reg = <0x10008000 0x34>;
+            interrupt-parent = <&plic>;
+            interrupts = <1>;
+            bus-width = <4>;
+            max-frequency = <25000000>;
+            non-removable;
+            no-1-8-v;
+        };
+        storage_dma: dma-controller@10009000 {
+            compatible = "oryukdo,dma-v1";
+            reg = <0x10009000 0x18>;
+            interrupt-parent = <&plic>;
+            interrupts = <2>;
+            #dma-cells = <1>;
+        };
+        bosio@20000000 {
+            compatible = "oryukdo,kfb-bosio-v1";
+            reg = <0x20000000 0x80>, <0x20010000 0x80>, <0x20020000 0x80>;
+            reg-names = "projection0", "projection1", "output";
+            memory-region = <&bosio_dma>;
+            status = "okay";
+        };
+        serial@10000000 {
+            compatible = "ns16550";
+            reg = <0x10000000 8>;
+            clock-frequency = <50000000>;
+            current-speed = <115200>;
+            reg-shift = <0>;
+            reg-io-width = <1>;
+            // Polling only; no external UART interrupt controller yet.
+        };
+        timer@200bff8 {
+            compatible = "riscv,aclint-mtimer";
+            reg = <0x0200bff8 8>, <0x02004000 8>;
+            interrupts-extended = <&cpu_intc 7>;
+        };
+    };
+};

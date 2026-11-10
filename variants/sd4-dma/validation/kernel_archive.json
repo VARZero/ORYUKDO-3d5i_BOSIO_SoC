@@ -1,0 +1,12 @@
+{
+  "result": "PASS_SOURCE_ARCHIVE",
+  "path": "D:\\temp\\gen3bosio\\sd4-dma\\candidate\\linux-6.12-sd4-dma-source.tar.gz",
+  "sha256": "62a15cf984f1f9100cfa2a7f986f2954195d7334c8eb29a0c5e2553f4a9288d3",
+  "regular_files": 93253,
+  "uncompressed_file_bytes": 1521633799,
+  "driver_matches": [
+    "linux/drivers/mmc/host/oryukdo_sd.c",
+    "linux/drivers/dma/oryukdo_dma.c"
+  ],
+  "external_absolute_symlinks": 0
+}

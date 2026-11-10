@@ -1,0 +1,69 @@
+{
+  "result": "PASS_IMPLEMENTATION_HARDWARE_UNTESTED",
+  "source_directory": "D:\\ORYUKDO-Gen3_AB_integrated_unverified\\ORYUKDO-Gen3\\work\\sd4-dma",
+  "implementation_directory": "D:\\temp\\gen3bosio\\sd4-dma\\board_v6_incremental",
+  "part": "xc7a200tfbg484-2",
+  "resources": {
+    "lut": 114075.0,
+    "ff": 74189.0,
+    "bram_tiles": 101.5,
+    "dsp": 62.0,
+    "occupied_slices": 32792.0
+  },
+  "timing_ns": {
+    "wns": 0.034,
+    "tns": 0.0,
+    "whs": 0.027,
+    "ths": 0.0,
+    "wpws": 0.0
+  },
+  "clock_targets_mhz": {
+    "cpu": 50,
+    "fabric": 100,
+    "sd_max": 25,
+    "pixel": 74.25,
+    "serializer": 371.25
+  },
+  "drc_known_mig_warnings": {
+    "BUFC-1": 4,
+    "REQP-1709": 1
+  },
+  "cdc_warning_critical": 0,
+  "vivado_raw_critical_warnings": [
+    "[Project 1-1108] set_clock_uncertainty constraint will adversely impact the incremental design run. Please consider setting config_implementation {incr.ignoreUserClockUncertainty 1} which will ignore this constraint."
+  ],
+  "cpu_fabric_setup_uncertainty_ns": 0.3,
+  "io_coverage_limits": {
+    "no_external_output_delay": [
+      "ddr3_reset_n",
+      "hdmi_clk_p",
+      "hdmi_data_p[0]",
+      "hdmi_data_p[1]",
+      "hdmi_data_p[2]"
+    ],
+    "asynchronous_input_max_delay_only": [
+      "gp_i2c_scl",
+      "gp_i2c_sda",
+      "gp_spi_miso",
+      "gp_uart_rx",
+      "sensor_scl",
+      "sensor_sda",
+      "uart_rx"
+    ],
+    "async_reset_false_path": "rst_n",
+    "generated_output_clock": "sd_dclk"
+  },
+  "bitstream": "ORYUKDO-KFB-SD4-DMA-v1.bit",
+  "bitstream_sha256": "fe1ce8e52f30f1b9bd7bad944a0bf6f981eef9bba01438c0d26b40da6126fdf0",
+  "image": "ORYUKDO-KFB-SD4-DMA-v1.img",
+  "image_sha256": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+  "hardware_tested": false,
+  "source_manifest_sha256": "65e7e7698749fd240953e2c1d5640bca1ea3201379794027e0cf191694c2d2e3",
+  "routed_checkpoint_sha256": "e693c93ecf1204082a0fe9ba93502c9269c9fd6c82e16a700cb1be52f951bbe4",
+  "io_inspection_script_sha256": "c41047df2aaaa5bdc1105b277f9f3368be00e9eb96b76026a1fa6fb95756cea0",
+  "internal_clock_setup_slack_ns": {
+    "cpu_raw": 0.646,
+    "clk_pll_i": 0.034,
+    "pixel_raw": 2.192
+  }
+}

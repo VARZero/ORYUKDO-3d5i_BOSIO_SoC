@@ -1,0 +1,3780 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Nov 10 08:20:34 2026
+| Host         : VieupE-Desk running 64-bit major release  (build 9200)
+| Command      : report_drc -no_waivers -file D:/temp/gen3bosio/sd4-dma/board_v6_incremental/route/placed_drc.rpt
+| Design       : gen3_kfb_bosio
+| Device       : xc7a200tfbg484-2
+| Speed File   : -2
+| Design State : Partially Routed
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_optimized
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 528
++-----------+------------------+----------------------------+------------+
+| Rule      | Severity         | Description                | Violations |
++-----------+------------------+----------------------------+------------+
+| PDIL-1    | Error            | Invalid Site Configuration | 522        |
+| RTSTAT-13 | Critical Warning | Insufficient Routing       | 1          |
+| BUFC-1    | Warning          | Input Buffer Connections   | 4          |
+| REQP-1709 | Warning          | Clock output buffering     | 1          |
++-----------+------------------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDIL-1#1 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X100Y100. Reason: Cannot replace net cache_ppn_reg_0_7_0_5_i_7__0_n_3 with net minstret[3]_i_89_n_3 on bel pin D/D
+, Cannot replace net cache_ppn_reg_0_7_0_5_i_7__0_n_3 with net minstret[3]_i_89_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#2 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X100Y101. Reason: Cannot replace net i___0_0 with net faults[10]_i_2_n_3 on bel pin C/C
+, Cannot replace net i___0_0 with net faults[10]_i_2_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#3 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X100Y117. Reason: Cannot replace net FSM_sequential_state[1]_i_3__0_n_3 with net held_fetch_reg on bel pin D/D
+, Cannot replace net FSM_sequential_state[1]_i_3__0_n_3 with net held_fetch_reg on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#4 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X100Y119. Reason: Cannot replace net mtime[63]_i_12_n_3 with net E[0] on bel pin D/D
+, Cannot replace net mtime[63]_i_12_n_3 with net E[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#5 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y120. Reason: Cannot replace net io_data[3]_i_4_n_3 with net io_data[31]_i_4_n_3 on bel pin D/D
+, Cannot replace net io_data[3]_i_4_n_3 with net io_data[31]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#6 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y122. Reason: Cannot replace net io_response_valid_reg_2[5] with net mem_response_ready on bel pin B/B
+, Cannot replace net io_response_valid_reg_2[5] with net mem_response_ready on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#7 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y127. Reason: Cannot replace net i__carry_i_5__14_n_3 with net p11_reg_5[1] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#8 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y128. Reason: Cannot replace net i__carry__0_i_5__14_n_3 with net p11_reg_3[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#9 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y136. Reason: Cannot replace net write_value[8]_i_2_n_3 with net value[19]_i_2_n_3 on bel pin D/D
+, Cannot replace net write_value[8]_i_2_n_3 with net value[19]_i_2_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#10 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y137. Reason: Cannot replace net add_ln42_fu_98_p2[4] with net write_value[8]_i_3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#11 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y146. Reason: Cannot replace net result_reg[21]_27 with net ap_NS_fsm[33] on bel pin C/C
+, Cannot replace net result_reg[21]_27 with net ap_NS_fsm[33] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#12 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y69. Reason: Cannot replace net decode_lane[1].imm[15] with net stage1[192]_i_6_n_3 on bel pin C/C
+, Cannot replace net decode_lane[1].imm[15] with net stage1[192]_i_6_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#13 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y76. Reason: Cannot replace net decode_lane[2].imm[12] with net decode_lane[2].imm[2] on bel pin D/D
+, Cannot replace net decode_lane[2].imm[12] with net decode_lane[2].imm[2] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#14 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y78. Reason: Cannot replace net decode_lane[2].imm[19] with net stage1[276]_i_2_n_3 on bel pin A/A
+, Cannot replace net decode_lane[2].imm[19] with net stage1[276]_i_2_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#15 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X101Y80. Reason: Cannot replace net head_reg[0]_rep__1_2 with net barrier_tag_reg[32] on bel pin D/D
+, Cannot replace net head_reg[0]_rep__1_2 with net barrier_tag_reg[32] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#16 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X102Y114. Reason: Cannot replace net rom_data[95]_i_8_n_3 with net rom_data[53]_i_7_n_3 on bel pin CMUX/CMUX
+, Cannot replace net rom_data[95]_i_8_n_3 with net rom_data[53]_i_7_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#17 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X102Y122. Reason: Cannot replace net DOD1 with net mem_valid on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#18 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X102Y136. Reason: Cannot replace net i__carry__2_i_5__12_n_3 with net write_value[15]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#19 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X102Y63. Reason: Cannot replace net G_OUTPUT[0].output_data_reg[0][80]_2 with net bank_write_data[3]__0[55] on bel pin D/D
+, Cannot replace net G_OUTPUT[0].output_data_reg[0][80]_2 with net bank_write_data[3]__0[55] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#20 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X102Y68. Reason: Cannot replace net stage1[56]_i_3_n_3 with net i___303_i_24__0_n_3 on bel pin C/C
+, Cannot replace net stage1[56]_i_3_n_3 with net i___303_i_24__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#21 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X102Y74. Reason: Cannot replace net words[41]_i_1_n_3 with net stage1[56]_i_3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#22 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X102Y99. Reason: Cannot replace net D[1] with net o_start_pc_reg[3]_22 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#23 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X103Y105. Reason: Cannot replace net rom_data[95]_i_5_n_3 with net GLOBAL_LOGIC1 on bel pin D/D
+, Cannot replace net rom_data[95]_i_5_n_3 with net GLOBAL_LOGIC1 on bel pin DUSED/0
+, Cannot replace net rom_data[95]_i_5_n_3 with net GLOBAL_LOGIC1 on bel pin DUSED/OUT
+, Site pin to site pin route-thru requires conflicting attribute string values for user logic element 'D6LUT in site 'SLICE_X103Y105'. Attribute 'EQN' is programmed to '64'h888888888888888A' but needs a value of 'O6=1' for the route-thru.
+.
+Related violations: <none>
+
+PDIL-1#24 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X103Y135. Reason: Cannot replace net i__carry__2_i_1__19_n_3 with net amo_value2_inferred__0/i__carry__2_n_3 on bel pin DMUX/DMUX
+, Cannot replace net i__carry__2_i_1__19_n_3 with net amo_value2_inferred__0/i__carry__2_n_3 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#25 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X103Y137. Reason: Cannot replace net value[11]_i_2_n_3 with net value[18]_i_2_n_3 on bel pin D/D
+, Cannot replace net value[11]_i_2_n_3 with net value[18]_i_2_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#26 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X103Y157. Reason: Cannot replace net dout_reg[24]_0 with net bus_read/next_rreq on bel pin B/B
+, Cannot replace net dout_reg[24]_0 with net bus_read/next_rreq on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#27 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X103Y66. Reason: Cannot replace net upper_push with net upper_forward_data_reg[77]_7[0] on bel pin D/D
+, Cannot replace net upper_push with net upper_forward_data_reg[77]_7[0] on bel pin DOUTMUX/O6
+, Cannot replace net upper_memory_reg_0_i_2_n_3 with net upper_memory_reg_0_i_72_n_3 on bel pin C/C
+, Cannot replace net upper_memory_reg_0_i_2_n_3 with net upper_memory_reg_0_i_72_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#28 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X103Y80. Reason: Cannot replace net cs[0]_i_23_n_3 with net kills/o_kill5[2] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#29 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X103Y95. Reason: Cannot replace net FSM_onehot_state[6]_i_4_n_3 with net clear_reservation0 on bel pin D/D
+, Cannot replace net FSM_onehot_state[6]_i_4_n_3 with net clear_reservation0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#30 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X104Y123. Reason: Cannot replace net lcr_reg[7]_0 with net pop on bel pin CMUX/CMUX
+, Cannot replace net lcr_reg[7]_0 with net pop on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#31 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X104Y56. Reason: Cannot replace net bank_write_data[6]__0[68] with net bank_write_data[6]__0[66] on bel pin D/D
+, Cannot replace net bank_write_data[6]__0[68] with net bank_write_data[6]__0[66] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#32 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X104Y62. Reason: Cannot replace net alu_lane[1].valid_reg_1 with net bank_write_data[3]__0[69] on bel pin D/D
+, Cannot replace net alu_lane[1].valid_reg_1 with net bank_write_data[3]__0[69] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#33 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X104Y64. Reason: Cannot replace net mem_reg_1_ENBWREN_cooolgate_en_sig_4 with net upper_forward_valid0 on bel pin D/D
+, Cannot replace net mem_reg_1_ENBWREN_cooolgate_en_sig_4 with net upper_forward_valid0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#34 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X104Y86. Reason: Cannot replace net sys_tag_reg[19][3] with net reclaim_index_reg[3]_22 on bel pin DMUX/DMUX
+, Cannot replace net cs[0]_i_74_n_3 with net reclaim_index_reg[3]_22 on bel pin DOUTMUX/O6
+, Cannot replace net sys_tag_reg[19][3] with net reclaim_index_reg[3]_22 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#35 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X105Y123. Reason: Cannot replace net mtime[63]_i_3_n_3 with net i__carry_i_4__33_n_3 on bel pin C/C
+, Cannot replace net mtime[63]_i_3_n_3 with net i__carry_i_4__33_n_3 on bel pin COUTMUX/O6
+, Cannot replace net product_reg[63]_0[9] with net CEB2 on bel pin BMUX/BMUX
+, Cannot replace net p00_reg_n_98 with net CEB2 on bel pin BOUTMUX/O6
+, Cannot replace net product_reg[63]_0[9] with net CEB2 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#36 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X105Y130. Reason: Cannot replace net value[7]_i_2_n_3 with net write_value[5]_i_3_n_3 on bel pin D/D
+, Cannot replace net value[7]_i_2_n_3 with net write_value[5]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#37 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X105Y190. Reason: Cannot replace net owner_reg[2]_rep__4_2[25] with net raddr[2]_i_1__2_n_3 on bel pin CMUX/CMUX
+, Cannot replace net owner_reg[2]_rep__4_3[25] with net raddr[2]_i_1__2_n_3 on bel pin COUTMUX/O6
+, Cannot replace net owner_reg[2]_rep__4_2[25] with net raddr[2]_i_1__2_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#38 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X105Y83. Reason: Cannot replace net p_2_in_0[62] with net i_branch_valid0 on bel pin DMUX/DMUX
+, Cannot replace net p_2_in_0[30] with net i_branch_valid0 on bel pin DOUTMUX/O6
+, Cannot replace net p_2_in_0[62] with net i_branch_valid0 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#39 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X105Y99. Reason: Cannot replace net G_SLOT[10].discarded[10]_i_5__2_n_3 with net o_start_pc_reg[3]_2 on bel pin D/D
+, Cannot replace net G_SLOT[10].discarded[10]_i_5__2_n_3 with net o_start_pc_reg[3]_2 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#40 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X106Y123. Reason: Cannot replace net address[7]_i_1_n_3 with net tx_count0_carry__0_i_1_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#41 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X106Y137. Reason: Cannot replace net value[20]_i_2_n_3 with net write_value[20]_i_2_n_3 on bel pin C/C
+, Cannot replace net value[20]_i_2_n_3 with net write_value[20]_i_2_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#42 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X106Y152. Reason: Cannot replace net saved[user][0]_i_1_n_3 with net i_fu_62_reg[5]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#43 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X106Y56. Reason: Cannot replace net bank_write_data[3]__0[69] with net bank_write_data[6]__0[8] on bel pin C/C
+, Cannot replace net bank_write_data[3]__0[69] with net bank_write_data[6]__0[8] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#44 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X106Y68. Reason: Cannot replace net stage1[72]_i_3_n_3 with net upper_memory_reg_0_i_55_n_3 on bel pin D/D
+, Cannot replace net stage1[72]_i_3_n_3 with net upper_memory_reg_0_i_55_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#45 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X107Y171. Reason: Cannot replace net saved[addr][63]_i_2_n_3 with net rdata[25]_i_3__1_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#46 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X107Y58. Reason: Cannot replace net G_ORDER_BANK[3].write_data[15] with net G_ORDER_BANK[3].write_data[12] on bel pin C/C
+, Cannot replace net G_ORDER_BANK[3].write_data[15] with net G_ORDER_BANK[3].write_data[12] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#47 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X107Y60. Reason: Cannot replace net G_ORDER_BANK[2].write_data[17] with net G_ORDER_BANK[2].write_data[15] on bel pin D/D
+, Cannot replace net G_ORDER_BANK[2].write_data[17] with net G_ORDER_BANK[2].write_data[15] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#48 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X107Y61. Reason: Cannot replace net G_ORDER_BANK[1].write_data[12] with net G_ORDER_BANK[2].write_data[17] on bel pin D/D
+, Cannot replace net G_ORDER_BANK[1].write_data[12] with net G_ORDER_BANK[2].write_data[17] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#49 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X107Y84. Reason: Cannot replace net G_SLOT[2].o_renamed[2]_i_1__5_n_3 with net head_reg[1]_rep__4_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#50 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X107Y97. Reason: Cannot replace net G_SLOT[9].discarded[9]_i_5__1_n_3 with net o_start_pc_reg[4]_28 on bel pin D/D
+, Cannot replace net G_SLOT[9].discarded[9]_i_5__1_n_3 with net o_start_pc_reg[4]_28 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#51 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X108Y124. Reason: Cannot replace net rx_count1_in[18] with net tx_count0_carry__1_i_3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#52 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X108Y139. Reason: Cannot replace net write_value[17]_i_2_n_3 with net GLOBAL_LOGIC0 on bel pin B/B
+, Cannot replace net write_value[17]_i_2_n_3 with net GLOBAL_LOGIC0 on bel pin BUSED/0
+, Cannot replace net write_value[17]_i_2_n_3 with net GLOBAL_LOGIC0 on bel pin BUSED/OUT
+, Site pin to site pin route-thru requires conflicting attribute string values for user logic element 'B6LUT in site 'SLICE_X108Y139'. Attribute 'EQN' is programmed to '64'hFFFFFFFF0A080200' but needs a value of 'O6=1' for the route-thru.
+.
+Related violations: <none>
+
+PDIL-1#53 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X108Y151. Reason: Cannot replace net ap_CS_fsm_state94 with net gmem_RREADY on bel pin CMUX/CMUX
+, Cannot replace net dout_vld_reg_1[2] with net gmem_RREADY on bel pin COUTMUX/O6
+, Cannot replace net ap_CS_fsm_state94 with net gmem_RREADY on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#54 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X108Y175. Reason: Cannot replace net rdata[23]_i_5__1_n_3 with net rdata[24]_i_3__1_n_3 on bel pin D/D
+, Cannot replace net rdata[23]_i_5__1_n_3 with net rdata[24]_i_3__1_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#55 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X108Y176. Reason: Cannot replace net saved[addr][58]_i_3_n_3 with net rdata[25]_i_5__1_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#56 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X108Y82. Reason: Cannot replace net faults[13]_i_2_n_3 with net GLOBAL_LOGIC0 on bel pin D/D
+, Cannot replace net faults[13]_i_2_n_3 with net GLOBAL_LOGIC0 on bel pin DUSED/0
+, Cannot replace net faults[13]_i_2_n_3 with net GLOBAL_LOGIC0 on bel pin DUSED/OUT
+, Site pin to site pin route-thru requires conflicting attribute string values for user logic element 'D6LUT in site 'SLICE_X108Y82'. Attribute 'EQN' is programmed to '64'hFAEAEAEAEAEAEAEA' but needs a value of 'O6=1' for the route-thru.
+.
+Related violations: <none>
+
+PDIL-1#57 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X109Y138. Reason: Cannot replace net write_value[23]_i_4_n_3 with net E[0] on bel pin C/C
+, Cannot replace net write_value[23]_i_4_n_3 with net E[0] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#58 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X109Y142. Reason: Cannot replace net state[2]_i_12__0_n_3 with net burst_left[1]_i_1_n_3 on bel pin C/C
+, Cannot replace net state[2]_i_12__0_n_3 with net burst_left[1]_i_1_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#59 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X109Y156. Reason: Cannot replace net destination[4]_i_1162_n_3 with net bus_read/fifo_burst/pop on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#60 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X109Y171. Reason: Cannot replace net destination[4]_i_71_n_3 with net rdata[11]_i_3__1_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#61 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X109Y79. Reason: Cannot replace net stage1[172]_i_2_n_3 with net head_reg[2] on bel pin D/D
+, Cannot replace net stage1[172]_i_2_n_3 with net head_reg[2] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#62 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X10Y131. Reason: Cannot replace net result_reg[13]_11 with net result_reg[13]_22 on bel pin D/D
+, Cannot replace net result_reg[13]_11 with net result_reg[13]_22 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#63 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X110Y92. Reason: Cannot replace net i___14_i_9_n_3 with net i___14_i_10_n_3 on bel pin D/D
+, Cannot replace net i___14_i_9_n_3 with net i___14_i_10_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#64 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X110Y96. Reason: Cannot replace net head_reg[2]_32 with net G_OUTPUT[0].output_data_reg[0][3]_5 on bel pin D/D
+, Cannot replace net head_reg[2]_32 with net G_OUTPUT[0].output_data_reg[0][3]_5 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#65 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X111Y135. Reason: Cannot replace net p_2_in__0[21] with net tx_bits_reg[3]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#66 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X111Y176. Reason: Cannot replace net state[1]_i_1__6_n_3 with net rdata[0]_i_8__1_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#67 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X111Y177. Reason: Cannot replace net rdata[0]_i_8__1_n_3 with net rdata[25]_i_6_n_3 on bel pin D/D
+, Cannot replace net rdata[0]_i_8__1_n_3 with net rdata[25]_i_6_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#68 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y109. Reason: Cannot replace net fault_value[4]_i_1_n_3 with net G_SLOT[2].await_outcome[2]_i_24_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#69 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y122. Reason: Cannot replace net rx_count1_in[9] with net G_SLOT[8].completed[8]_i_6__4_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#70 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y127. Reason: Cannot replace net tx_count0_carry__2_i_2_n_3 with net p10_reg_i_40__3_n_3 on bel pin C/C
+, Cannot replace net tx_count0_carry__2_i_2_n_3 with net p10_reg_i_40__3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#71 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y131. Reason: Cannot replace net p10_reg_i_35__4_n_3 with net p10_reg_i_37__3_n_3 on bel pin C/C
+, Cannot replace net p10_reg_i_35__4_n_3 with net p10_reg_i_37__3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#72 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y148. Reason: Cannot replace net D[22] with net len_cnt[7]_i_3_n_3 on bel pin D/D
+, Cannot replace net D[22] with net len_cnt[7]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#73 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y63. Reason: Cannot replace net G_ORDER_BANK[1].write_data[18] with net G_ORDER_BANK[2].write_data[22] on bel pin A/A
+, Cannot replace net G_ORDER_BANK[1].write_data[18] with net G_ORDER_BANK[2].write_data[22] on bel pin AOUTMUX/O6
+, Cannot replace net upper_push_data[16] with net G_ORDER_BANK[3].write_data[18] on bel pin C/C
+, Cannot replace net upper_push_data[16] with net G_ORDER_BANK[3].write_data[18] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#74 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y70. Reason: Cannot replace net if_data_reg[95]_0[80] with net upper_memory_reg_0_i_75_n_3 on bel pin AMUX/AMUX
+, Cannot replace net p_2_in_0[74] with net upper_memory_reg_0_i_75_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net if_data_reg[95]_0[80] with net upper_memory_reg_0_i_75_n_3 on bel pin AOUTMUX/OUT
+, Cannot replace net upper_memory_reg_0_i_75_n_3 with net rd[13] on bel pin C/C
+, Cannot replace net upper_memory_reg_0_i_75_n_3 with net rd[13] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#75 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y79. Reason: Cannot replace net alu_lane[2].bad_reg with net i__carry_i_13_0[2] on bel pin D/D
+, Cannot replace net alu_lane[2].bad_reg with net i__carry_i_13_0[2] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#76 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X112Y96. Reason: Cannot replace net G_SLOT[6].o_sidefx[6]_i_1__1_n_3 with net head_reg[2]_1 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#77 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X113Y123. Reason: Cannot replace net G_SLOT[5].completed[5]_i_2__2_n_3 with net G_SLOT[12].completed[12]_i_4__1_n_3 on bel pin D/D
+, Cannot replace net G_SLOT[5].completed[5]_i_2__2_n_3 with net G_SLOT[12].completed[12]_i_4__1_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#78 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X113Y137. Reason: Cannot replace net G_SLOT[12].discarded[12]_i_8__1_n_3 with net p11_reg_4[1] on bel pin D/D
+, Cannot replace net G_SLOT[12].discarded[12]_i_8__1_n_3 with net p11_reg_4[1] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#79 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X113Y142. Reason: Cannot replace net product[39]_i_15__8_n_3 with net wr_en on bel pin D/D
+, Cannot replace net product[39]_i_15__8_n_3 with net wr_en on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#80 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X113Y198. Reason: Cannot replace net owner_reg[2]_rep__4_24[5] with net rdata[11]_i_5__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#81 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X113Y63. Reason: Cannot replace net if_data_reg[73] with net G_ORDER_BANK[2].write_data[20] on bel pin D/D
+, Cannot replace net if_data_reg[73] with net G_ORDER_BANK[2].write_data[20] on bel pin DOUTMUX/O6
+, Cannot replace net if_data_reg[73]_0 with net G_ORDER_BANK[2].write_data[21] on bel pin C/C
+, Cannot replace net if_data_reg[73]_0 with net G_ORDER_BANK[2].write_data[21] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#82 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X113Y64. Reason: Cannot replace net upper_push_data[24] with net G_ORDER_BANK[1].write_data[20] on bel pin C/C
+, Cannot replace net upper_push_data[31] with net G_ORDER_BANK[1].write_data[20] on bel pin CMUX/CMUX
+, Cannot replace net upper_push_data[24] with net G_ORDER_BANK[1].write_data[20] on bel pin COUTMUX/O6
+, Cannot replace net upper_push_data[31] with net G_ORDER_BANK[1].write_data[20] on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#83 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X113Y78. Reason: Cannot replace net pending_uop_reg[7]_i_7_n_3 with net kills/o_kill10_in on bel pin COUT/COUT
+, Cannot replace net pending_uop_reg[7]_i_7_n_3 with net kills/o_kill10_in on bel pin DOUTMUX/CY
+.
+Related violations: <none>
+
+PDIL-1#84 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X114Y18. Reason: Cannot replace net read_addr[2] with net forward_data_reg[37]_0 on bel pin C/C
+, Cannot replace net read_addr[2] with net forward_data_reg[37]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#85 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X114Y23. Reason: Cannot replace net G_OUTPUT[0].output_data[0][45]_i_5__0_n_3 with net forward_data_reg[84]_0 on bel pin C/C
+, Cannot replace net G_OUTPUT[0].output_data[0][45]_i_5__0_n_3 with net forward_data_reg[84]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#86 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X114Y34. Reason: Cannot replace net D[85] with net forward_data_reg[91]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#87 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X115Y11. Reason: Cannot replace net core_release_reg[1]_8 with net empty_reg_6 on bel pin D/D
+, Cannot replace net core_release_reg[1]_8 with net empty_reg_6 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#88 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X115Y175. Reason: Cannot replace net i___436_n_3 with net rdata[23]_i_2__1_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#89 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X115Y207. Reason: Cannot replace net owner_reg[2]_rep__4_19[25] with net mem_reg[3][57]_srl4_i_3__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#90 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X115Y211. Reason: Cannot replace net owner_reg[2]_rep__4_21[4] with net rnext[4] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#91 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X115Y95. Reason: Cannot replace net G_OUTPUT[0].output_data_reg[0][32]_9 with net G_OUTPUT[0].output_data_reg[0][32]_8 on bel pin C/C
+, Cannot replace net G_OUTPUT[0].output_data_reg[0][32]_9 with net G_OUTPUT[0].output_data_reg[0][32]_8 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#92 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y133. Reason: Cannot replace net G_SLOT[2].discarded[2]_i_12__2_n_3 with net G_SLOT[15].completed[15]_i_5__3_n_3 on bel pin B/B
+, Cannot replace net G_SLOT[2].discarded[2]_i_12__2_n_3 with net G_SLOT[15].completed[15]_i_5__3_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net G_SLOT[1].completed[1]_i_3__4_n_3 with net G_SLOT[11].completed[11]_i_3__4_n_3 on bel pin C/C
+, Cannot replace net G_SLOT[1].completed[1]_i_3__4_n_3 with net G_SLOT[11].completed[11]_i_3__4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#93 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y155. Reason: Cannot replace net destination[4]_i_1090_n_3 with net DOA on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#94 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y157. Reason: Cannot replace net destination[4]_i_805_n_3 with net DOB on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#95 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y160. Reason: Cannot replace net destination[4]_i_342_n_3 with net DOC on bel pin COUTMUX/O6
+, Cannot replace net destination[4]_i_344_n_3 with net DOA on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#96 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y162. Reason: Cannot replace net destination[4]_i_1156_n_3 with net DOA on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#97 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y163. Reason: Cannot replace net destination[4]_i_1024_n_3 with net DOB on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#98 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y29. Reason: Cannot replace net read_addr[0] with net forward_valid_i_4__11_n_3 on bel pin D/D
+, Cannot replace net read_addr[0] with net forward_valid_i_4__11_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net read_addr[1] with net forward_valid_i_3__11_n_3 on bel pin C/C
+, Cannot replace net read_addr[1] with net forward_valid_i_3__11_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#99 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X116Y81. Reason: Cannot replace net stage1_reg[246]_65[2] with net G_SLOT[3].o_rename_rd[19]_i_1__2_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#100 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X117Y12. Reason: Cannot replace net empty_reg_2 with net memory_reg_0_i_8__16[0] on bel pin D/D
+, Cannot replace net empty_reg_2 with net memory_reg_0_i_8__16[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#101 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X117Y13. Reason: Cannot replace net head[6]_459[15] with net empty_reg_5 on bel pin A/A
+, Cannot replace net head[6]_459[14] with net empty_reg_5 on bel pin AMUX/AMUX
+, Cannot replace net head[6]_459[15] with net empty_reg_5 on bel pin AOUTMUX/O6
+, Cannot replace net head[6]_459[14] with net empty_reg_5 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#102 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X117Y130. Reason: Cannot replace net G_SLOT[11].discarded[11]_i_6__3_n_3 with net G_SLOT[6].discarded[6]_i_9__3_n_3 on bel pin C/C
+, Cannot replace net G_SLOT[11].discarded[11]_i_6__3_n_3 with net G_SLOT[6].discarded[6]_i_9__3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#103 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X117Y131. Reason: Cannot replace net cfg_data[14]_i_1_n_3 with net G_SLOT[10].discarded[10]_i_8__3_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#104 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X117Y16. Reason: Cannot replace net D[52] with net reserve_num[4][2]_i_1_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#105 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X117Y78. Reason: Cannot replace net stage1_reg[246]_91[1] with net head_reg[1]_rep__4_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#106 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X118Y140. Reason: Cannot replace net G_SLOT[14].discarded[14]_i_8_n_3 with net sin_q300_carry__1_i_10__0_n_3 on bel pin B/B
+, Cannot replace net G_SLOT[14].discarded[14]_i_8_n_3 with net sin_q300_carry__1_i_10__0_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#107 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X118Y142. Reason: Cannot replace net z[8]_i_2__0_n_3 with net GLOBAL_LOGIC0 on bel pin D/D
+, Cannot replace net z[8]_i_2__0_n_3 with net GLOBAL_LOGIC0 on bel pin DUSED/0
+, Cannot replace net z[8]_i_2__0_n_3 with net GLOBAL_LOGIC0 on bel pin DUSED/OUT
+, Site pin to site pin route-thru requires conflicting attribute string values for user logic element 'D6LUT in site 'SLICE_X118Y142'. Attribute 'EQN' is programmed to '32'hB8B888BB' but needs a value of 'O6=1' for the route-thru.
+.
+Related violations: <none>
+
+PDIL-1#108 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X119Y140. Reason: Cannot replace net G_SLOT[6].completed[6]_i_10__1_n_3 with net sin_q300_carry__1_i_9__0_n_3 on bel pin C/C
+, Cannot replace net G_SLOT[6].completed[6]_i_10__1_n_3 with net sin_q300_carry__1_i_9__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#109 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X11Y81. Reason: Cannot replace net prm_update_istnum_reg[3][1]_2 with net prm_update_istnum_reg[0][2]_0 on bel pin B/B
+, Cannot replace net prm_update_istnum_reg[3][1] with net prm_update_istnum_reg[0][2]_0 on bel pin BMUX/BMUX
+, Cannot replace net prm_update_istnum_reg[3][1]_2 with net prm_update_istnum_reg[0][2]_0 on bel pin BOUTMUX/O6
+, Cannot replace net prm_update_istnum_reg[3][1] with net prm_update_istnum_reg[0][2]_0 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#110 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X120Y121. Reason: Cannot replace net G_SLOT[6].completed[6]_i_1__3_n_3 with net G_SLOT[11].discarded[11]_i_3__2_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#111 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X120Y177. Reason: Cannot replace net watchdog_cnt[0]_i_3_n_3 with net w_finished_reg_4[0] on bel pin D/D
+, Cannot replace net watchdog_cnt[0]_i_3_n_3 with net w_finished_reg_4[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#112 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X121Y158. Reason: Cannot replace net cfg_idx[5]_i_2_n_3 with net write_ptr[9]_i_3__0_n_3 on bel pin C/C
+, Cannot replace net cfg_idx[5]_i_2_n_3 with net write_ptr[9]_i_3__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#113 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X121Y192. Reason: Cannot replace net Q[21] with net mem_reg[3][2]_srl4_i_3__0_n_3 on bel pin BMUX/BMUX
+, Cannot replace net data_p1[22]_i_1__2_n_3 with net mem_reg[3][2]_srl4_i_3__0_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net Q[21] with net mem_reg[3][2]_srl4_i_3__0_n_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#114 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X121Y2. Reason: Cannot replace net response_start_reg[2]_1 with net full_i_4__13_n_3 on bel pin C/C
+, Cannot replace net response_start_reg[2]_1 with net full_i_4__13_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#115 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X121Y5. Reason: Cannot replace net push0139_out with net read_addr[3] on bel pin B/B
+, Cannot replace net push0139_out with net read_addr[3] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#116 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X121Y67. Reason: Cannot replace net stage1_reg[246]_126[4] with net stage1_alloc_req[2] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#117 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y101. Reason: Cannot replace net retire_cursor with net reclaim_index[7]_i_61_n_3 on bel pin D/D
+, Cannot replace net retire_cursor with net reclaim_index[7]_i_61_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#118 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y105. Reason: Cannot replace net G_SLOT[14].await_outcome[14]_i_1_n_3 with net G_SLOT[0].await_outcome[0]_i_2__2_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#119 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y18. Reason: Cannot replace net memory_reg_0_36 with net forward_data_reg[19]_0 on bel pin C/C
+, Cannot replace net memory_reg_0_36 with net forward_data_reg[19]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#120 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y187. Reason: Cannot replace net data_p2[31]_i_2_n_3 with net len_cnt_reg[6] on bel pin D/D
+, Cannot replace net data_p2[31]_i_2_n_3 with net len_cnt_reg[6] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#121 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y200. Reason: Cannot replace net mem_reg[3][23]_srl4_i_3__0_n_3 with net mem_reg[3][30]_srl4_i_3__0_n_3 on bel pin D/D
+, Cannot replace net mem_reg[3][23]_srl4_i_3__0_n_3 with net mem_reg[3][30]_srl4_i_3__0_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#122 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y52. Reason: Cannot replace net out_ord_vg_data_reg_reg[17]_rep_2[1] with net G_ORDER_BANK[1].write_data[32] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#123 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y54. Reason: Cannot replace net G_ORDER_BANK[3].write_data[33] with net G_ORDER_BANK[3].write_data[30] on bel pin C/C
+, Cannot replace net G_ORDER_BANK[3].write_data[33] with net G_ORDER_BANK[3].write_data[30] on bel pin COUTMUX/O6
+, Cannot replace net G_ORDER_BANK[3].write_data[31] with net G_ORDER_BANK[2].write_data[31] on bel pin A/A
+, Cannot replace net G_ORDER_BANK[3].write_data[31] with net G_ORDER_BANK[2].write_data[31] on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#124 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y6. Reason: Cannot replace net WEBWE[0] with net empty_next on bel pin D/D
+, Cannot replace net WEBWE[0] with net empty_next on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#125 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y66. Reason: Cannot replace net oldest_rename_rd[29] with net lsq_ready_discard_valid on bel pin AMUX/AMUX
+, Cannot replace net G_SLOT[5].o_rename_rd_reg[29]_0 with net lsq_ready_discard_valid on bel pin AOUTMUX/O6
+, Cannot replace net oldest_rename_rd[29] with net lsq_ready_discard_valid on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#126 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y74. Reason: Cannot replace net stage1_reg[35]_2 with net o_start_pc_reg[2]_53 on bel pin D/D
+, Cannot replace net stage1_reg[35]_1 with net o_start_pc_reg[2]_53 on bel pin DMUX/DMUX
+, Cannot replace net stage1_reg[35]_2 with net o_start_pc_reg[2]_53 on bel pin DOUTMUX/O6
+, Cannot replace net stage1_reg[35]_1 with net o_start_pc_reg[2]_53 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#127 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y8. Reason: Cannot replace net full_i_4__18_n_3 with net reserve_num[4][6]_i_1_n_3 on bel pin D/D
+, Cannot replace net full_i_4__18_n_3 with net reserve_num[4][6]_i_1_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#128 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y81. Reason: Cannot replace net stage1_reg[5]_4 with net G_SLOT[2].o_rename_rd[14]_i_3__3_0[0] on bel pin D/D
+, Cannot replace net stage1_reg[5]_4 with net G_SLOT[2].o_rename_rd[14]_i_3__3_0[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#129 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X122Y83. Reason: Cannot replace net G_SLOT[2].discarded[2]_i_14__2_n_3 with net G_SLOT[3].o_rename_rd[19]_i_3__3_0[0] on bel pin D/D
+, Cannot replace net G_SLOT[1].admitted[1]_i_13__0_n_3 with net G_SLOT[3].o_rename_rd[19]_i_3__3_0[0] on bel pin DMUX/DMUX
+, Cannot replace net G_SLOT[2].discarded[2]_i_14__2_n_3 with net G_SLOT[3].o_rename_rd[19]_i_3__3_0[0] on bel pin DOUTMUX/O6
+, Cannot replace net G_SLOT[1].admitted[1]_i_13__0_n_3 with net G_SLOT[3].o_rename_rd[19]_i_3__3_0[0] on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#130 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y100. Reason: Cannot replace net reclaim_index[7]_i_60_n_3 with net reclaim_index[7]_i_59_n_3 on bel pin C/C
+, Cannot replace net reclaim_index[7]_i_60_n_3 with net reclaim_index[7]_i_59_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#131 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y109. Reason: Cannot replace net G_SLOT[8].await_outcome[8]_i_2__2_n_3 with net G_SLOT[2].await_outcome[2]_i_4__2_n_3 on bel pin C/C
+, Cannot replace net G_SLOT[4].await_outcome[4]_i_2__2_n_3 with net G_SLOT[2].await_outcome[2]_i_4__2_n_3 on bel pin CMUX/CMUX
+, Cannot replace net G_SLOT[8].await_outcome[8]_i_2__2_n_3 with net G_SLOT[2].await_outcome[2]_i_4__2_n_3 on bel pin COUTMUX/O6
+, Cannot replace net G_SLOT[4].await_outcome[4]_i_2__2_n_3 with net G_SLOT[2].await_outcome[2]_i_4__2_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#132 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y120. Reason: Cannot replace net G_SLOT[5].completed[5]_i_2__0_n_3 with net G_SLOT[15].completed[15]_i_2__0_n_3 on bel pin C/C
+, Cannot replace net G_SLOT[5].completed[5]_i_2__0_n_3 with net G_SLOT[15].completed[15]_i_2__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#133 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y14. Reason: Cannot replace net queued_entries[52]_i_8_n_3 with net forward_data_reg[25]_0 on bel pin B/B
+, Cannot replace net queued_entries[44]_i_9_n_3 with net forward_data_reg[25]_0 on bel pin BMUX/BMUX
+, Cannot replace net queued_entries[52]_i_8_n_3 with net forward_data_reg[25]_0 on bel pin BOUTMUX/O6
+, Cannot replace net queued_entries[44]_i_9_n_3 with net forward_data_reg[25]_0 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#134 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y164. Reason: Cannot replace net destination[4]_i_327_n_3 with net FSM_onehot_state[2]_i_4__0_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#135 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y169. Reason: Cannot replace net FSM_onehot_state[2]_i_50_n_3 with net FSM_onehot_state[8]_i_12__0_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#136 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y19. Reason: Cannot replace net pending_entries_reg[4] with net queued_entries[124]_i_7_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#137 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y20. Reason: Cannot replace net queued_entries[88] with net queued_entries[116]_i_4_n_3 on bel pin AMUX/AMUX
+, Cannot replace net pending_entries_reg[28] with net queued_entries[116]_i_4_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net queued_entries[88] with net queued_entries[116]_i_4_n_3 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#138 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y33. Reason: Cannot replace net queued_entries[17]_i_2_n_3 with net forward_data_reg[40] on bel pin C/C
+, Cannot replace net queued_entries[17]_i_2_n_3 with net forward_data_reg[40] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#139 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y34. Reason: Cannot replace net forward_data_reg[44]_0 with net forward_data_reg[27]_1 on bel pin C/C
+, Cannot replace net forward_data_reg[44]_0 with net forward_data_reg[27]_1 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#140 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y37. Reason: Cannot replace net memory_reg_0_24 with net forward_data_reg[15] on bel pin C/C
+, Cannot replace net memory_reg_0_24 with net forward_data_reg[15] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#141 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y4. Reason: Cannot replace net first_bank_reg[1] with net empty_next on bel pin B/B
+, Cannot replace net first_bank_reg[1] with net empty_next on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#142 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y5. Reason: Cannot replace net full_i_4__5_n_3 with net full_i_4__19_n_3 on bel pin C/C
+, Cannot replace net full_i_4__5_n_3 with net full_i_4__19_n_3 on bel pin COUTMUX/O6
+, Cannot replace net read_addr[2] with net read_addr[2] on bel pin D/D
+, Cannot replace net read_addr[2] with net read_addr[2] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#143 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y53. Reason: Cannot replace net stage1_reg[246]_77[0] with net G_ORDER_BANK[1].write_data[33] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#144 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y54. Reason: Cannot replace net G_ORDER_BANK[3].write_data[4] with net G_ORDER_BANK[3].write_data[33] on bel pin D/D
+, Cannot replace net G_ORDER_BANK[3].write_data[4] with net G_ORDER_BANK[3].write_data[33] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#145 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y55. Reason: Cannot replace net G_ORDER_BANK[2].write_enable with net order_read_reg[0]_12 on bel pin C/C
+, Cannot replace net G_ORDER_BANK[2].write_enable with net order_read_reg[0]_12 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#146 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X123Y92. Reason: Cannot replace net G_SLOT[1].admitted[1]_i_18_n_3 with net o_start_pc_reg[4]_3 on bel pin B/B
+, Cannot replace net G_SLOT[0].completed[0]_i_17__2_n_3 with net o_start_pc_reg[4]_3 on bel pin BMUX/BMUX
+, Cannot replace net G_SLOT[1].admitted[1]_i_18_n_3 with net o_start_pc_reg[4]_3 on bel pin BOUTMUX/O6
+, Cannot replace net G_SLOT[0].completed[0]_i_17__2_n_3 with net o_start_pc_reg[4]_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#147 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X124Y166. Reason: Cannot replace net FSM_onehot_state[8]_i_132_n_3 with net DOB on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#148 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X124Y181. Reason: Cannot replace net w_finished_reg_4[0] with net rdata_reg[16]_0 on bel pin B/B
+, Cannot replace net w_finished_reg_4[0] with net rdata_reg[16]_0 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#149 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X124Y33. Reason: Cannot replace net D[386] with net forward_data_reg[31]_1 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#150 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X125Y1. Reason: Cannot replace net memory_reg_0_38 with net empty_reg_6 on bel pin D/D
+, Cannot replace net memory_reg_0_38 with net empty_reg_6 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#151 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X125Y172. Reason: Cannot replace net pending[1]_i_7_n_3 with net w_finished_reg_5[0] on bel pin C/C
+, Cannot replace net pending[1]_i_7_n_3 with net w_finished_reg_5[0] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#152 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X125Y2. Reason: Cannot replace net forward_data_reg[38]_0 with net SR[0] on bel pin D/D
+, Cannot replace net forward_data_reg[38]_0 with net SR[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#153 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X125Y204. Reason: Cannot replace net owner_reg[2]_rep__4_21[29] with net mem_reg[3][39]_srl4_i_3__0_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#154 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X125Y3. Reason: Cannot replace net empty_next with net empty_reg_5 on bel pin B/B
+, Cannot replace net empty_next with net empty_reg_5 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#155 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X125Y6. Reason: Cannot replace net reserve_num[3][5]_i_1_n_3 with net push0122_out_3 on bel pin B/B
+, Cannot replace net reserve_num[3][4]_i_1_n_3 with net push0122_out_3 on bel pin BMUX/BMUX
+, Cannot replace net reserve_num[3][5]_i_1_n_3 with net push0122_out_3 on bel pin BOUTMUX/O6
+, Cannot replace net reserve_num[3][4]_i_1_n_3 with net push0122_out_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#156 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X126Y109. Reason: Cannot replace net o_active_i_6__3_n_3 with net G_SLOT[2].await_outcome[2]_i_4__3_n_3 on bel pin D/D
+, Cannot replace net o_active_i_6__3_n_3 with net G_SLOT[2].await_outcome[2]_i_4__3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#157 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X126Y33. Reason: Cannot replace net forward_data_reg[68]_0 with net queued_entries[7]_i_7_n_3 on bel pin C/C
+, Cannot replace net forward_data_reg[68]_0 with net queued_entries[7]_i_7_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#158 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y1. Reason: Cannot replace net first_bank[2]_i_10_n_3 with net empty_reg_2 on bel pin B/B
+, Cannot replace net first_bank[2]_i_10_n_3 with net empty_reg_2 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#159 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y101. Reason: Cannot replace net reclaim_index[7]_i_136_n_3 with net reclaim_index[7]_i_64_n_3 on bel pin C/C
+, Cannot replace net reclaim_index[7]_i_136_n_3 with net reclaim_index[7]_i_64_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#160 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y107. Reason: Cannot replace net G_SLOT[1].await_outcome[1]_i_4__3_n_3 with net o_active_i_6__3_n_3 on bel pin D/D
+, Cannot replace net G_SLOT[1].await_outcome[1]_i_4__3_n_3 with net o_active_i_6__3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#161 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y113. Reason: Cannot replace net G_SLOT[8].discarded[8]_i_12__2_n_3 with net G_SLOT[3].discarded[3]_i_5__3_n_3 on bel pin C/C
+, Cannot replace net o_start_pc_reg[4]_6 with net G_SLOT[3].discarded[3]_i_5__3_n_3 on bel pin CMUX/CMUX
+, Cannot replace net G_SLOT[8].discarded[8]_i_12__2_n_3 with net G_SLOT[3].discarded[3]_i_5__3_n_3 on bel pin COUTMUX/O6
+, Cannot replace net o_start_pc_reg[4]_6 with net G_SLOT[3].discarded[3]_i_5__3_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#162 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y172. Reason: Cannot replace net priority_value[1][2]_i_9_n_3 with net rv_reg_0[0] on bel pin D/D
+, Cannot replace net priority_value[1][2]_i_9_n_3 with net rv_reg_0[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#163 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y2. Reason: Cannot replace net core_release_reg[1]_1 with net empty_reg_1 on bel pin C/C
+, Cannot replace net core_release_reg[1]_1 with net empty_reg_1 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#164 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y6. Reason: Cannot replace net forward_data_reg[37]_0 with net forward_data_reg[9]_0 on bel pin C/C
+, Cannot replace net forward_data_reg[37]_0 with net forward_data_reg[9]_0 on bel pin COUTMUX/O6
+, Cannot replace net forward_valid_i_2__12_n_3 with net forward_valid_i_4__26_n_3 on bel pin B/B
+, Cannot replace net forward_valid_i_2__12_n_3 with net forward_valid_i_4__26_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#165 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X127Y99. Reason: Cannot replace net reclaim_index[7]_i_4_n_3 with net G_SLOT[2].o_killed[2]_i_4__1_n_3 on bel pin D/D
+, Cannot replace net reclaim_index[7]_i_4_n_3 with net G_SLOT[2].o_killed[2]_i_4__1_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#166 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X128Y18. Reason: Cannot replace net forward_data_reg[9]_0 with net forward_data_reg[25]_0 on bel pin C/C
+, Cannot replace net forward_data_reg[9]_0 with net forward_data_reg[25]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#167 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X128Y19. Reason: Cannot replace net forward_data_reg[31]_0 with net memory_reg_0_8 on bel pin D/D
+, Cannot replace net forward_data_reg[31]_0 with net memory_reg_0_8 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#168 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X128Y20. Reason: Cannot replace net forward_data_reg[38] with net forward_data_reg[0]_0 on bel pin C/C
+, Cannot replace net forward_data_reg[38] with net forward_data_reg[0]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#169 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X128Y26. Reason: Cannot replace net forward_data_reg[5]_1 with net queued_entries[56]_i_6_n_3 on bel pin C/C
+, Cannot replace net forward_data_reg[5]_1 with net queued_entries[56]_i_6_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#170 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X129Y179. Reason: Cannot replace net scl_t_reg_i_37_n_3 with net state132_in on bel pin COUT/COUT
+, Cannot replace net state2[16] with net state132_in on bel pin DMUX/DMUX
+, Cannot replace net scl_t_reg_i_37_n_3 with net state132_in on bel pin DOUTMUX/CY
+, Cannot replace net state2[16] with net state132_in on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#171 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X129Y194. Reason: Cannot replace net int_scene_reg[63]_0[15] with net i___766_i_15__0_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#172 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X129Y222. Reason: Cannot replace net wide_a[32] with net mul_8ns_9ns_17_1_1_U29/p_reg_reg_i_44_n_3 on bel pin C/C
+, Cannot replace net wide_a[32] with net mul_8ns_9ns_17_1_1_U29/p_reg_reg_i_44_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#173 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X129Y27. Reason: Cannot replace net head[4]_457[24] with net forward_data_reg[5] on bel pin D/D
+, Cannot replace net head[4]_457[24] with net forward_data_reg[5] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#174 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X129Y30. Reason: Cannot replace net queued_entries[57]_i_2_n_3 with net forward_data_reg[39]_0 on bel pin B/B
+, Cannot replace net queued_entries[57]_i_2_n_3 with net forward_data_reg[39]_0 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#175 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X129Y4. Reason: Cannot replace net rptr_reg[2]_0 with net forward_valid_i_2__27_n_3 on bel pin C/C
+, Cannot replace net rptr_reg[2]_0 with net forward_valid_i_2__27_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#176 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X129Y46. Reason: Cannot replace net reg_mem[48][0]_i_5_n_3 with net reg_mem[61][0]_i_2_n_3 on bel pin C/C
+, Cannot replace net reg_mem[19][0]_i_2__0_n_3 with net reg_mem[61][0]_i_2_n_3 on bel pin CMUX/CMUX
+, Cannot replace net reg_mem[48][0]_i_5_n_3 with net reg_mem[61][0]_i_2_n_3 on bel pin COUTMUX/O6
+, Cannot replace net reg_mem[19][0]_i_2__0_n_3 with net reg_mem[61][0]_i_2_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#177 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X12Y107. Reason: Cannot replace net result_reg[3]_6 with net result_reg[5]_13 on bel pin D/D
+, Cannot replace net result_reg[3]_6 with net result_reg[5]_13 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#178 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X130Y4. Reason: Cannot replace net read_addr[0] with net forward_data_reg[67]_0 on bel pin C/C
+, Cannot replace net read_addr[0] with net forward_data_reg[67]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#179 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X130Y45. Reason: Cannot replace net reg_mem[28][0]_i_2__0_n_3 with net i___81_i_2_n_3 on bel pin C/C
+, Cannot replace net reg_mem[28][0]_i_2__0_n_3 with net i___81_i_2_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#180 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X130Y83. Reason: Cannot replace net stage1_reg[51]_9[5] with net G_SLOT[14].admitted[14]_i_2__2_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#181 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X131Y158. Reason: Cannot replace net done_i_2__0_n_3 with net rx_data[7]_i_3_n_3 on bel pin C/C
+, Cannot replace net sync_reg[1]_0[0] with net rx_data[7]_i_3_n_3 on bel pin CMUX/CMUX
+, Cannot replace net done_i_2__0_n_3 with net rx_data[7]_i_3_n_3 on bel pin COUTMUX/O6
+, Cannot replace net sync_reg[1]_0[0] with net rx_data[7]_i_3_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#182 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X131Y202. Reason: Cannot replace net rdata[23]_i_5__0_n_3 with net rdata[30]_i_4__0_n_3 on bel pin C/C
+, Cannot replace net rdata[23]_i_5__0_n_3 with net rdata[30]_i_4__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#183 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X132Y195. Reason: Cannot replace net count[4] with net rdata[14]_i_3__0_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#184 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X132Y200. Reason: Cannot replace net rdata[23]_i_3__0_n_3 with net rdata[24]_i_3__0_n_3 on bel pin C/C
+, Cannot replace net rdata[23]_i_3__0_n_3 with net rdata[24]_i_3__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#185 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X132Y3. Reason: Cannot replace net memory_reg_0_61 with net G_OUTPUT[0].output_data[0][94]_i_3__1_n_3 on bel pin C/C
+, Cannot replace net memory_reg_0_61 with net G_OUTPUT[0].output_data[0][94]_i_3__1_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#186 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X132Y44. Reason: Cannot replace net saved_rd_reg[5]_7 with net i___83_i_2_n_3 on bel pin D/D
+, Cannot replace net saved_rd_reg[5]_7 with net i___83_i_2_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#187 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X132Y51. Reason: Cannot replace net reg_mem[11][0]_i_6_n_3 with net reg_mem[6][0]_i_3_n_3 on bel pin D/D
+, Cannot replace net reg_mem[11][0]_i_6_n_3 with net reg_mem[6][0]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#188 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X132Y52. Reason: Cannot replace net reg_mem[27][0]_i_3_n_3 with net reg_mem[11][0]_i_6_n_3 on bel pin D/D
+, Cannot replace net reg_mem[27][0]_i_3_n_3 with net reg_mem[11][0]_i_6_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#189 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X132Y92. Reason: Cannot replace net oldest_killed[9] with net reclaim_index[7]_i_181_n_3 on bel pin CMUX/CMUX
+, Cannot replace net G_SLOT[9].o_killed_reg[9]_1 with net reclaim_index[7]_i_181_n_3 on bel pin COUTMUX/O6
+, Cannot replace net oldest_killed[9] with net reclaim_index[7]_i_181_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#190 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y3. Reason: Cannot replace net forward_data_reg[1]_0 with net memory_reg_0_0 on bel pin A/A
+, Cannot replace net forward_data_reg[1]_0 with net memory_reg_0_0 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#191 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y31. Reason: Cannot replace net pending_start[7][0]_i_5_n_3 with net queued_entries[23]_i_5_n_3 on bel pin B/B
+, Cannot replace net pending_start[7][0]_i_5_n_3 with net queued_entries[23]_i_5_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#192 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y32. Reason: Cannot replace net head[4]_457[51] with net queued_entries[55]_i_6_n_3 on bel pin D/D
+, Cannot replace net head[4]_457[51] with net queued_entries[55]_i_6_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#193 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y38. Reason: Cannot replace net stage2_reg[59]_i_3_n_3 with net forward_data_reg[46] on bel pin CMUX/CMUX
+, Cannot replace net stage2[59]_i_9_n_3 with net forward_data_reg[46] on bel pin COUTMUX/O6
+, Cannot replace net stage2_reg[59]_i_3_n_3 with net forward_data_reg[46] on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#194 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y53. Reason: Cannot replace net D[22] with net i___18_i_22_n_3 on bel pin D/D
+, Cannot replace net D[22] with net i___18_i_22_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#195 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y54. Reason: Cannot replace net out_ord_vg_data_reg_reg[17]_rep__0_15[5] with net D[18] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#196 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y60. Reason: Cannot replace net o_map3__21[0] with net o_map[191]_i_72_n_3 on bel pin C/C
+, Cannot replace net o_map10_in[0] with net o_map[191]_i_72_n_3 on bel pin CMUX/CMUX
+, Cannot replace net o_map3__21[0] with net o_map[191]_i_72_n_3 on bel pin COUTMUX/O6
+, Cannot replace net o_map10_in[0] with net o_map[191]_i_72_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#197 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y66. Reason: Cannot replace net G_SLOT[14].o_renamed[14]_i_1__2_n_3 with net o_map[190]_i_14_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#198 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X133Y92. Reason: Cannot replace net oldest_killed[12] with net G_SLOT[12].o_renamed_reg[12]_0 on bel pin AMUX/AMUX
+, Cannot replace net G_SLOT[12].o_killed_reg[12]_1 with net G_SLOT[12].o_renamed_reg[12]_0 on bel pin AOUTMUX/O6
+, Cannot replace net oldest_killed[12] with net G_SLOT[12].o_renamed_reg[12]_0 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#199 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X134Y242. Reason: Cannot replace net dout__32_carry__0_i_2__0_n_3 with net dout__32_carry__1_i_2__0_n_3 on bel pin D/D
+, Cannot replace net dout__32_carry__0_i_2__0_n_3 with net dout__32_carry__1_i_2__0_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#200 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X134Y31. Reason: Cannot replace net pending_start[7][0]_i_18_n_3 with net p_0_in110_out[1] on bel pin D/D
+, Cannot replace net queued_entries[81]_i_9_n_3 with net p_0_in110_out[1] on bel pin DMUX/DMUX
+, Cannot replace net pending_start[7][0]_i_18_n_3 with net p_0_in110_out[1] on bel pin DOUTMUX/O6
+, Cannot replace net queued_entries[81]_i_9_n_3 with net p_0_in110_out[1] on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#201 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X135Y212. Reason: Cannot replace net cnt_idel_dec_cpt_r[5]_i_1_n_0 with net right_edge_taps_r[5]_i_1_n_0 on bel pin D/D
+, Cannot replace net cnt_idel_dec_cpt_r[5]_i_1_n_0 with net right_edge_taps_r[5]_i_1_n_0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#202 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X136Y176. Reason: Cannot replace net ticks_reg[8]_i_3__0_n_10 with net DOA on bel pin AMUX/AMUX
+, Cannot replace net ticks[8]_i_11__0_n_3 with net DOA on bel pin AOUTMUX/O6
+, Cannot replace net ticks_reg[8]_i_3__0_n_10 with net DOA on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#203 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X137Y162. Reason: Cannot replace net arststages_ff[2] with net linebuf_reg_512_767_0_0_i_1_n_3 on bel pin BMUX/BMUX
+, Cannot replace net arststages_ff[2] with net linebuf_reg_512_767_0_0_i_1_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net arststages_ff[2] with net linebuf_reg_512_767_0_0_i_1_n_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#204 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X137Y170. Reason: Cannot replace net state[4]_i_14_n_3 with net scaled_g3[15]_i_24_n_3 on bel pin C/C
+, Cannot replace net state[4]_i_14_n_3 with net scaled_g3[15]_i_24_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#205 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X137Y29. Reason: Cannot replace net pending_entries_reg[14]_i_9_n_3 with net pending_entries[127]_i_10_n_3 on bel pin CMUX/CMUX
+, Cannot replace net pending_entries[14]_i_17_n_3 with net pending_entries[127]_i_10_n_3 on bel pin COUTMUX/O6
+, Cannot replace net pending_entries_reg[14]_i_9_n_3 with net pending_entries[127]_i_10_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#206 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X138Y198. Reason: Cannot replace net rdata[16]_i_5__2_n_3 with net rdata[9]_i_3__2_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#207 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X138Y23. Reason: Cannot replace net queued_entries[125]_i_8_n_3 with net queued_entries[53]_i_9_n_3 on bel pin D/D
+, Cannot replace net queued_entries[125]_i_8_n_3 with net queued_entries[53]_i_9_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#208 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X138Y41. Reason: Cannot replace net index_reg[4]_24[0] with net out_ord_vg_data_reg_reg[13]_rep__1_6 on bel pin CMUX/CMUX
+, Cannot replace net index_reg[4]_26[0] with net out_ord_vg_data_reg_reg[13]_rep__1_6 on bel pin COUTMUX/O6
+, Cannot replace net index_reg[4]_24[0] with net out_ord_vg_data_reg_reg[13]_rep__1_6 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#209 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X138Y6. Reason: Cannot replace net memory_reg_0_31 with net wptr_reg[0]_0 on bel pin A/A
+, Cannot replace net forward_data[66] with net wptr_reg[0]_0 on bel pin AMUX/AMUX
+, Cannot replace net memory_reg_0_31 with net wptr_reg[0]_0 on bel pin AOUTMUX/O6
+, Cannot replace net forward_data[66] with net wptr_reg[0]_0 on bel pin AOUTMUX/OUT
+, Cannot replace net forward_data_reg[66]_0 with net forward_data_reg[63]_0 on bel pin B/B
+, Cannot replace net forward_data_reg[66]_0 with net forward_data_reg[63]_0 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#210 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X138Y9. Reason: Cannot replace net active_entries[63]_i_3_n_3 with net forward_data_reg[22]_0 on bel pin C/C
+, Cannot replace net active_entries[63]_i_3_n_3 with net forward_data_reg[22]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#211 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y14. Reason: Cannot replace net memory_reg_0_53 with net queued_entries[57]_i_5_n_3 on bel pin B/B
+, Cannot replace net memory_reg_0_53 with net queued_entries[57]_i_5_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#212 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y17. Reason: Cannot replace net forward_data_reg[3]_0 with net memory_reg_0_18 on bel pin D/D
+, Cannot replace net forward_data_reg[3]_0 with net memory_reg_0_18 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#213 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y19. Reason: Cannot replace net queued_entries[85]_i_6_n_3 with net forward_data_reg[38]_0 on bel pin B/B
+, Cannot replace net queued_entries[77]_i_4_n_3 with net forward_data_reg[38]_0 on bel pin BMUX/BMUX
+, Cannot replace net queued_entries[85]_i_6_n_3 with net forward_data_reg[38]_0 on bel pin BOUTMUX/O6
+, Cannot replace net queued_entries[77]_i_4_n_3 with net forward_data_reg[38]_0 on bel pin BOUTMUX/OUT
+, Cannot replace net queued_entries[93]_i_4_n_3 with net memory_reg_0_50 on bel pin D/D
+, Cannot replace net queued_entries[93]_i_4_n_3 with net memory_reg_0_50 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#214 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y201. Reason: Cannot replace net rdata[0]_i_1__3_n_3 with net rdata[28]_i_3__2_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#215 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y203. Reason: Cannot replace net rdata[26]_i_1__2_n_3 with net rdata[26]_i_3__2_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#216 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y25. Reason: Cannot replace net queued_entries[93]_i_1_n_3 with net queued_entries[109]_i_12_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#217 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y3. Reason: Cannot replace net forward_data_reg[16]_0 with net read_addr[3] on bel pin C/C
+, Cannot replace net forward_data_reg[16]_0 with net read_addr[3] on bel pin COUTMUX/O6
+, Cannot replace net forward_data_reg[54]_0 with net forward_valid_i_3__24_n_3 on bel pin A/A
+, Cannot replace net forward_data_reg[54]_0 with net forward_valid_i_3__24_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net forward_data_reg[62]_0 with net forward_valid_i_4__24_n_3 on bel pin B/B
+, Cannot replace net forward_data_reg[62]_0 with net forward_valid_i_4__24_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#218 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X139Y6. Reason: Cannot replace net memory_reg_0_22 with net forward_data_reg[62]_0 on bel pin D/D
+, Cannot replace net memory_reg_0_22 with net forward_data_reg[62]_0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#219 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X140Y165. Reason: Cannot replace net tx_shift[6]_i_1__1_n_3 with net scaled_g3[11]_i_2_n_3 on bel pin AMUX/AMUX
+, Cannot replace net tx_bits[0]_i_1__0_n_3 with net scaled_g3[11]_i_2_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net tx_shift[6]_i_1__1_n_3 with net scaled_g3[11]_i_2_n_3 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#220 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X141Y190. Reason: Cannot replace net app_wdf_data[4] with net app_wdf_data[33] on bel pin C/C
+, Cannot replace net app_wdf_data[4] with net app_wdf_data[33] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#221 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X142Y1. Reason: Cannot replace net first_bank_reg[0] with net empty_reg_5 on bel pin A/A
+, Cannot replace net first_bank_reg[0] with net empty_reg_5 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#222 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X142Y16. Reason: Cannot replace net queued_entries[34]_i_1_n_3 with net active_entries[104]_i_7_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#223 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X142Y2. Reason: Cannot replace net rptr_reg[2]_0 with net empty_reg_4 on bel pin B/B
+, Cannot replace net rptr_reg[2]_0 with net empty_reg_4 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#224 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X142Y213. Reason: Cannot replace net regl_rank_cnt[0]_i_1_n_0 with net samp_cnt_done_r_i_3_n_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#225 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X142Y3. Reason: Cannot replace net forward_data_reg[38]_0 with net empty_reg_3[0] on bel pin B/B
+, Cannot replace net forward_data_reg[38]_0 with net empty_reg_3[0] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#226 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X142Y34. Reason: Cannot replace net memory_reg_0_12 with net forward_data_reg[28]_0 on bel pin C/C
+, Cannot replace net memory_reg_0_12 with net forward_data_reg[28]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#227 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X142Y8. Reason: Cannot replace net forward_data_reg[39]_0 with net memory_reg_0_51 on bel pin D/D
+, Cannot replace net forward_data_reg[39]_0 with net memory_reg_0_51 on bel pin DOUTMUX/O6
+, Cannot replace net memory_reg_0_50 with net memory_reg_0_15 on bel pin C/C
+, Cannot replace net forward_data[7] with net memory_reg_0_15 on bel pin CMUX/CMUX
+, Cannot replace net memory_reg_0_50 with net memory_reg_0_15 on bel pin COUTMUX/O6
+, Cannot replace net forward_data[7] with net memory_reg_0_15 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#228 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y11. Reason: Cannot replace net memory_reg_0_49 with net active_entries_next[102] on bel pin D/D
+, Cannot replace net memory_reg_0_49 with net active_entries_next[102] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#229 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y13. Reason: Cannot replace net active_entries[56]_i_5_n_3 with net active_entries[54]_i_4_n_3 on bel pin B/B
+, Cannot replace net active_entries[56]_i_5_n_3 with net active_entries[54]_i_4_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#230 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y16. Reason: Cannot replace net pending_start[2][0]_i_1_n_3 with net memory_reg_0_23 on bel pin C/C
+, Cannot replace net pending_start[2][0]_i_1_n_3 with net memory_reg_0_23 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#231 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y3. Reason: Cannot replace net memory_reg_0_30 with net first_bank_reg[0]_0[0] on bel pin C/C
+, Cannot replace net memory_reg_0_30 with net first_bank_reg[0]_0[0] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#232 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y33. Reason: Cannot replace net memory_reg_0_19 with net forward_data_reg[17]_0 on bel pin C/C
+, Cannot replace net memory_reg_0_19 with net forward_data_reg[17]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#233 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y35. Reason: Cannot replace net reg_mem[21][4]_i_2_n_3 with net stage1_reg[245]_6 on bel pin A/A
+, Cannot replace net out_ord_vg_data_reg_reg[10]_rep__0_10 with net stage1_reg[245]_6 on bel pin AMUX/AMUX
+, Cannot replace net reg_mem[21][4]_i_2_n_3 with net stage1_reg[245]_6 on bel pin AOUTMUX/O6
+, Cannot replace net out_ord_vg_data_reg_reg[10]_rep__0_10 with net stage1_reg[245]_6 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#234 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y37. Reason: Cannot replace net out_ord_vg_data_reg_reg[16]_rep__1_9 with net forward_data_reg[4]_0 on bel pin D/D
+, Cannot replace net out_ord_vg_data_reg_reg[16]_rep__1_9 with net forward_data_reg[4]_0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#235 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X143Y38. Reason: Cannot replace net stage2[57]_i_10_n_3 with net memory_reg_0_26 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#236 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X144Y190. Reason: Cannot replace net app_wdf_data[25] with net app_wdf_data[37] on bel pin C/C
+, Cannot replace net app_wdf_data[25] with net app_wdf_data[37] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#237 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X144Y194. Reason: Cannot replace net p_0_in_0[27] with net app_wdf_data[60] on bel pin BMUX/BMUX
+, Cannot replace net p_0_in16_in[30] with net app_wdf_data[60] on bel pin BOUTMUX/O6
+, Cannot replace net p_0_in_0[27] with net app_wdf_data[60] on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#238 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X144Y197. Reason: Cannot replace net p_0_in10_in[6] with net app_wdf_data[193] on bel pin AMUX/AMUX
+, Cannot replace net p_0_in13_in[8] with net app_wdf_data[193] on bel pin AOUTMUX/O6
+, Cannot replace net p_0_in10_in[6] with net app_wdf_data[193] on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#239 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X145Y166. Reason: Cannot replace net scaled_b3[11]_i_22_n_3 with net scaled_b3[7]_i_12_n_3 on bel pin B/B
+, Cannot replace net scaled_b3[11]_i_22_n_3 with net scaled_b3[7]_i_12_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#240 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X145Y184. Reason: Cannot replace net app_wdf_data[47] with net app_wdf_data[45] on bel pin D/D
+, Cannot replace net app_wdf_data[47] with net app_wdf_data[45] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#241 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X145Y185. Reason: Cannot replace net app_wdf_data[45] with net app_wdf_data[47] on bel pin A/A
+, Cannot replace net app_wdf_data[45] with net app_wdf_data[47] on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#242 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X145Y189. Reason: Cannot replace net app_wdf_data[57] with net app_wdf_data[54] on bel pin C/C
+, Cannot replace net app_wdf_data[57] with net app_wdf_data[54] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#243 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X145Y190. Reason: Cannot replace net app_wdf_data[203] with net app_wdf_data[229] on bel pin D/D
+, Cannot replace net app_wdf_data[203] with net app_wdf_data[229] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#244 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X145Y192. Reason: Cannot replace net app_wdf_data[24] with net app_wdf_data[130] on bel pin D/D
+, Cannot replace net app_wdf_data[24] with net app_wdf_data[130] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#245 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y11. Reason: Cannot replace net queued_entries[117]_i_7_n_3 with net queued_entries[107]_i_8_n_3 on bel pin A/A
+, Cannot replace net queued_entries[117]_i_7_n_3 with net queued_entries[107]_i_8_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#246 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y14. Reason: Cannot replace net queued_entries[113]_i_10_n_3 with net queued_entries[76]_i_6_n_3 on bel pin A/A
+, Cannot replace net queued_entries[113]_i_10_n_3 with net queued_entries[76]_i_6_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#247 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y16. Reason: Cannot replace net queued_entries[66]_i_4_n_3 with net queued_entries[77]_i_8_n_3 on bel pin B/B
+, Cannot replace net queued_entries[66]_i_4_n_3 with net queued_entries[77]_i_8_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#248 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y180. Reason: Cannot replace net app_wdf_data[15] with net boot_wen on bel pin A/A
+, Cannot replace net app_wdf_data[15] with net boot_wen on bel pin AOUTMUX/O6
+, Cannot replace net app_wdf_data[235] with net app_wdf_data[15] on bel pin C/C
+, Cannot replace net app_wdf_data[235] with net app_wdf_data[15] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#249 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y188. Reason: Cannot replace net app_wdf_data[61] with net app_wdf_data[202] on bel pin C/C
+, Cannot replace net app_wdf_data[61] with net app_wdf_data[202] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#250 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y19. Reason: Cannot replace net queued_entries[106]_i_1_n_3 with net queued_entries[82]_i_8_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#251 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y190. Reason: Cannot replace net data_reg[255]_0[177] with net app_wdf_data[55] on bel pin CMUX/CMUX
+, Cannot replace net wdata_reg[31]_0[153] with net app_wdf_data[55] on bel pin COUTMUX/O6
+, Cannot replace net data_reg[255]_0[177] with net app_wdf_data[55] on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#252 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y192. Reason: Cannot replace net app_wdf_data[227] with net app_wdf_data[195] on bel pin D/D
+, Cannot replace net app_wdf_data[227] with net app_wdf_data[195] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#253 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y194. Reason: Cannot replace net p_0_in1_in[15] with net app_wdf_data[230] on bel pin DMUX/DMUX
+, Cannot replace net p_0_in16_in[23] with net app_wdf_data[230] on bel pin DOUTMUX/O6
+, Cannot replace net p_0_in1_in[15] with net app_wdf_data[230] on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#254 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X146Y2. Reason: Cannot replace net wptr[3]_i_1__31_n_3 with net forward_valid_i_3__30_n_3 on bel pin C/C
+, Cannot replace net wptr[3]_i_1__31_n_3 with net forward_valid_i_3__30_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#255 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X147Y11. Reason: Cannot replace net queued_entries[21]_i_5_n_3 with net queued_entries[37]_i_6_n_3 on bel pin B/B
+, Cannot replace net queued_entries[21]_i_5_n_3 with net queued_entries[37]_i_6_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#256 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X147Y16. Reason: Cannot replace net queued_entries[82]_i_10_n_3 with net queued_entries[33]_i_5_n_3 on bel pin A/A
+, Cannot replace net queued_entries[82]_i_10_n_3 with net queued_entries[33]_i_5_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#257 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X147Y19. Reason: Cannot replace net pending_entries[114]_i_2_n_3 with net queued_entries[90]_i_8_n_3 on bel pin D/D
+, Cannot replace net pending_entries[114]_i_2_n_3 with net queued_entries[90]_i_8_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net memory_reg_0_3 with net queued_entries[82]_i_4_n_3 on bel pin A/A
+, Cannot replace net memory_reg_0_3 with net queued_entries[82]_i_4_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#258 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X147Y193. Reason: Cannot replace net app_wdf_data[132] with net app_wdf_data[227] on bel pin D/D
+, Cannot replace net app_wdf_data[132] with net app_wdf_data[227] on bel pin DOUTMUX/O6
+, Cannot replace net app_wdf_data[167] with net app_wdf_data[132] on bel pin C/C
+, Cannot replace net app_wdf_data[167] with net app_wdf_data[132] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#259 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X147Y23. Reason: Cannot replace net prm_stage_valid[4]_i_36_n_3 with net prm_stage_valid[4]_i_37_n_3 on bel pin C/C
+, Cannot replace net prm_stage_valid[4]_i_36_n_3 with net prm_stage_valid[4]_i_37_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#260 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X147Y7. Reason: Cannot replace net queued_entries[5]_i_5_n_3 with net active_entries[6]_i_4_n_3 on bel pin A/A
+, Cannot replace net queued_entries[5]_i_5_n_3 with net active_entries[6]_i_4_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#261 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X147Y8. Reason: Cannot replace net active_entries_next[67] with net active_entries[70]_i_5_n_3 on bel pin B/B
+, Cannot replace net active_entries_next[67] with net active_entries[70]_i_5_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#262 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X148Y148. Reason: Cannot replace net app_addr[1] with net timer[31]_i_7_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#263 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X148Y191. Reason: Cannot replace net app_wdf_data[231] with net app_wdf_data[199] on bel pin D/D
+, Cannot replace net app_wdf_data[231] with net app_wdf_data[199] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#264 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X149Y180. Reason: Cannot replace net app_wdf_data[76] with net app_wdf_data[238] on bel pin C/C
+, Cannot replace net app_wdf_data[76] with net app_wdf_data[238] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#265 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X149Y184. Reason: Cannot replace net app_wdf_data[138] with net app_wdf_data[74] on bel pin C/C
+, Cannot replace net app_wdf_data[138] with net app_wdf_data[74] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#266 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X14Y190. Reason: Cannot replace net dda[28].cur_reg[28][31]_i_7_n_8 with net c2[25]_i_2_n_3 on bel pin CMUX/CMUX
+, Cannot replace net dda[28].cur[28][31]_i_13_n_3 with net c2[25]_i_2_n_3 on bel pin COUTMUX/O6
+, Cannot replace net dda[28].cur_reg[28][31]_i_7_n_8 with net c2[25]_i_2_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#267 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X151Y188. Reason: Cannot replace net app_wdf_data[72] with net app_wdf_data[84] on bel pin C/C
+, Cannot replace net app_wdf_data[72] with net app_wdf_data[84] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#268 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X151Y192. Reason: Cannot replace net p_0_in4_in[3] with net app_wdf_data[134] on bel pin DMUX/DMUX
+, Cannot replace net p_0_in1_in[8] with net app_wdf_data[134] on bel pin DOUTMUX/O6
+, Cannot replace net p_0_in4_in[3] with net app_wdf_data[134] on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#269 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X152Y157. Reason: Cannot replace net app_addr[22] with net scaled_r3[11]_i_20_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#270 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X152Y177. Reason: Cannot replace net app_wdf_data[113] with net app_wdf_data[244] on bel pin D/D
+, Cannot replace net app_wdf_data[113] with net app_wdf_data[244] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#271 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X155Y161. Reason: Cannot replace net scaled_r3[11]_i_19_n_3 with net GLOBAL_LOGIC0 on bel pin D/D
+, Cannot replace net scaled_r3[11]_i_19_n_3 with net GLOBAL_LOGIC0 on bel pin DUSED/0
+, Cannot replace net scaled_r3[11]_i_19_n_3 with net GLOBAL_LOGIC0 on bel pin DUSED/OUT
+, Site pin to site pin route-thru requires conflicting attribute string values for user logic element 'D6LUT in site 'SLICE_X155Y161'. Attribute 'EQN' is programmed to '32'hD5404040' but needs a value of 'O6=1' for the route-thru.
+.
+Related violations: <none>
+
+PDIL-1#272 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X156Y149. Reason: Cannot replace net i___16_n_0 with net periodic_rd_generation.periodic_rd_request_r_reg_0 on bel pin D/D
+, Cannot replace net i___16_n_0 with net periodic_rd_generation.periodic_rd_request_r_reg_0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#273 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X156Y157. Reason: Cannot replace net i___47_n_0 with net p_9_in on bel pin C/C
+, Cannot replace net i___47_n_0 with net p_9_in on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#274 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X156Y163. Reason: Cannot replace net idle_r_lcl_reg with net idle_r_lcl_reg_5 on bel pin C/C
+, Cannot replace net idle_r_lcl_reg with net idle_r_lcl_reg_5 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#275 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X156Y179. Reason: Cannot replace net write_buffer.wr_buf_in_data[245] with net app_wdf_data[79] on bel pin C/C
+, Cannot replace net write_buffer.wr_buf_in_data[245] with net app_wdf_data[79] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#276 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X156Y189. Reason: Cannot replace net write_buffer.wr_buf_out_data_reg[174][23] with net write_buffer.wr_buf_out_data_reg[249][5] on bel pin D/D
+, Cannot replace net write_buffer.wr_buf_out_data_reg[174][23] with net write_buffer.wr_buf_out_data_reg[249][5] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#277 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X156Y190. Reason: Cannot replace net write_buffer.wr_buf_out_data_reg[249]_0[24] with net app_wdf_data[68] on bel pin C/C
+, Cannot replace net write_buffer.wr_buf_out_data_reg[249]_0[24] with net app_wdf_data[68] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#278 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X156Y200. Reason: Cannot replace net app_wdf_data[127] with net app_wdf_data[125] on bel pin B/B
+, Cannot replace net app_wdf_data[127] with net app_wdf_data[125] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#279 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X157Y148. Reason: Cannot replace net refresh_timer.refresh_timer_r0[5] with net i___16_n_0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#280 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X157Y160. Reason: Cannot replace net idle_r_lcl_reg_2 with net rb_hit_busy_r_reg_1 on bel pin DMUX/DMUX
+, Cannot replace net rb_hit_busies.rb_hit_busies_r_lcl_reg[3] with net rb_hit_busy_r_reg_1 on bel pin DOUTMUX/O6
+, Cannot replace net idle_r_lcl_reg_2 with net rb_hit_busy_r_reg_1 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#281 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X157Y162. Reason: Cannot replace net i___6_i_5_n_0 with net pre_bm_end_r_reg_1 on bel pin C/C
+, Cannot replace net i___6_i_5_n_0 with net pre_bm_end_r_reg_1 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#282 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X157Y176. Reason: Cannot replace net nxt_wr_ptr[3] with net my_empty[4]_i_1__1_n_0 on bel pin C/C
+, Cannot replace net nxt_wr_ptr[2] with net my_empty[4]_i_1__1_n_0 on bel pin CMUX/CMUX
+, Cannot replace net nxt_wr_ptr[3] with net my_empty[4]_i_1__1_n_0 on bel pin COUTMUX/O6
+, Cannot replace net nxt_wr_ptr[2] with net my_empty[4]_i_1__1_n_0 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#283 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X157Y193. Reason: Cannot replace net write_buffer.wr_buf_out_data_reg[249]_0[38] with net write_buffer.wr_buf_out_data_reg[249]_0[34] on bel pin D/D
+, Cannot replace net write_buffer.wr_buf_out_data_reg[249]_0[38] with net write_buffer.wr_buf_out_data_reg[249]_0[34] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#284 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X16Y100. Reason: Cannot replace net prf[42][2]_i_4_n_3 with net result_reg[2]_16 on bel pin D/D
+, Cannot replace net prf[42][2]_i_4_n_3 with net result_reg[2]_16 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#285 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X16Y101. Reason: Cannot replace net result_reg[2]_4 with net result_reg[3]_28 on bel pin D/D
+, Cannot replace net result_reg[2]_4 with net result_reg[3]_28 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#286 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X16Y103. Reason: Cannot replace net prf[27][3]_i_4_n_3 with net prf[57][3]_i_4_n_3 on bel pin D/D
+, Cannot replace net prf[27][3]_i_4_n_3 with net prf[57][3]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#287 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X16Y80. Reason: Cannot replace net i___92_i_9_n_3 with net i___324_n_3 on bel pin D/D
+, Cannot replace net i___92_i_9_n_3 with net i___324_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#288 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X16Y99. Reason: Cannot replace net result_reg[2]_29 with net prf[4][3]_i_4_n_3 on bel pin D/D
+, Cannot replace net result_reg[2]_29 with net prf[4][3]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#289 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X17Y101. Reason: Cannot replace net prf[40][7]_i_4_n_3 with net prf[53][3]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[40][7]_i_4_n_3 with net prf[53][3]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#290 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X17Y105. Reason: Cannot replace net prf[61][7]_i_3_n_3 with net prf[25][7]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[61][7]_i_3_n_3 with net prf[25][7]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#291 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X17Y82. Reason: Cannot replace net i___93_i_7_n_3 with net prm_update_istnum_reg[0][0]_20 on bel pin D/D
+, Cannot replace net i___93_i_7_n_3 with net prm_update_istnum_reg[0][0]_20 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#292 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X17Y98. Reason: Cannot replace net prf[31][7]_i_4_n_3 with net prf[61][3]_i_4_n_3 on bel pin D/D
+, Cannot replace net prf[31][7]_i_4_n_3 with net prf[61][3]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#293 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X18Y125. Reason: Cannot replace net result_reg[9]_41 with net prf[4][9]_i_4_n_3 on bel pin C/C
+, Cannot replace net n0_reg[31]_0[13] with net prf[4][9]_i_4_n_3 on bel pin CMUX/CMUX
+, Cannot replace net result_reg[9]_41 with net prf[4][9]_i_4_n_3 on bel pin COUTMUX/O6
+, Cannot replace net n0_reg[31]_0[13] with net prf[4][9]_i_4_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#294 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X18Y156. Reason: Cannot replace net prf[30][15]_i_3_n_3 with net prf[44][15]_i_3_n_3 on bel pin A/A
+, Cannot replace net prf[30][15]_i_3_n_3 with net prf[44][15]_i_3_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#295 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X18Y93. Reason: Cannot replace net prf[44][7]_i_4_n_3 with net prf[12][2]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[44][7]_i_4_n_3 with net prf[12][2]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#296 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X19Y106. Reason: Cannot replace net prf[25][7]_i_3_n_3 with net prf[13][7]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[25][7]_i_3_n_3 with net prf[13][7]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#297 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X19Y151. Reason: Cannot replace net prf[9][18]_i_2_n_3 with net prf[36][15]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[9][18]_i_2_n_3 with net prf[36][15]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#298 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X1Y234. Reason: Cannot replace net cnt_t_3[4]_i_3__1_n_3 with net cnt_t_3[3]_i_6__0_n_3 on bel pin A/A
+, Cannot replace net cnt_t_3[4]_i_3__1_n_3 with net cnt_t_3[3]_i_6__0_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#299 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X1Y235. Reason: Cannot replace net cnt_t_3[3]_i_7__0_n_3 with net cnt_t_3[2]_i_3__1_n_3 on bel pin C/C
+, Cannot replace net cnt_t_3[3]_i_7__0_n_3 with net cnt_t_3[2]_i_3__1_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#300 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X20Y154. Reason: Cannot replace net result_reg[15]_23 with net result_reg[18]_29 on bel pin C/C
+, Cannot replace net result_reg[15]_23 with net result_reg[18]_29 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#301 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X20Y156. Reason: Cannot replace net result_reg[14]_5 with net result_reg[14]_4 on bel pin B/B
+, Cannot replace net result_reg[14]_5 with net result_reg[14]_4 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#302 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X20Y99. Reason: Cannot replace net va[3]_i_122_n_3 with net prf[31][7]_i_4_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net va_reg[3]_i_35_n_3 with net prf[18][7]_i_7_n_3 on bel pin BMUX/BMUX
+, Cannot replace net va[3]_i_124_n_3 with net prf[18][7]_i_7_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net va_reg[3]_i_35_n_3 with net prf[18][7]_i_7_n_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#303 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X22Y89. Reason: Cannot replace net value_reg[31]_17[2] with net p10_reg_i_44_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#304 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X23Y111. Reason: Cannot replace net va_reg[11]_i_22_n_3 with net p01_reg_i_144_n_3 on bel pin BMUX/BMUX
+, Cannot replace net va[11]_i_72_n_3 with net p01_reg_i_144_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net va_reg[11]_i_22_n_3 with net p01_reg_i_144_n_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#305 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X23Y214. Reason: Cannot replace net dda[58].dy_reg[58]_774[21] with net ga[3][5]_i_2_n_3 on bel pin DMUX/DMUX
+, Cannot replace net cfg_bank[8].word_write[10].shadow_reg[154]_813[20] with net ga[3][5]_i_2_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net dda[58].dy_reg[58]_774[21] with net ga[3][5]_i_2_n_3 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#306 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X25Y86. Reason: Cannot replace net prm_update_istnum_reg[2][0]_rep__0_2 with net i___104_i_1_n_3 on bel pin C/C
+, Cannot replace net prm_update_istnum_reg[2][0]_rep__0_2 with net i___104_i_1_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#307 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X26Y204. Reason: Cannot replace net dda[46].dy_reg[46]_734[30] with net dda[23].starts[23][31]_i_1_n_3 on bel pin BMUX/BMUX
+, Cannot replace net cfg_bank[3].word_write[16].shadow_reg[70]_719[26] with net dda[23].starts[23][31]_i_1_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net dda[46].dy_reg[46]_734[30] with net dda[23].starts[23][31]_i_1_n_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#308 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X26Y95. Reason: Cannot replace net value_reg[31]_28[7] with net prf[17][2]_i_2_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#309 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X27Y95. Reason: Cannot replace net alu_lane[1].data[10]_i_24_n_3 with net prf[34][2]_i_4_n_3 on bel pin C/C
+, Cannot replace net alu_lane[1].data[10]_i_24_n_3 with net prf[34][2]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#310 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X28Y87. Reason: Cannot replace net i___19_i_2_n_3 with net prm_update_istnum_reg[0][3]_32 on bel pin C/C
+, Cannot replace net i___19_i_2_n_3 with net prm_update_istnum_reg[0][3]_32 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#311 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X28Y93. Reason: Cannot replace net result_reg[6]_19 with net prf[38][2]_i_4_n_3 on bel pin D/D
+, Cannot replace net result_reg[6]_19 with net prf[38][2]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#312 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X29Y93. Reason: Cannot replace net va[3]_i_79_n_3 with net prf[41][7]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#313 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X29Y95. Reason: Cannot replace net prf[25][2]_i_4_n_3 with net prf[13][3]_i_4_n_3 on bel pin D/D
+, Cannot replace net prf[25][2]_i_4_n_3 with net prf[13][3]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#314 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X2Y81. Reason: Cannot replace net result[5]_i_1_n_3 with net result[2]_i_3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#315 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X30Y97. Reason: Cannot replace net sys_operand[7]_i_4_n_3 with net prf[17][7]_i_4_n_3 on bel pin C/C
+, Cannot replace net sys_operand[7]_i_4_n_3 with net prf[17][7]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#316 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X32Y83. Reason: Cannot replace net o_recovery_tag[33]_i_12_n_3 with net prm_update_istnum_reg[0][3]_2 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#317 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X32Y95. Reason: Cannot replace net result_reg[6]_18 with net prf[1][3]_i_4_n_3 on bel pin D/D
+, Cannot replace net result_reg[6]_18 with net prf[1][3]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#318 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X32Y96. Reason: Cannot replace net prf[13][6]_i_4_n_3 with net prf[22][3]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[13][6]_i_4_n_3 with net prf[22][3]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#319 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X36Y186. Reason: Cannot replace net dda[47].cur[47][31]_i_1_n_3 with net cur on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#320 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X36Y89. Reason: Cannot replace net alu_lane[1].data[27]_i_29_n_3 with net p01_reg_i_97_n_3 on bel pin C/C
+, Cannot replace net alu_lane[1].data[27]_i_29_n_3 with net p01_reg_i_97_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#321 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X36Y97. Reason: Cannot replace net prf[11][6]_i_2_n_3 with net prf[35][7]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[11][6]_i_2_n_3 with net prf[35][7]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#322 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X38Y100. Reason: Cannot replace net prf[49][6]_i_4_n_3 with net prf[50][7]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[49][6]_i_4_n_3 with net prf[50][7]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#323 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X38Y104. Reason: Cannot replace net result_reg[7]_5 with net prf[37][9]_i_4_n_3 on bel pin D/D
+, Cannot replace net result_reg[7]_5 with net prf[37][9]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#324 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X38Y127. Reason: Cannot replace net result_reg[9]_6 with net result_reg[9]_5 on bel pin D/D
+, Cannot replace net result_reg[9]_6 with net result_reg[9]_5 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#325 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X39Y127. Reason: Cannot replace net prf[47][10]_i_3_n_3 with net sys_operand[14]_i_4_n_3 on bel pin B/B
+, Cannot replace net prf[47][10]_i_3_n_3 with net sys_operand[14]_i_4_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#326 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X39Y146. Reason: Cannot replace net va[15]_i_83_n_3 with net prf[47][18]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#327 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X39Y89. Reason: Cannot replace net alu_lane[1].data[27]_i_2_n_3 with net alu_lane[1].data[27]_i_28_n_3 on bel pin B/B
+, Cannot replace net alu_lane[1].data[27]_i_2_n_3 with net alu_lane[1].data[27]_i_28_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#328 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X39Y95. Reason: Cannot replace net prf[57][6]_i_4_n_3 with net alu_lane[1].data[6]_i_24_n_3 on bel pin D/D
+, Cannot replace net prf[57][6]_i_4_n_3 with net alu_lane[1].data[6]_i_24_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#329 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X3Y156. Reason: Cannot replace net result_reg[14] with net prf[28][11]_i_4_n_3 on bel pin C/C
+, Cannot replace net result_reg[14] with net prf[28][11]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#330 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X40Y104. Reason: Cannot replace net prf[32][9]_i_4_n_3 with net result_reg[7]_11 on bel pin D/D
+, Cannot replace net prf[32][9]_i_4_n_3 with net result_reg[7]_11 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#331 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X40Y105. Reason: Cannot replace net prf[55][1]_i_4_n_3 with net prf[20][1]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[55][1]_i_4_n_3 with net prf[20][1]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#332 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X40Y107. Reason: Cannot replace net result_reg[1]_5 with net result_reg[1]_4 on bel pin D/D
+, Cannot replace net result_reg[1]_5 with net result_reg[1]_4 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#333 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X40Y121. Reason: Cannot replace net result_reg[28]_21 with net prf[34][28]_i_4_n_3 on bel pin D/D
+, Cannot replace net result_reg[28]_21 with net prf[34][28]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#334 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X40Y91. Reason: Cannot replace net va[3]_i_86_n_3 with net p10_reg_i_53_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#335 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X41Y128. Reason: Cannot replace net prf[29][13]_i_3_n_3 with net result_reg[9]_4 on bel pin D/D
+, Cannot replace net prf[29][13]_i_3_n_3 with net result_reg[9]_4 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#336 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X41Y147. Reason: Cannot replace net prf[42][18]_i_4_n_3 with net prf[41][18]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[42][18]_i_4_n_3 with net prf[41][18]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#337 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X43Y108. Reason: Cannot replace net prf[44][4]_i_3_n_3 with net prf[19][1]_i_3_n_3 on bel pin A/A
+, Cannot replace net prf[44][4]_i_3_n_3 with net prf[19][1]_i_3_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#338 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X43Y89. Reason: Cannot replace net G_OUTPUT[0].output_data_reg[0][76]_0[26] with net alu_lane[1].data[30]_i_27_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#339 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X44Y105. Reason: Cannot replace net va[11]_i_20_n_3 with net prf[18][1]_i_10_n_3 on bel pin C/C
+, Cannot replace net va[11]_i_20_n_3 with net prf[18][1]_i_10_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#340 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X44Y151. Reason: Cannot replace net prf[50][18]_i_4_n_3 with net prf[53][18]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[50][18]_i_4_n_3 with net prf[53][18]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#341 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X45Y103. Reason: Cannot replace net prf[18][1]_i_10_n_3 with net prf[34][6]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[18][1]_i_10_n_3 with net prf[34][6]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#342 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X45Y135. Reason: Cannot replace net prf[2][8]_i_3_n_3 with net prf[60][8]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[2][8]_i_3_n_3 with net prf[60][8]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#343 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X45Y150. Reason: Cannot replace net prf[53][18]_i_4_n_3 with net prf[31][18]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[53][18]_i_4_n_3 with net prf[31][18]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#344 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X45Y239. Reason: Cannot replace net captured_command[5] with net dout__32_carry__0_0[0] on bel pin BMUX/BMUX
+, Cannot replace net captured_command[1]_i_1_n_3 with net dout__32_carry__0_0[0] on bel pin BOUTMUX/O6
+, Cannot replace net captured_command[5] with net dout__32_carry__0_0[0] on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#345 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X45Y83. Reason: Cannot replace net alu_lane[1].data[8]_i_2_n_3 with net alu_lane[1].data[15]_i_8_n_3 on bel pin D/D
+, Cannot replace net alu_lane[1].data[8]_i_2_n_3 with net alu_lane[1].data[15]_i_8_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#346 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X46Y105. Reason: Cannot replace net prf[51][6]_i_4_n_3 with net result_reg[1]_20 on bel pin D/D
+, Cannot replace net prf[51][6]_i_4_n_3 with net result_reg[1]_20 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#347 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X46Y116. Reason: Cannot replace net va[31]_i_140_n_3 with net prf[3][28]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#348 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X46Y147. Reason: Cannot replace net va[19]_i_87_n_3 with net prf[17][18]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#349 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X46Y83. Reason: Cannot replace net alu_lane[1].data[10]_i_14_n_3 with net alu_lane[1].data[10]_i_8_n_3 on bel pin B/B
+, Cannot replace net alu_lane[1].data[10]_i_14_n_3 with net alu_lane[1].data[10]_i_8_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#350 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X47Y91. Reason: Cannot replace net ex_lane[1].source_a[5] with net alu_lane[1].data[31]_i_28_n_3 on bel pin A/A
+, Cannot replace net ex_lane[1].source_a[5] with net alu_lane[1].data[31]_i_28_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#351 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X47Y93. Reason: Cannot replace net alu_lane[1].data[31]_i_35_n_3 with net alu_lane[1].data[31]_i_45_n_3 on bel pin B/B
+, Cannot replace net alu_lane[1].data[31]_i_35_n_3 with net alu_lane[1].data[31]_i_45_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#352 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y106. Reason: Cannot replace net result_reg[1]_23 with net prf[2][1]_i_3_n_3 on bel pin D/D
+, Cannot replace net result_reg[1]_23 with net prf[2][1]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#353 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y110. Reason: Cannot replace net prf[23][26]_i_3_n_3 with net va[15]_i_21_n_3 on bel pin A/A
+, Cannot replace net prf[23][26]_i_3_n_3 with net va[15]_i_21_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#354 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y147. Reason: Cannot replace net va[19]_i_107_n_3 with net prf[32][18]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#355 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y148. Reason: Cannot replace net value_reg[31]_10[19] with net prf[41][17]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#356 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y27. Reason: Cannot replace net reg_mem[49][2]_i_9_n_3 with net reg_mem[49][2]_i_7_n_3 on bel pin D/D
+, Cannot replace net reg_mem[49][2]_i_9_n_3 with net reg_mem[49][2]_i_7_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#357 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y39. Reason: Cannot replace net drain_phyreg[3]_i_3_n_3 with net drain_phyreg[2]_i_44_n_3 on bel pin D/D
+, Cannot replace net drain_phyreg[3]_i_3_n_3 with net drain_phyreg[2]_i_44_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#358 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y40. Reason: Cannot replace net drain_phyreg[0]_i_42_n_3 with net drain_phyreg[0]_i_25_n_3 on bel pin B/B
+, Cannot replace net drain_phyreg[0]_i_42_n_3 with net drain_phyreg[0]_i_25_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net drain_phyreg[3]_i_13_n_3 with net drain_phyreg[0]_i_24_n_3 on bel pin A/A
+, Cannot replace net drain_phyreg[0]_i_55_n_3 with net drain_phyreg[0]_i_24_n_3 on bel pin AMUX/AMUX
+, Cannot replace net drain_phyreg[3]_i_13_n_3 with net drain_phyreg[0]_i_24_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net drain_phyreg[0]_i_55_n_3 with net drain_phyreg[0]_i_24_n_3 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#359 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y42. Reason: Cannot replace net drain_start[3]_i_11_n_3 with net drain_phyreg[2]_i_48_n_3 on bel pin B/B
+, Cannot replace net drain_start[3]_i_11_n_3 with net drain_phyreg[2]_i_48_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#360 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X48Y92. Reason: Cannot replace net ex_lane[1].source_a[0] with net alu_lane[1].data[31]_i_43_n_3 on bel pin A/A
+, Cannot replace net ex_lane[1].source_a[0] with net alu_lane[1].data[31]_i_43_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#361 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X49Y105. Reason: Cannot replace net prf[8][1]_i_4_n_3 with net prf[36][1]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[8][1]_i_4_n_3 with net prf[36][1]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#362 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X49Y30. Reason: Cannot replace net reg_mem[43][2]_i_2_n_3 with net reg_mem[43][2]_i_3_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#363 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X49Y37. Reason: Cannot replace net drain_phyreg[2]_i_65_n_3 with net drain_phyreg[3]_i_9_n_3 on bel pin C/C
+, Cannot replace net drain_phyreg[2]_i_65_n_3 with net drain_phyreg[3]_i_9_n_3 on bel pin COUTMUX/O6
+, Cannot replace net drain_phyreg[0]_i_43_n_3 with net forward_data_reg[87]_0 on bel pin B/B
+, Cannot replace net drain_phyreg[0]_i_43_n_3 with net forward_data_reg[87]_0 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#364 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X49Y38. Reason: Cannot replace net drain_phyreg[0]_i_56_n_3 with net drain_phyreg[2]_i_65_n_3 on bel pin C/C
+, Cannot replace net drain_phyreg[0]_i_56_n_3 with net drain_phyreg[2]_i_65_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#365 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X49Y39. Reason: Cannot replace net drain_phyreg[0]_i_6_n_3 with net drain_phyreg[3]_i_3_n_3 on bel pin D/D
+, Cannot replace net drain_phyreg[0]_i_6_n_3 with net drain_phyreg[3]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#366 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X4Y202. Reason: Cannot replace net dda[52].cur[52][5]_i_1_n_3 with net gb[3][15]_i_2_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#367 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X50Y105. Reason: Cannot replace net prf[20][4]_i_3_n_3 with net prf[36][1]_i_3_n_3 on bel pin B/B
+, Cannot replace net prf[20][4]_i_3_n_3 with net prf[36][1]_i_3_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#368 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X50Y113. Reason: Cannot replace net prf[50][4]_i_3_n_3 with net prf[44][1]_i_4_n_3 on bel pin B/B
+, Cannot replace net prf[50][4]_i_3_n_3 with net prf[44][1]_i_4_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#369 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X50Y98. Reason: Cannot replace net prf[4][4]_i_2_n_3 with net prf[27][6]_i_3_n_3 on bel pin A/A
+, Cannot replace net prf[4][4]_i_2_n_3 with net prf[27][6]_i_3_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net data[7]_i_3_n_3 with net prf[27][6]_i_4_n_3 on bel pin C/C
+, Cannot replace net data[7]_i_3_n_3 with net prf[27][6]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#370 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X51Y119. Reason: Cannot replace net prf[10][26]_i_3_n_3 with net prf[45][30]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[10][26]_i_3_n_3 with net prf[45][30]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#371 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X51Y156. Reason: Cannot replace net result_reg[17]_4 with net prf[59][17]_i_4_n_3 on bel pin C/C
+, Cannot replace net result_reg[17]_4 with net prf[59][17]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#372 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X51Y50. Reason: Cannot replace net forward_data_reg[85]_0 with net memory_reg_1_10 on bel pin C/C
+, Cannot replace net forward_data_reg[85]_0 with net memory_reg_1_10 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#373 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X51Y90. Reason: Cannot replace net p10_reg_i_60_n_3 with net alu_lane[1].data[31]_i_16_n_3 on bel pin D/D
+, Cannot replace net p10_reg_i_60_n_3 with net alu_lane[1].data[31]_i_16_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#374 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X51Y92. Reason: Cannot replace net saved_rd_reg[1]_3 with net alu_lane[2].data[31]_i_36_n_3 on bel pin B/B
+, Cannot replace net saved_rd_reg[1]_3 with net alu_lane[2].data[31]_i_36_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#375 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X51Y95. Reason: Cannot replace net alu_lane[1].data[11]_i_26_n_3 with net prf[17][6]_i_4_n_3 on bel pin C/C
+, Cannot replace net alu_lane[1].data[11]_i_26_n_3 with net prf[17][6]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#376 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X51Y96. Reason: Cannot replace net core_release_reg[1]_7 with net alu_lane[1].data[7]_i_26_n_3 on bel pin D/D
+, Cannot replace net core_release_reg[1]_7 with net alu_lane[1].data[7]_i_26_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#377 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X52Y122. Reason: Cannot replace net prf[46][30]_i_3_n_3 with net result_reg[30]_0 on bel pin D/D
+, Cannot replace net prf[46][30]_i_3_n_3 with net result_reg[30]_0 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#378 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X52Y90. Reason: Cannot replace net ex_lane[2].source_b[15] with net alu_lane[2].data[13]_i_18_n_3 on bel pin B/B
+, Cannot replace net ex_lane[2].source_b[15] with net alu_lane[2].data[13]_i_18_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#379 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X52Y92. Reason: Cannot replace net prf[25][31]_i_4_n_3 with net saved_rd_reg[1]_2 on bel pin B/B
+, Cannot replace net prf[25][31]_i_4_n_3 with net saved_rd_reg[1]_2 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#380 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X54Y134. Reason: Cannot replace net result_reg[20]_42 with net prf[4][8]_i_3_n_3 on bel pin D/D
+, Cannot replace net result_reg[20]_42 with net prf[4][8]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#381 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X54Y135. Reason: Cannot replace net result_reg[31]_8[8] with net prf[17][20]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#382 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X54Y151. Reason: Cannot replace net value_reg[31]_14[19] with net prf[18][17]_i_15_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#383 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X54Y93. Reason: Cannot replace net ex_lane[2].source_b[30] with net ex_lane[1].source_b[6] on bel pin B/B
+, Cannot replace net ex_lane[2].source_b[30] with net ex_lane[1].source_b[6] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#384 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X54Y96. Reason: Cannot replace net alu_lane[2].data[12]_i_14_n_3 with net alu_lane[1].data[6]_i_18_n_3 on bel pin C/C
+, Cannot replace net alu_lane[2].data[12]_i_14_n_3 with net alu_lane[1].data[6]_i_18_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#385 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X55Y96. Reason: Cannot replace net alu_lane[1].data[21]_i_17_n_3 with net alu_lane[1].data[31]_i_46_n_3 on bel pin A/A
+, Cannot replace net alu_lane[1].data[21]_i_17_n_3 with net alu_lane[1].data[31]_i_46_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#386 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X55Y97. Reason: Cannot replace net prf[19][4]_i_4_n_3 with net prf[57][6]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[19][4]_i_4_n_3 with net prf[57][6]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#387 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X56Y140. Reason: Cannot replace net diff_y_reg[4]_1[0] with net diff_y_reg[8]_0[1] on bel pin D/D
+, Cannot replace net diff_y_reg[4]_1[0] with net diff_y_reg[8]_0[1] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#388 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X56Y141. Reason: Cannot replace net prf[9][20]_i_3_n_3 with net diff_y_reg[12]_0[3] on bel pin B/B
+, Cannot replace net prf[9][20]_i_3_n_3 with net diff_y_reg[12]_0[3] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#389 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X56Y153. Reason: Cannot replace net result_reg[17]_6 with net result_reg[17]_5 on bel pin D/D
+, Cannot replace net result_reg[17]_6 with net result_reg[17]_5 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#390 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X57Y119. Reason: Cannot replace net prf[55][30]_i_3_n_3 with net prf[10][26]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[55][30]_i_3_n_3 with net prf[10][26]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#391 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X57Y157. Reason: Cannot replace net prf[12][17]_i_4_n_3 with net prf[22][19]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[12][17]_i_4_n_3 with net prf[22][19]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#392 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X57Y85. Reason: Cannot replace net alu_lane[2].data[31]_i_54_n_3 with net alu_lane[2].data[31]_i_55_n_3 on bel pin D/D
+, Cannot replace net alu_lane[2].data[31]_i_54_n_3 with net alu_lane[2].data[31]_i_55_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#393 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X57Y92. Reason: Cannot replace net alu_lane[2].data[9]_i_19_n_3 with net alu_lane[2].data[15]_i_36_n_3 on bel pin D/D
+, Cannot replace net alu_lane[2].data[9]_i_19_n_3 with net alu_lane[2].data[15]_i_36_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net alu_lane[2].data[31]_i_66_n_3 with net ex_lane[2].source_b[15] on bel pin B/B
+, Cannot replace net alu_lane[2].data[31]_i_66_n_3 with net ex_lane[2].source_b[15] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#394 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X58Y104. Reason: Cannot replace net result_reg[4]_31 with net result_reg[4]_30 on bel pin D/D
+, Cannot replace net result_reg[4]_31 with net result_reg[4]_30 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#395 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X58Y107. Reason: Cannot replace net prf[17][26]_i_4_n_3 with net prf[59][4]_i_4_n_3 on bel pin D/D
+, Cannot replace net prf[17][26]_i_4_n_3 with net prf[59][4]_i_4_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net prf[17][26]_i_2_n_3 with net sys_operand[30]_i_4_n_3 on bel pin B/B
+, Cannot replace net prf[17][26]_i_2_n_3 with net sys_operand[30]_i_4_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#396 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X59Y107. Reason: Cannot replace net prf[9][30]_i_3_n_3 with net prf[56][26]_i_4_n_3 on bel pin D/D
+, Cannot replace net prf[9][30]_i_3_n_3 with net prf[56][26]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#397 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X59Y128. Reason: Cannot replace net va[19]_i_15_n_3 with net result_reg[28]_31 on bel pin D/D
+, Cannot replace net va[19]_i_15_n_3 with net result_reg[28]_31 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#398 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X59Y151. Reason: Cannot replace net prf[6][19]_i_2_n_3 with net prf[6][19]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[6][19]_i_2_n_3 with net prf[6][19]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#399 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X59Y154. Reason: Cannot replace net prf[3][19]_i_3_n_3 with net prf[50][19]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[3][19]_i_3_n_3 with net prf[50][19]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#400 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X59Y157. Reason: Cannot replace net result_reg[19]_8 with net prf[55][19]_i_3_n_3 on bel pin B/B
+, Cannot replace net result_reg[19]_8 with net prf[55][19]_i_3_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#401 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X59Y82. Reason: Cannot replace net head_reg[0]_rep__2_4 with net alu_lane[2].data[6]_i_3_n_3 on bel pin C/C
+, Cannot replace net head_reg[0]_rep__2_4 with net alu_lane[2].data[6]_i_3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#402 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X59Y93. Reason: Cannot replace net actual_q_reg[15]_513[21] with net alu_lane[2].data[31]_i_39_n_3 on bel pin BMUX/BMUX
+, Cannot replace net branch_data[58] with net alu_lane[2].data[31]_i_39_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net actual_q_reg[15]_513[21] with net alu_lane[2].data[31]_i_39_n_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#403 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y104. Reason: Cannot replace net result_reg[27]_20 with net result_reg[4]_16 on bel pin D/D
+, Cannot replace net result_reg[27]_20 with net result_reg[4]_16 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#404 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y108. Reason: Cannot replace net prf[12][27]_i_3_n_3 with net prf[43][26]_i_4_n_3 on bel pin D/D
+, Cannot replace net prf[12][27]_i_3_n_3 with net prf[43][26]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#405 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y121. Reason: Cannot replace net data1[30] with net prf[46][30]_i_4_n_3 on bel pin D/D
+, Cannot replace net data1[30] with net prf[46][30]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#406 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y122. Reason: Cannot replace net value_reg[31]_7[26] with net prf[24][26]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#407 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y143. Reason: Cannot replace net va[19]_i_70_n_3 with net prf[14][20]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#408 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y157. Reason: Cannot replace net value_reg[31]_9[19] with net prf[26][19]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#409 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y198. Reason: Cannot replace net p_323_out with net cfg_bank[7].data0 on bel pin B/B
+, Cannot replace net p_323_out with net cfg_bank[7].data0 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#410 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X60Y92. Reason: Cannot replace net o_redirect_pc[23]_i_6_n_3 with net ex_lane[2].source_a[11] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#411 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X61Y107. Reason: Cannot replace net va[15]_i_105_n_3 with net prf[57][30]_i_3_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#412 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X61Y121. Reason: Cannot replace net prf[24][26]_i_4_n_3 with net prf[19][30]_i_3_n_3 on bel pin C/C
+, Cannot replace net prf[24][26]_i_4_n_3 with net prf[19][30]_i_3_n_3 on bel pin COUTMUX/O6
+, Cannot replace net prf[2][26]_i_4_n_3 with net prf[19][30]_i_4_n_3 on bel pin D/D
+, Cannot replace net prf[2][26]_i_4_n_3 with net prf[19][30]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#413 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X61Y98. Reason: Cannot replace net va[3]_i_10_n_3 with net alu_lane[1].data[24]_i_14_n_3 on bel pin A/A
+, Cannot replace net va[3]_i_11_n_3 with net alu_lane[1].data[24]_i_14_n_3 on bel pin AMUX/AMUX
+, Cannot replace net va[3]_i_10_n_3 with net alu_lane[1].data[24]_i_14_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net va[3]_i_11_n_3 with net alu_lane[1].data[24]_i_14_n_3 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#414 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X62Y120. Reason: Cannot replace net va[19]_i_123_n_3 with net prf[18][26]_i_5_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#415 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X63Y122. Reason: Cannot replace net prf[34][27]_i_4_n_3 with net prf[57][26]_i_3_n_3 on bel pin C/C
+, Cannot replace net prf[34][27]_i_4_n_3 with net prf[57][26]_i_3_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#416 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X63Y137. Reason: Cannot replace net va[23]_i_128_n_3 with net ctrl_target[31]_i_268_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#417 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X63Y147. Reason: Cannot replace net data[31]_i_43_n_3 with net prf[52][19]_i_3_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net data[31]_i_41_n_3 with net prf[52][19]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#418 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X63Y149. Reason: Cannot replace net alu_lane[2].data[31]_i_73_n_3 with net prf[51][19]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#419 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X63Y98. Reason: Cannot replace net va[3]_i_15_n_3 with net prf[25][4]_i_4_n_3 on bel pin C/C
+, Cannot replace net va[3]_i_15_n_3 with net prf[25][4]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#420 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X64Y142. Reason: Cannot replace net va[11]_i_123_n_3 with net prf[21][20]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#421 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X65Y110. Reason: Cannot replace net ctrl_target[31]_i_246_n_3 with net prf[24][4]_i_3_n_3 on bel pin D/D
+, Cannot replace net ctrl_target[31]_i_246_n_3 with net prf[24][4]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#422 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X65Y122. Reason: Cannot replace net prf[62][27]_i_4_n_3 with net prf[32][26]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[62][27]_i_4_n_3 with net prf[32][26]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#423 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X66Y104. Reason: Cannot replace net prf[5][29]_i_3_n_3 with net prf[33][26]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[5][29]_i_3_n_3 with net prf[33][26]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#424 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X66Y112. Reason: Cannot replace net ex_lane[4].source_a[21] with net prf[26][26]_i_4_n_3 on bel pin C/C
+, Cannot replace net ex_lane[4].source_a[21] with net prf[26][26]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#425 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X66Y113. Reason: Cannot replace net D[16] with net prf[29][26]_i_3_n_3 on bel pin AMUX/AMUX
+, Cannot replace net dividend_tmp[15]_i_1__0_n_3 with net prf[29][26]_i_3_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net D[16] with net prf[29][26]_i_3_n_3 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#426 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X66Y126. Reason: Cannot replace net result_reg[27]_9 with net result_reg[27]_11 on bel pin D/D
+, Cannot replace net result_reg[27]_9 with net result_reg[27]_11 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#427 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X67Y80. Reason: Cannot replace net valid_q[25]_i_1_n_3 with net head_reg[0]_rep__2_14 on bel pin DOUTMUX/O6
+, Cannot replace net valid_q[15]_i_1_n_3 with net head_reg[0]_rep__2_15 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#428 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X68Y104. Reason: Cannot replace net va[19]_i_133_n_3 with net prf[39][26]_i_4_n_3 on bel pin C/C
+, Cannot replace net va[19]_i_133_n_3 with net prf[39][26]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#429 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X68Y108. Reason: Cannot replace net request_address1_in[26] with net prf[17][26]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#430 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X68Y119. Reason: Cannot replace net result_reg[27]_26 with net result_reg[27]_25 on bel pin D/D
+, Cannot replace net result_reg[27]_26 with net result_reg[27]_25 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#431 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X6Y79. Reason: Cannot replace net prm_update_istnum_reg[2][1]_rep__0_5 with net i___295_n_3 on bel pin C/C
+, Cannot replace net prm_update_istnum_reg[2][3]_9 with net i___295_n_3 on bel pin CMUX/CMUX
+, Cannot replace net prm_update_istnum_reg[2][1]_rep__0_5 with net i___295_n_3 on bel pin COUTMUX/O6
+, Cannot replace net prm_update_istnum_reg[2][3]_9 with net i___295_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#432 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X70Y151. Reason: Cannot replace net alu_lane[1].data[31]_i_111_n_3 with net result_reg[31]_51 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#433 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X70Y91. Reason: Cannot replace net o_redirect_pc[22]_i_6_n_3 with net p01_reg_i_224_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#434 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X71Y109. Reason: Cannot replace net physical_address[31]_i_4_n_3 with net prf[54][30]_i_3_n_3 on bel pin A/A
+, Cannot replace net FSM_sequential_state[0]_i_2_n_3 with net prf[54][30]_i_3_n_3 on bel pin AMUX/AMUX
+, Cannot replace net physical_address[31]_i_4_n_3 with net prf[54][30]_i_3_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net FSM_sequential_state[0]_i_2_n_3 with net prf[54][30]_i_3_n_3 on bel pin AOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#435 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X71Y156. Reason: Cannot replace net prf[15][31]_i_4_n_3 with net prf[25][31]_i_7_n_3 on bel pin C/C
+, Cannot replace net prf[15][31]_i_4_n_3 with net prf[25][31]_i_7_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#436 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X71Y79. Reason: Cannot replace net head_reg[0]_rep__2_10 with net tag_q[24][34]_i_1_n_3 on bel pin B/B
+, Cannot replace net head_reg[0]_rep__2_10 with net tag_q[24][34]_i_1_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#437 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X71Y93. Reason: Cannot replace net ctrl_target[31]_i_241_n_3 with net sys_operand[31]_i_7_n_3 on bel pin D/D
+, Cannot replace net ctrl_target[31]_i_241_n_3 with net sys_operand[31]_i_7_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net va[31]_i_12_n_3 with net sys_operand[31]_i_11_n_3 on bel pin B/B
+, Cannot replace net va[31]_i_12_n_3 with net sys_operand[31]_i_11_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#438 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X72Y115. Reason: Cannot replace net result_reg[27]_25 with net result_reg[27]_24 on bel pin D/D
+, Cannot replace net result_reg[27]_25 with net result_reg[27]_24 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#439 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X72Y146. Reason: Cannot replace net prf[12][21]_i_4_n_3 with net result_reg[21]_3 on bel pin D/D
+, Cannot replace net prf[12][21]_i_4_n_3 with net result_reg[21]_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#440 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X72Y150. Reason: Cannot replace net owner_reg[2]_rep__4_7[9] with net prf[62][19]_i_5_n_3 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#441 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X72Y152. Reason: Cannot replace net prf[11][31]_i_4_n_3 with net prf[14][31]_i_6_n_3 on bel pin C/C
+, Cannot replace net prf[11][31]_i_4_n_3 with net prf[14][31]_i_6_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#442 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X72Y153. Reason: Cannot replace net owner_reg[2]_rep__4_8[13] with net prf[24][31]_i_5_n_3 on bel pin AOUTMUX/O6
+, Cannot replace net owner_reg[2]_rep__4_8[8] with net prf[6][31]_i_6_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#443 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X73Y104. Reason: Cannot replace net prf[1][29]_i_3_n_3 with net prf[2][29]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[1][29]_i_3_n_3 with net prf[2][29]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#444 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X73Y146. Reason: Cannot replace net prf[49][21]_i_3_n_3 with net prf[13][21]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[49][21]_i_3_n_3 with net prf[13][21]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#445 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X74Y107. Reason: Cannot replace net data[29]_i_30_n_3 with net prf[1][29]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#446 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X74Y146. Reason: Cannot replace net prf[54][21]_i_4_n_3 with net prf[12][21]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[54][21]_i_4_n_3 with net prf[12][21]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#447 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X75Y107. Reason: Cannot replace net prf[10][29]_i_3_n_3 with net prf[14][29]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[10][29]_i_3_n_3 with net prf[14][29]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#448 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X75Y160. Reason: Cannot replace net int_scene_reg[63][27] with net rdata[21]_i_5_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#449 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X75Y68. Reason: Cannot replace net G_OUTPUT[0].output_data_reg[0][82]_3 with net bank_write_data[2]__0[73] on bel pin D/D
+, Cannot replace net G_OUTPUT[0].output_data_reg[0][82]_3 with net bank_write_data[2]__0[73] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#450 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X78Y138. Reason: Cannot replace net va[23]_i_115_n_3 with net inside_reg_2953_reg[0] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#451 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X78Y141. Reason: Cannot replace net result_reg[21]_5 with net result_reg[21]_4 on bel pin D/D
+, Cannot replace net result_reg[21]_5 with net result_reg[21]_4 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#452 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X78Y162. Reason: Cannot replace net owner_reg[2]_rep__4_11[0] with net rdata[29]_i_3_n_3 on bel pin CMUX/CMUX
+, Cannot replace net owner_reg[2]_rep__4_12[0] with net rdata[29]_i_3_n_3 on bel pin COUTMUX/O6
+, Cannot replace net owner_reg[2]_rep__4_11[0] with net rdata[29]_i_3_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#453 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X79Y150. Reason: Cannot replace net rdata[11]_i_5_n_3 with net mem_reg[3][11]_srl4_i_3_n_3 on bel pin D/D
+, Cannot replace net rdata[11]_i_5_n_3 with net mem_reg[3][11]_srl4_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#454 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X80Y175. Reason: Cannot replace net error_i_5_n_3 with net bank on bel pin B/B
+, Cannot replace net error_i_5_n_3 with net bank on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#455 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X80Y74. Reason: Cannot replace net alu_lane[2].bad_i_5_n_3 with net upper_memory_reg_1_i_20_n_3 on bel pin C/C
+, Cannot replace net alu_lane[2].bad_i_5_n_3 with net upper_memory_reg_1_i_20_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#456 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X81Y166. Reason: Cannot replace net owner_reg[2]_rep__4_10[3] with net state[2]_i_4__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#457 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X81Y75. Reason: Cannot replace net alu_lane[2].data[31]_i_2_n_3 with net stage1_reg[233]_0[18] on bel pin B/B
+, Cannot replace net alu_lane[2].data[31]_i_2_n_3 with net stage1_reg[233]_0[18] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#458 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X82Y161. Reason: Cannot replace net icmp_ln39_fu_862_p2 with net trunc_ln35_reg_2463[13]_i_5_n_3 on bel pin D/D
+, Cannot replace net icmp_ln39_fu_862_p2 with net trunc_ln35_reg_2463[13]_i_5_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net owner_reg[2]_rep__4_9[0] with net rdata[30]_i_3_n_3 on bel pin CMUX/CMUX
+, Cannot replace net owner_reg[2]_rep__4_10[0] with net rdata[30]_i_3_n_3 on bel pin COUTMUX/O6
+, Cannot replace net owner_reg[2]_rep__4_9[0] with net rdata[30]_i_3_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#459 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X82Y164. Reason: Cannot replace net owner_reg[2]_rep__4_5[18] with net FSM_onehot_rstate_reg[1][0] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#460 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X83Y116. Reason: Cannot replace net prf[43][29]_i_4_n_3 with net prf[24][29]_i_4_n_3 on bel pin C/C
+, Cannot replace net prf[43][29]_i_4_n_3 with net prf[24][29]_i_4_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#461 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X83Y140. Reason: Cannot replace net prf[18][24]_i_15_n_3 with net prf[18][24]_i_10_n_3 on bel pin D/D
+, Cannot replace net prf[18][24]_i_15_n_3 with net prf[18][24]_i_10_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#462 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X83Y159. Reason: Cannot replace net rdata[23]_i_5_n_3 with net rdata[0]_i_7_n_3 on bel pin A/A
+, Cannot replace net rdata[23]_i_5_n_3 with net rdata[0]_i_7_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#463 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X83Y161. Reason: Cannot replace net owner_reg[2]_rep__4_12[8] with net task_ap_done on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#464 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X84Y116. Reason: Cannot replace net result_reg[29]_20 with net result_reg[29]_19 on bel pin C/C
+, Cannot replace net result_reg[29]_20 with net result_reg[29]_19 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#465 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X84Y80. Reason: Cannot replace net stage1[292]_i_7_n_3 with net stage1[292]_i_5_n_3 on bel pin C/C
+, Cannot replace net stage1[292]_i_7_n_3 with net stage1[292]_i_5_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#466 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X84Y81. Reason: Cannot replace net stage1[237]_i_2_n_3 with net decode_lane[2].op[0] on bel pin B/B
+, Cannot replace net stage1[237]_i_2_n_3 with net decode_lane[2].op[0] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#467 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X84Y82. Reason: Cannot replace net stage1[235]_i_16_n_3 with net stage1[241]_i_9_n_3 on bel pin D/D
+, Cannot replace net stage1[235]_i_16_n_3 with net stage1[241]_i_9_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net stage1[235]_i_11_n_3 with net stage1[241]_i_7_n_3 on bel pin C/C
+, Cannot replace net stage1[235]_i_11_n_3 with net stage1[241]_i_7_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#468 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X85Y163. Reason: Cannot replace net i___1080_n_3 with net dir1_reg_0_ENARDEN_cooolgate_en_sig_23 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#469 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X85Y82. Reason: Cannot replace net stage1[240]_i_5_n_3 with net ops[23] on bel pin D/D
+, Cannot replace net stage1[198]_i_6_n_3 with net ops[23] on bel pin DMUX/DMUX
+, Cannot replace net stage1[240]_i_5_n_3 with net ops[23] on bel pin DOUTMUX/O6
+, Cannot replace net stage1[198]_i_6_n_3 with net ops[23] on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#470 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X86Y102. Reason: Cannot replace net sys_data[5]_i_5_n_3 with net sys_data[5]_i_6_n_3 on bel pin C/C
+, Cannot replace net sys_data[5]_i_5_n_3 with net sys_data[5]_i_6_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#471 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X86Y164. Reason: Cannot replace net owner_reg[2]_rep__4_10[6] with net wr[9]_i_3_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#472 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X86Y176. Reason: Cannot replace net rdata[28]_i_2__1_n_3 with net rdata[29]_i_2__1_n_3 on bel pin A/A
+, Cannot replace net rdata[28]_i_2__1_n_3 with net rdata[29]_i_2__1_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#473 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X87Y169. Reason: Cannot replace net int_scene_reg[63][28] with net load_state[1]_i_11_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#474 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X87Y171. Reason: Cannot replace net load_state[1]_i_22_n_3 with net load_state[1]_i_12_n_3 on bel pin D/D
+, Cannot replace net load_state[1]_i_22_n_3 with net load_state[1]_i_12_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#475 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X87Y78. Reason: Cannot replace net decode_lane[2].imm[0] with net stage1[95]_i_5_n_3 on bel pin D/D
+, Cannot replace net decode_lane[2].imm[0] with net stage1[95]_i_5_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#476 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X87Y79. Reason: Cannot replace net stage1[92]_i_6_n_3 with net stage1[93]_i_5_n_3 on bel pin D/D
+, Cannot replace net stage1[92]_i_6_n_3 with net stage1[93]_i_5_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#477 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X89Y113. Reason: Cannot replace net fault_i_2_n_3 with net physical_address1__15 on bel pin B/B
+, Cannot replace net fault_i_2_n_3 with net physical_address1__15 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#478 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X8Y148. Reason: Cannot replace net result_reg[14]_15 with net result_reg[14]_14 on bel pin D/D
+, Cannot replace net result_reg[14]_15 with net result_reg[14]_14 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#479 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X8Y163. Reason: Cannot replace net tid3[3]_i_11_n_3 with net tid3[3]_i_10_n_3 on bel pin C/C
+, Cannot replace net tid3[3]_i_11_n_3 with net tid3[3]_i_10_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#480 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X90Y101. Reason: Cannot replace net trap_cause[3]_i_12_n_3 with net read_value01_out[1] on bel pin DMUX/DMUX
+, Cannot replace net trap_cause[3]_i_12_n_3 with net read_value01_out[1] on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#481 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X90Y82. Reason: Cannot replace net stage1[286]_i_2_n_3 with net decode_lane[2].imm[28] on bel pin C/C
+, Cannot replace net stage1[286]_i_2_n_3 with net decode_lane[2].imm[28] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#482 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X90Y98. Reason: Cannot replace net irq_available19_out with net pending_value[21]_i_2_n_3 on bel pin D/D
+, Cannot replace net irq_available123_out with net pending_value[21]_i_2_n_3 on bel pin DMUX/DMUX
+, Cannot replace net irq_available19_out with net pending_value[21]_i_2_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net irq_available123_out with net pending_value[21]_i_2_n_3 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#483 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X91Y103. Reason: Cannot replace net sys_data[9]_i_2_n_3 with net ex_lane[4].source_a[3] on bel pin B/B
+, Cannot replace net sys_data[9]_i_2_n_3 with net ex_lane[4].source_a[3] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#484 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X91Y107. Reason: Cannot replace net physical_address[17]_i_2__0_n_3 with net ex_lane[4].source_a[19] on bel pin B/B
+, Cannot replace net physical_address[17]_i_2__0_n_3 with net ex_lane[4].source_a[19] on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#485 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X91Y169. Reason: Cannot replace net rdata[8]_i_4__1_n_3 with net bus_active0 on bel pin C/C
+, Cannot replace net rdata[8]_i_4__1_n_3 with net bus_active0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#486 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X91Y69. Reason: Cannot replace net control_new_pc01_out[2] with net stage1[193]_i_8_n_3 on bel pin CMUX/CMUX
+, Cannot replace net next_pc[1]_i_21_n_3 with net stage1[193]_i_8_n_3 on bel pin COUTMUX/O6
+, Cannot replace net control_new_pc01_out[2] with net stage1[193]_i_8_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#487 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X91Y81. Reason: Cannot replace net stage1[289]_i_4_n_3 with net decode_lane[2].imm[29] on bel pin C/C
+, Cannot replace net stage1[289]_i_4_n_3 with net decode_lane[2].imm[29] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#488 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X92Y113. Reason: Cannot replace net cache_hit1_carry__0_i_2__0_n_3 with net db_addr[1] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#489 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X92Y116. Reason: Cannot replace net db_addr[29] with net db_addr[6] on bel pin D/D
+, Cannot replace net db_addr[29] with net db_addr[6] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#490 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X92Y76. Reason: Cannot replace net stage1[96]_i_3_n_3 with net ops[7] on bel pin D/D
+, Cannot replace net stage1[96]_i_3_n_3 with net ops[7] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#491 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X92Y85. Reason: Cannot replace net next_pc_reg[24] with net request_pending_reg[1]_i_3_n_3 on bel pin DMUX/DMUX
+, Cannot replace net next_pc_reg[24] with net request_pending_reg[1]_i_3_n_3 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#492 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X93Y104. Reason: Cannot replace net issue_store with net p_0_in0 on bel pin D/D
+, Cannot replace net va[31]_i_32_n_3 with net p_0_in0 on bel pin DMUX/DMUX
+, Cannot replace net issue_store with net p_0_in0 on bel pin DOUTMUX/O6
+, Cannot replace net va[31]_i_32_n_3 with net p_0_in0 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#493 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X93Y123. Reason: Cannot replace net prf[4][25]_i_4_n_3 with net prf[62][25]_i_5_n_3 on bel pin C/C
+, Cannot replace net prf[4][25]_i_4_n_3 with net prf[62][25]_i_5_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#494 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X93Y197. Reason: Cannot replace net rd[30]_i_2_n_3 with net tempmon_state[10]_i_9_n_0 on bel pin B/B
+, Cannot replace net rd[30]_i_2_n_3 with net tempmon_state[10]_i_9_n_0 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#495 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X94Y177. Reason: Cannot replace net left0[19] with net DOB on bel pin BMUX/BMUX
+, Cannot replace net left0_carry__3_i_3_n_3 with net DOB on bel pin BOUTMUX/O6
+, Cannot replace net left0[19] with net DOB on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#496 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X94Y63. Reason: Cannot replace net phyreg_ready_next[15] with net G_OUTPUT[0].output_data_reg[0][79]_0 on bel pin C/C
+, Cannot replace net phyreg_ready_next[15] with net G_OUTPUT[0].output_data_reg[0][79]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#497 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X94Y97. Reason: Cannot replace net minstret[3]_i_72_n_3 with net core_commit_fire[1] on bel pin C/C
+, Cannot replace net minstret[3]_i_72_n_3 with net core_commit_fire[1] on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#498 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y102. Reason: Cannot replace net G_OUTPUT[0].output_data_reg[0][68]_3 with net csr/illegal1 on bel pin D/D
+, Cannot replace net G_OUTPUT[0].output_data_reg[0][68]_3 with net csr/illegal1 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#499 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y113. Reason: Cannot replace net io_data[3]_i_8_n_3 with net db_addr[12] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#500 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y114. Reason: Cannot replace net request_address1_in[31] with net db_addr[13] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#501 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y62. Reason: Cannot replace net saved_rd_reg[5]_26 with net alu_lane[1].dest_reg[2]_0 on bel pin C/C
+, Cannot replace net saved_rd_reg[5]_26 with net alu_lane[1].dest_reg[2]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#502 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y63. Reason: Cannot replace net saved_rd_reg[4]_11 with net alu_lane[1].valid_reg_2 on bel pin A/A
+, Cannot replace net saved_rd_reg[4]_11 with net alu_lane[1].valid_reg_2 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#503 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y68. Reason: Cannot replace net decode_lane[1].imm[7] with net stage1[168]_i_2_n_3 on bel pin D/D
+, Cannot replace net decode_lane[1].imm[7] with net stage1[168]_i_2_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net decode_lane[1].imm[22] with net stage1[167]_i_2_n_3 on bel pin C/C
+, Cannot replace net decode_lane[1].imm[22] with net stage1[167]_i_2_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#504 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y70. Reason: Cannot replace net stage1[193]_i_13_n_3 with net stage1[139]_i_6_n_3 on bel pin D/D
+, Cannot replace net stage1[194]_i_13_n_3 with net stage1[139]_i_6_n_3 on bel pin DMUX/DMUX
+, Cannot replace net stage1[193]_i_13_n_3 with net stage1[139]_i_6_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net stage1[194]_i_13_n_3 with net stage1[139]_i_6_n_3 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#505 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X95Y93. Reason: Cannot replace net sepc_reg[31][20] with net csr/source__0[0] on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#506 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X96Y108. Reason: Cannot replace net io_data[2]_i_8_n_3 with net DOC on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#507 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X96Y172. Reason: Cannot replace net load_state[1]_i_13_n_3 with net load_state[1]_i_41_n_3 on bel pin D/D
+, Cannot replace net load_state[1]_i_13_n_3 with net load_state[1]_i_41_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#508 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X96Y72. Reason: Cannot replace net barrier_retired20_out[6] with net stage1[96]_i_5_n_3 on bel pin CMUX/CMUX
+, Cannot replace net barrier_tag[34]_i_20_n_3 with net stage1[96]_i_5_n_3 on bel pin COUTMUX/O6
+, Cannot replace net barrier_retired20_out[6] with net stage1[96]_i_5_n_3 on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#509 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X97Y69. Reason: Cannot replace net decode_lane[1].imm[6] with net stage1[169]_i_2_n_3 on bel pin A/A
+, Cannot replace net decode_lane[1].imm[6] with net stage1[169]_i_2_n_3 on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#510 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X97Y78. Reason: Cannot replace net barrier_tag_reg[34]_i_60_n_3 with net kills/o_kill13_in on bel pin COUT/COUT
+, Cannot replace net barrier_tag_reg[34]_i_60_n_3 with net kills/o_kill13_in on bel pin DOUTMUX/CY
+.
+Related violations: <none>
+
+PDIL-1#511 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X98Y108. Reason: Cannot replace net io_data[0]_i_11_n_3 with net DOA on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#512 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X98Y181. Reason: Cannot replace net i__carry__2_i_4__40_n_3 with net DOA on bel pin AOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#513 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X98Y61. Reason: Cannot replace net alu_lane[1].valid_reg with net G_OUTPUT[0].output_data_reg[0][80]_2 on bel pin C/C
+, Cannot replace net alu_lane[1].valid_reg with net G_OUTPUT[0].output_data_reg[0][80]_2 on bel pin COUTMUX/O6
+, Cannot replace net upper_forward_data_reg[78]_10 with net phyreg_ready[9]_i_4_n_3 on bel pin D/D
+, Cannot replace net upper_forward_data_reg[78]_10 with net phyreg_ready[9]_i_4_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#514 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X98Y70. Reason: Cannot replace net stage1[182]_i_2_n_3 with net decode_lane[1].imm[22] on bel pin D/D
+, Cannot replace net stage1[182]_i_2_n_3 with net decode_lane[1].imm[22] on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#515 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X98Y82. Reason: Cannot replace net o_redirect_pc_reg[31]_5[7] with net current_used_reg[0] on bel pin C/C
+, Cannot replace net o_redirect_pc_reg[9]_0 with net current_used_reg[0] on bel pin CMUX/CMUX
+, Cannot replace net o_redirect_pc_reg[31]_5[7] with net current_used_reg[0] on bel pin COUTMUX/O6
+, Cannot replace net o_redirect_pc_reg[9]_0 with net current_used_reg[0] on bel pin COUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#516 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X98Y83. Reason: Cannot replace net request_pending[1]_i_22_n_3 with net FSM_onehot_state_reg[3]_0 on bel pin BOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#517 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X99Y107. Reason: Cannot replace net physical_address[13]_i_2__0_n_3 with net physical_address[31]_i_1__0_n_3 on bel pin D/D
+, Cannot replace net physical_address[13]_i_2__0_n_3 with net physical_address[31]_i_1__0_n_3 on bel pin DOUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#518 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X99Y108. Reason: Cannot replace net request_address[31]_i_5__0_n_3 with net FSM_sequential_state[1]_i_1__0_n_3 on bel pin C/C
+, Cannot replace net request_address[31]_i_5__0_n_3 with net FSM_sequential_state[1]_i_1__0_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#519 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X99Y169. Reason: Cannot replace net i__carry_i_6__28_n_3 with net dir0_reg_0_i_19_n_3 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+PDIL-1#520 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X99Y79. Reason: Cannot replace net o_kill23_out[23] with net barrier_tag[34]_i_6_n_3 on bel pin DMUX/DMUX
+, Cannot replace net barrier_tag[34]_i_131_n_3 with net barrier_tag[34]_i_6_n_3 on bel pin DOUTMUX/O6
+, Cannot replace net o_kill23_out[23] with net barrier_tag[34]_i_6_n_3 on bel pin DOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#521 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X99Y81. Reason: Cannot replace net o_kill23_out[29] with net i___171_n_3 on bel pin BMUX/BMUX
+, Cannot replace net barrier_tag[34]_i_115_n_3 with net i___171_n_3 on bel pin BOUTMUX/O6
+, Cannot replace net o_kill23_out[29] with net i___171_n_3 on bel pin BOUTMUX/OUT
+.
+Related violations: <none>
+
+PDIL-1#522 Error
+Invalid Site Configuration  
+Invalid configuration for site SLICE_X99Y84. Reason: Cannot replace net request_pending[2]_i_23_n_3 with net FSM_onehot_state_reg[0]_0 on bel pin COUTMUX/O6
+.
+Related violations: <none>
+
+RTSTAT-13#1 Critical Warning
+Insufficient Routing  
+A signficant portion of the design is not routed. Routed nets status (RTSTAT-*) DRC checks will not be run.  For routing information, run report_route_status.  Please run implementation on your design.
+Related violations: <none>
+
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[0].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 (in ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[0].gen_dqs_diff.u_iobuf_dqs macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#2 Warning
+Input Buffer Connections  
+Input buffer ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[1].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 (in ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[1].gen_dqs_diff.u_iobuf_dqs macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#3 Warning
+Input Buffer Connections  
+Input buffer ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[2].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 (in ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[2].gen_dqs_diff.u_iobuf_dqs macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#4 Warning
+Input Buffer Connections  
+Input buffer ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[3].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 (in ddr/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HR.gen_dqs_iobuf[3].gen_dqs_diff.u_iobuf_dqs macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+REQP-1709#1 Warning
+Clock output buffering  
+PLLE2_ADV connectivity violation. The signal ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out on the ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of ddr/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+

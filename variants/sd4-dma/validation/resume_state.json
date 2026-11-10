@@ -1,0 +1,20 @@
+{
+  "state": "IMPLEMENTATION_PASS_HARDWARE_UNTESTED",
+  "date_local": "2026-11-10",
+  "run": "D:/temp/gen3bosio/sd4-dma/board_v6",
+  "runner_session": 94463,
+  "vivado_pid_observed": 10628,
+  "last_stage": "Incremental routing, final audits and bitstream generation passed",
+  "source_frozen": true,
+  "board_access_authorized_for_this_run": false,
+  "new_regression": "cpu_bosio_native_regression.log: all six PASS with production AXI-MIG bridge and native arbiter",
+  "post_run_steps": [
+    "Hardware validation follows BOARD_STORAGE_CHECK_KO.md when user reconnects the board"
+  ],
+  "current_checks": "All report_status.py checks pass. Actual image loader/QEMU payload hash remains feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e.",
+  "notes": "Final board_manifest.json and status.json are authoritative; initial full route stopped after congestion; no active board synthesis/route remains",
+  "incremental_run": "D:/temp/gen3bosio/sd4-dma/board_v6_incremental",
+  "incremental_runner_session": 20566,
+  "incremental_vivado_pid": 11436,
+  "default_route_stopped": true
+}

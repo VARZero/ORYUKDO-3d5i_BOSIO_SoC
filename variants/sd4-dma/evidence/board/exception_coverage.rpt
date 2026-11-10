@@ -1,0 +1,97 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Nov 10 09:42:35 2026
+| Host         : VieupE-Desk running 64-bit major release  (build 9200)
+| Command      : report_exceptions -coverage -file D:/temp/gen3bosio/sd4-dma/board_v6_incremental/route/exception_coverage.rpt
+| Design       : gen3_kfb_bosio
+| Device       : 7a200t-fbg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+-------------------------------------------------------------------------------------------------------------------------------
+
+Exceptions Report
+
+Position  Type                     Setup            Hold             From      Through  To        Endpoints  From (%)  Through (%)  To (%)
+--------  -----------------------  ---------------  ---------------  --------  -------  --------  ---------  --------  -----------  ------
+1         Multicycle Path          cycles=6         -                1 cells            32 cells  64         100.00                 25.00
+2         Multicycle Path          -                cycles=5         1 cells            32 cells  64         100.00                 25.00
+3         False Path               false            false                      4 pins             4                    100.00        
+4         Multicycle Path          cycles=2(start)  -                          7 pins             64                   100.00        
+5         Multicycle Path          -                cycles=1(start)            7 pins             64                   100.00        
+6         Max Delay                max=20           -                                   12 pins   12                                100.00
+7         Max Delay Datapath Only  max_dpo=5        -                24 cells           2 pins    2          4.17                   100.00
+8         False Path               false            false                      1 nets             16                   100.00        
+9         Max Delay Datapath Only  max_dpo=20       -                24 cells           1 cells   1          4.17                   33.33
+10        False Path               false            false                      2 pins             2                    100.00        
+11        False Path               false            false                      1 pins             0                    100.00        
+18        Multicycle Path          cycles=3(end)    -                5 ports                      5          100.00                  
+19        Multicycle Path          -                cycles=3(end)    5 ports                      5          100.00                  
+20        Multicycle Path          cycles=2(start)  -                                   5 ports   5                                 100.00
+21        Multicycle Path          -                cycles=3(start)                     5 ports   5                                 100.00
+22        False Path               false            false                      1 pins             4                    100.00        
+23        False Path               false            false                      1 pins             4                    100.00        
+24        False Path               false            false                      1 pins             4                    100.00        
+25        False Path               false            false                      1 pins             4                    100.00        
+26        False Path               false            false                      1 pins             4                    100.00        
+27        False Path               false            false                      1 pins             4                    100.00        
+28        False Path               false            false                      1 pins             4                    100.00        
+29        False Path               false            false                      1 pins             4                    100.00        
+30        False Path               false            false                      1 pins             4                    100.00        
+31        False Path               false            false                      1 pins             4                    100.00        
+32        False Path               false            false                      1 pins             4                    100.00        
+33        False Path               false            false                      1 pins             4                    100.00        
+34        False Path               false            false                      1 pins             4                    100.00        
+35        False Path               false            false                      1 pins             4                    100.00        
+36        Max Delay Datapath Only  max_dpo=20       -                4 cells            4 cells   4          100.00                 33.33
+38        Max Delay Datapath Only  max_dpo=10       -                4 cells            4 cells   4          100.00                 33.33
+40        Max Delay Datapath Only  max_dpo=20       -                4 cells            4 cells   4          100.00                 33.33
+42        Max Delay Datapath Only  max_dpo=20       -                4 cells            4 cells   4          100.00                 33.33
+44        Max Delay Datapath Only  max_dpo=10       -                4 cells            4 cells   4          100.00                 33.33
+46        Max Delay Datapath Only  max_dpo=20       -                4 cells            4 cells   4          100.00                 33.33
+48        Max Delay Datapath Only  max_dpo=10       -                4 cells            4 cells   4          100.00                 33.33
+50        Max Delay Datapath Only  max_dpo=20       -                4 cells            4 cells   4          100.00                 33.33
+52        Max Delay Datapath Only  max_dpo=10       -                4 cells            4 cells   4          100.00                 33.33
+54        Max Delay Datapath Only  max_dpo=10       -                4 cells            4 cells   4          100.00                 33.33
+76        Max Delay Datapath Only  max_dpo=13.468   -                9 cells            9 cells   9          100.00                 33.33
+78        Max Delay Datapath Only  max_dpo=10       -                9 cells            9 cells   9          100.00                 33.33
+80        Max Delay Datapath Only  max_dpo=13.468   -                10 cells           10 cells  10         100.00                 33.33
+84        False Path               false            false                               1 cells   1                                 33.33
+85        False Path               false            false                               1 cells   1                                 33.33
+86        False Path               false            false                               1 cells   1                                 33.33
+87        False Path               false            false                               1 cells   1                                 33.33
+88        False Path               false            false                               1 cells   1                                 33.33
+89        False Path               false            false                               1 cells   1                                 33.33
+91        False Path               false            false                               1 cells   1                                 33.33
+92        False Path               false            false                               1 cells   1                                 33.33
+93        False Path               false            false                               1 cells   1                                 33.33
+94        False Path               false            false                               1 cells   1                                 33.33
+95        False Path               false            false                               1 cells   1                                 33.33
+96        False Path               false            false                               1 cells   1                                 33.33
+97        False Path               false            false                               1 cells   1                                 33.33
+98        False Path               false            false                               1 cells   1                                 33.33
+99        False Path               false            false                               1 cells   1                                 33.33
+100       False Path               false            false                               1 cells   1                                 33.33
+101       False Path               false            false                               1 cells   1                                 33.33
+102       False Path               false            false                               1 cells   1                                 33.33
+103       False Path               false            false                               1 cells   1                                 33.33
+104       False Path               false            false                               5 pins    5                                 100.00
+105       False Path               false            false            1 ports                      104        100.00                  
+108       Max Delay Datapath Only  max_dpo=12       -                1 ports            1 pins    1          100.00                 100.00
+109       Max Delay Datapath Only  max_dpo=12       -                1 ports            1 pins    1          100.00                 100.00
+110       Max Delay Datapath Only  max_dpo=12       -                1 ports            1 pins    1          100.00                 100.00
+111       Max Delay Datapath Only  max_dpo=12       -                1 ports            1 pins    1          100.00                 100.00
+112       Max Delay Datapath Only  max_dpo=12       -                1 ports            1 pins    1          100.00                 100.00
+113       Max Delay Datapath Only  max_dpo=12       -                1 ports            1 pins    1          100.00                 100.00
+114       Max Delay Datapath Only  max_dpo=12       -                1 ports            1 pins    1          100.00                 100.00
+115       Max Delay Datapath Only  max_dpo=12       -                6 cells            1 ports   1          100.00                 100.00
+116       Max Delay Datapath Only  max_dpo=12       -                5 cells            1 ports   1          100.00                 100.00
+117       Max Delay Datapath Only  max_dpo=12       -                1 cells            1 ports   1          100.00                 100.00
+118       Max Delay Datapath Only  max_dpo=12       -                1 cells            1 ports   1          100.00                 100.00
+119       Max Delay Datapath Only  max_dpo=12       -                2 cells            1 ports   1          100.00                 100.00
+120       Max Delay Datapath Only  max_dpo=12       -                1 cells            1 ports   1          100.00                 100.00
+121       Max Delay Datapath Only  max_dpo=12       -                1 cells            1 ports   1          100.00                 100.00
+122       Max Delay Datapath Only  max_dpo=12       -                1 cells            1 ports   1          100.00                 100.00
+123       Max Delay Datapath Only  max_dpo=12       -                1 cells            1 ports   1          100.00                 100.00
+124       Max Delay Datapath Only  max_dpo=12       -                4 cells            1 ports   1          100.00                 100.00
+
+Warning: the percentages reported indicate the number of pins covered by the exception relative to the number of pins specified implicitly or explicitly.

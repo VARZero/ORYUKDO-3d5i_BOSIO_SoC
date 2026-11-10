@@ -1,0 +1,33 @@
+{
+  "image_sha256": "823d16971078e303e8cfd372d168bacc4599b54c5d8c616d39f1e5acb5ed702c",
+  "image_bytes": 7336960,
+  "segments": [
+    {
+      "file": "fw_jump.bin",
+      "bytes": 265224,
+      "address": "0x80000000",
+      "lba": 2049,
+      "sectors": 519,
+      "crc32": "edd168be",
+      "sha256": "0e7c072de5160f8346719a6b458bed12754ac4df88a5d812272721a25fe79eee"
+    },
+    {
+      "file": "Image",
+      "bytes": 6019328,
+      "address": "0x80400000",
+      "lba": 2568,
+      "sectors": 11757,
+      "crc32": "da3448c9",
+      "sha256": "3d8913dfe5fe9a31a79ea7726681632bc2ceed5000fe3b229164b4b483ebbc73"
+    },
+    {
+      "file": "gen3.dtb",
+      "bytes": 2444,
+      "address": "0x87f00000",
+      "lba": 14325,
+      "sectors": 5,
+      "crc32": "2838a6d8",
+      "sha256": "25c3bbe42f29edbf9df46ffd799384fa3341b2a191b98e2761fe9930849a349b"
+    }
+  ]
+}

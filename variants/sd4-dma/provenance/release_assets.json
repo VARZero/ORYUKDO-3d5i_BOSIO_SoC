@@ -1,0 +1,30 @@
+{
+  "tag": "sd4-dma-20261110-candidate",
+  "hardware_tested": false,
+  "assets": [
+    {
+      "name": "ORYUKDO-KFB-SD4-DMA-v1.bit",
+      "bytes": 6332765,
+      "sha256": "fe1ce8e52f30f1b9bd7bad944a0bf6f981eef9bba01438c0d26b40da6126fdf0",
+      "url": "https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/download/sd4-dma-20261110-candidate/ORYUKDO-KFB-SD4-DMA-v1.bit"
+    },
+    {
+      "name": "ORYUKDO-KFB-SD4-DMA-v1.img",
+      "bytes": 275775488,
+      "sha256": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+      "url": "https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/download/sd4-dma-20261110-candidate/ORYUKDO-KFB-SD4-DMA-v1.img"
+    },
+    {
+      "name": "ORYUKDO-SD4-DMA-rtl-software-tests.tar.gz",
+      "bytes": 576510,
+      "sha256": "d170cd78fa486b3c4e49c0da7f48894d340cb2f68c004e1a332e1d1702172508",
+      "url": "https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/download/sd4-dma-20261110-candidate/ORYUKDO-SD4-DMA-rtl-software-tests.tar.gz"
+    },
+    {
+      "name": "linux-6.12-sd4-dma-source.tar.gz",
+      "bytes": 257347918,
+      "sha256": "62a15cf984f1f9100cfa2a7f986f2954195d7334c8eb29a0c5e2553f4a9288d3",
+      "url": "https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/download/sd4-dma-20261110-candidate/linux-6.12-sd4-dma-source.tar.gz"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "result": "PASS_NATIVE_SD_LOADER_MODEL",
+  "image_sha256": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+  "raw_boot_sha256": "823d16971078e303e8cfd372d168bacc4599b54c5d8c616d39f1e5acb5ed702c",
+  "hardware": false,
+  "rtl": true,
+  "cpu_executes_linux": false,
+  "ddr_backend": "mock; loader RAM clear parameter reduced to 4096 bytes",
+  "native_sd_model": "pin-level behavioral SDHC model",
+  "rtl_sha256": {
+    "soc/board/sd_boot.sv": "c2d65cb9dc1efb9504618d08fd12d92ac25801adec64103d6cdded4317ae7526",
+    "soc/bosio/or_sd_native.sv": "b3c70a33b473c25f3ebc4a9beb5f397242b24eb0110a3cb89ebff774127f48b8",
+    "soc/bosio/or_sd_storage.sv": "18299bda8f206884c30790f8dec4b836b2fa5ab598005d8440c765df8efdd51a",
+    "soc/bosio/or_storage_dma.sv": "3fdbc1db6532c303f8d1c6634a87fd3c4dbd6ced78ad8afa909eed073653113b"
+  }
+}

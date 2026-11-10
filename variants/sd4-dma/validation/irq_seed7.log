@@ -1,0 +1,2 @@
+PASS CSR external IRQ mask, M/S delegation, privilege and priority
+- soc/tests/tb_storage_irq.sv:30: Verilog $finish

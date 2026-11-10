@@ -1,0 +1,77 @@
+{
+  "captured_date_kst": "2026-10-31",
+  "repositories": [
+    {
+      "name": "opensbi",
+      "repository": "https://github.com/riscv-software-src/opensbi.git",
+      "tag": "v1.8.1",
+      "commit": "74434f255873d74e56cc50aa762d1caf24c099f8",
+      "role": "unmodified_generic_RV32_fw_jump_source"
+    },
+    {
+      "name": "YOUNGDO_Studio",
+      "repository": "https://github.com/VARZero/YOUNGDO_Studio.git",
+      "commit": "5aae9517d4425d0fb4c5d0c0154225d5f3c1ea61"
+    },
+    {
+      "name": "bosio_ProjectionCore",
+      "repository": "https://github.com/VARZero/bosio_ProjectionCore.git",
+      "commit": "60943cc825e47779c8175c2d411939dc68b106e1"
+    },
+    {
+      "name": "bosio_OutputCore",
+      "repository": "https://github.com/VARZero/bosio_OutputCore.git",
+      "commit": "a8a1ec3177d453f4d91955baf2d4f9cbeafce22d"
+    },
+    {
+      "name": "bosio_SphericalWM",
+      "repository": "https://github.com/VARZero/bosio_SphericalWM.git",
+      "commit": "95ecdbb7f8383ce9e56b5c54cfd7805b3ea6298d",
+      "checkout": "sparse: hw, docs, root files"
+    }
+  ],
+  "generated_oryukdo_source": {
+    "repository": "https://github.com/VARZero/ORYUKDO.git",
+    "commit": "84e07b64b525b9d243b74641a1e59bb1337f4f52",
+    "path": "gen2/src/RTL",
+    "sha256": {
+      "_element_logics.sv": "b330cb3f3af0bc1e0650f40ea11b5d407378718bc6a945f669c1228f1fa8df6d",
+      "eulsukdo_scheduler.sv": "333f20659a0ae18bf7f22318e288b0729fc8089b01fa28db4b35b84686dcbdad",
+      "flow_control_logic.sv": "8bc64d4778f86e270172a5777723830b58932e171d40ec4c9ad236ac465715c6",
+      "instruction_state_table.sv": "3362962bcd15bd66431baafafef0f48bec3f8be552c65902b832e75028f7569e",
+      "load_store_queue.sv": "2f034721275a73c6400af5d1868378e337f17c7cae8f56dd2a8cedf9e16b7a99",
+      "new_entry_logic.sv": "bab7518424804500c5c9d42fca1802fed3f602f7ba690dd9084c309917e33193",
+      "oryukdo_completion_queue.sv": "813f525c93282d739998cd61e5d7bbeb15cb8b63c7082731a0b8dc06449fcfa9",
+      "oryukdo_dependency_mapper.sv": "e513025a525f5eb7a9e66e9325984452da27dfa2711f04382f8f52a0e89a1a12",
+      "oryukdo_frontier.sv": "b6e971e8d6f211c54d7dc083643e17deaa5088830260e1bc6d11697f2fa633a7",
+      "oryukdo_memory.sv": "ecbc02825c2d1950b0d309af32eaf06999241c9c4f0efdd94a3ab1b4d1cc3fb0",
+      "oryukdo_new_entry_logic.sv": "304683edc265b55bda9097eb8818d10b6fd433fb97e70b905abcd36bbc46263f",
+      "oryukdo_rename.sv": "33a292af238b1fcc2deedd7c1748349127c3cf270afb1c080a87772df45314bc",
+      "oryukdo_result_selector.sv": "54e485819bfaa985693e9ef94ea13b22c20ad8c8d60cc4c604c90705f151be2d",
+      "oryukdo_scheduler.sv": "ab32d639ddd49ea9e8a1095c2f5098c8f38bef9e899f751b441819d6776a1c28",
+      "physical_register_mapper.sv": "05f8efbe29c7378fbb6d5e25c6ed6e425d3d5aeba9dbb0cc85c733fa77b41d06",
+      "ready_station.sv": "d33c25b208cdcc0f24d91e951ac51608d30e81b0c305c3fc9e0cdc73915ab059",
+      "write_back_concatenation.sv": "9a62e2fdcdd6723a241d5d7e1264be3053427fbf47efa18dc878f6cd6fb41b68"
+    }
+  },
+  "archive_sha256": "f667292fce95d659288ad53e0e48f50cbf0eca35a89cee5075295ebdd6175eb4",
+  "supplied_documents": [
+    {
+      "path": "D:/Downloads/BOSIO_design_review_KO.pdf",
+      "sha256": "0793ef4d35cd4121e0be789f5c3635ea37b22f65476a44111a1dbc615317312e",
+      "revision": "Rev0.1_2026-10-28",
+      "role": "final_carrier_design_target_not_verified_hardware"
+    }
+  ],
+  "linux_kernel": {
+    "version": "6.12",
+    "archive_url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz",
+    "archive_sha256": "b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb",
+    "checksum_source": "https://cdn.kernel.org/pub/linux/kernel/v6.x/sha256sums.asc",
+    "role": "unmodified_initial_RV32_Linux_bringup",
+    "source_cache_default": "WSL:~/or_bo_linux/linux-6.12",
+    "config": "firmware/linux_miniconfig",
+    "userspace_config": "firmware/linux_userspace_miniconfig",
+    "userspace_probe": "firmware/linux_init/"
+  }
+}

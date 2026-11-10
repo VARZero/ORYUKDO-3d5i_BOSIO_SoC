@@ -1,0 +1,16 @@
+{
+  "result": "PASS_QEMU_ONLY",
+  "image": "/var/tmp/oryukdo-sd4-linux/image/ORYUKDO-KFB-SD4-DMA-v1.img",
+  "image_sha256": "feee0045461772ce1c6ed8ea342a7c3d81b39383b7cbcb0f1f9b25b749a8006e",
+  "hardware": false,
+  "rtl": false,
+  "mock_backend": true,
+  "checks": [
+    "BusyBox repair shell; native SD hardware absent",
+    "cat /etc/oryukdo-image",
+    "test ! -L /usr/bin/python && test ! -e /usr/bin/python3 && test ! -d /usr/lib/python3.12",
+    "echo $((19+23))",
+    "ddrcheck",
+    "test -x /bin/storage-check && test -d /data"
+  ]
+}

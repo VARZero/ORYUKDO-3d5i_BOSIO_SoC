@@ -1,0 +1,2 @@
+PASS native SD boot initialization, header and 3 CRC-checked segments to mock DDR cycles=294715
+PASS boot-to-runtime ownership, MMIO command, SD->DMA->RAM, fill, RAM->DMA->SD, sector roundtrip cycles=321465

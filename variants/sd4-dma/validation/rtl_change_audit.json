@@ -1,0 +1,27 @@
+{
+  "unchanged_normalized": 125,
+  "changed": [
+    "soc\\board\\gen3_kfb_bosio.sv",
+    "soc\\board\\sd.xdc",
+    "soc\\board\\sd_boot.sv",
+    "soc\\bosio\\gen3_bosio_soc.sv",
+    "soc\\bosio\\or_bo_axi_fabric.sv",
+    "soc\\bosio\\or_bo_axi_pkg.sv",
+    "soc\\rtl\\gen3_cpu.sv",
+    "soc\\rtl\\gen3_soc.sv",
+    "soc\\rtl\\rv32_machine_csrs.sv",
+    "soc\\tests\\axi_ram_model.sv",
+    "soc\\tests\\tb_axi_fabric.sv",
+    "soc\\tests\\tb_gen3_bosio.sv"
+  ],
+  "added": [
+    "soc\\bosio\\or_sd_native.sv",
+    "soc\\bosio\\or_sd_storage.sv",
+    "soc\\bosio\\or_storage_dma.sv",
+    "soc\\bosio\\or_storage_plic.sv",
+    "soc\\tests\\tb_sd_storage.sv",
+    "soc\\tests\\tb_storage_dma.sv",
+    "soc\\tests\\tb_storage_irq.sv",
+    "soc\\tests\\tb_storage_plic.sv"
+  ]
+}

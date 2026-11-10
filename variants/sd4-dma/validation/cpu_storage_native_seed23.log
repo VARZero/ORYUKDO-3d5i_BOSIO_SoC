@@ -1,0 +1,5 @@
+[0] %Warning: xpm_cdc.sv:257: TOP.tb_cpu_storage.dut.snoop_cdc.completion_path.completion_sync.sim_check.sim_xil_check: Vivado Simulator does not currently support the SystemVerilog Assertion syntax used within XPM_CDC.  
+Messages related to potential misuse will not be reported.
+PASS CPU SD read/write/roundtrip, DMA MMIO copy/fill payloads, PLIC M/S claim/complete, CDC, precise external interrupts cycles=362042 retired=5400 M=5 S=2 snoops=576
+PASS production AXI-MIG bridge/native arbiter with mock DDR, SD DMA at 0xbffff000 and fill through 0xbffffffc
+- soc/tests/tb_cpu_storage.sv:54: Verilog $finish
