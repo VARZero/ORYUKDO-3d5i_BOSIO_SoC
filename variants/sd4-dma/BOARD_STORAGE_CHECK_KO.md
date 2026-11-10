@@ -5,6 +5,11 @@
 
 ## 준비
 
+공개 파일은 [SD4 사전 릴리스](https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/tag/sd4-dma-20261110-candidate)에서 받는다.
+`SD4-SHA256SUMS.txt`로 다운로드 파일을 검사한다. 게시본의 결과·해시는
+[provenance/board_manifest.json](provenance/board_manifest.json)과 [release_assets.json](provenance/release_assets.json)에 있다.
+아래 `D:/temp/...`는 제작 당시 로컬 위치이며 다른 PC에서는 다운로드 위치로 바꾼다.
+
 1. 2026-11-10 전체 보드 합성/배선과 비트스트림 생성은 완료했다. `validation/status.json`,
    `validation/board_implementation.json` 및 후보 폴더의 `board_manifest.json`을 확인한다.
    비트스트림은 `D:/temp/gen3bosio/sd4-dma/candidate/ORYUKDO-KFB-SD4-DMA-v1.bit`이다.
