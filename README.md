@@ -1,4 +1,6 @@
-# ORYUKDO-3d5i_BOSIO_SoC
+# 해반천 (HAEBANCHEON)
+
+해반천은 ORYUKDO CPU, BOSIO 투영·출력 시스템, BoAYO 윈도우 매니저를 통합하는 FPGA SoC 프로젝트이다. 기존 프로젝트명은 `ORYUKDO-3d5i_BOSIO_SoC`이며, 각 하위 구성요소의 이름과 RTL 모듈명·실행 파일명은 유지한다.
 
 ## 최신 추가: SD 4비트·DMA·ext4 (2026-11-10)
 
@@ -18,7 +20,7 @@ Linux MMC/DMAengine 드라이버와 영구 ext4 `/data`를 추가했다. BusyBox
 | CDC Warning·Critical | 0 |
 | DRC | Error·Critical 0, 기존 MIG Warning 5건 |
 
-[새 사전 릴리스: 비트스트림·SD 이미지·Linux 전체 소스](https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/tag/sd4-dma-20261110-candidate)
+[새 사전 릴리스: 비트스트림·SD 이미지·Linux 전체 소스](https://github.com/VARZero/HAEBANCHEON/releases/tag/sd4-dma-20261110-candidate)
 에서 파일을 받는다. 새 비트스트림과 새 SD 이미지는 한 쌍으로 사용해야 한다.
 
 - [추가 기능과 검증 범위](variants/sd4-dma/README.md)
@@ -33,7 +35,7 @@ Linux MMC/DMAengine 드라이버와 영구 ext4 `/data`를 추가했다. BusyBox
 
 PZ-A7200T-KFB에서 Linux 6.12와 BusyBox UART 쉘의 부팅을 확인한 ORYUKDO Gen3 + BOSIO SoC 소스이다. 기준은 **2026-11-08 실보드에서 검증한 TLB8 비트스트림과 trace-v2 진단 SD**의 조합이다.
 
-비트스트림, SD 이미지, 전체 Linux 소스 압축본은 [실보드 검증본 Release](https://github.com/VARZero/ORYUKDO-3d5i_BOSIO_SoC/releases/tag/board-20261108-tlb8-trace-v2)에서 받는다. 첨부한 `SOC-SHA256SUMS.txt`로 다운로드한 파일의 해시를 확인할 수 있다.
+비트스트림, SD 이미지, 전체 Linux 소스 압축본은 [실보드 검증본 Release](https://github.com/VARZero/HAEBANCHEON/releases/tag/board-20261108-tlb8-trace-v2)에서 받는다. 첨부한 `SOC-SHA256SUMS.txt`로 다운로드한 파일의 해시를 확인할 수 있다.
 
 ORYUKDO 스케줄러는 3 Decode / 5 Issue이며 실행기는 Branch·CSR 1개, ALU 2개, MULDIV 1개, LSQ 1개로 구성한다. CPU에는 Sv32 MMU와 명령·데이터 측 각각 8엔트리 TLB가 있다. MIG를 통한 DDR3L 1GiB, SD 부트 로더, UART 콘솔, BOSIO 투영코어 2개·출력코어·센서 허브, HDMI 출력 연결, 추가 AXI UART·SPI·I2C를 포함한다.
 
